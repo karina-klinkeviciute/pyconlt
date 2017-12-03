@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load flatpages %}
+{% get_flatpages as flatpages %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +12,24 @@
 </head>
 <body>
 <div id="branding">
-<img id="logo" src="{% static 'info/img/pyconlt_logo.png' %}">
+    <div id="branding-inner">
+        <img id="logo" src="{% static 'info/img/pyconlt_logo.png' %}">
+    </div>
 </div>
+<div id="wrapper">
 <nav id="main_nav">
     <ul>
         <li><a href="/">About</a></li>
         <li><a href="/sponsors/">Sponsors</a></li>
         <li class="last"><a href="/coc/">Code of Conduct</a></li>
-
+{#    {% for page in flatpages %}#}
+{#        {% if forloop.last %}#}
+{#        <li class="last"><a href="{{ page.url }}">{{ page.title }}</a></li>#}
+{#        {% else %}#}
+{#        <li><a href="{{ page.url }}">{{ page.title }}</a></li>#}
+{#        {% endif %}#}
+{##}
+{#    {% endfor %}#}
     </ul>
 </nav>
 
@@ -26,6 +38,7 @@
 {% block content %}
 
 {% endblock content %}
+</div>
 </div>
 </body>
 </html>
