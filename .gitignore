@@ -9,3 +9,4 @@ notes
 /sqlite.db
 /env/
 pyconlt/settings/development.py
+pyconlt/settings/production.py
