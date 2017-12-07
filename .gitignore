@@ -6,3 +6,6 @@ __pycache__
 .idea
 local.py
 notes
+/sqlite.db
+/env/
+/pyconlt/settings/local.py
