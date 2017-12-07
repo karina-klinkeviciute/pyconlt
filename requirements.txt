@@ -6,6 +6,5 @@ django-js-asset==0.1.1
 django-tinymce==2.6.0
 multilingual-flatpages==0.8.2
 olefile==0.44
-pkg-resources==0.0.0
 psycopg2==2.7.3.2
 pytz==2017.3
