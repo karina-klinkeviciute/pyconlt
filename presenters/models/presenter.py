@@ -12,7 +12,7 @@ class Presenter(models.Model):
         User,
         null=True,
         blank=True,
-        help_text=_('If a presenters is also a user in the system, '
+        help_text=_('If a presenter is also a user in the system, '
                     'we connect it that user'),
         on_delete=models.SET_NULL
     )
@@ -21,15 +21,15 @@ class Presenter(models.Model):
         null=True,
         blank=True,
         help_text=_("Presenter's full "
-                    "name, if presenters not connected to a user")
+                    "name, if presenter is not connected to a user")
     )
     image = models.ImageField(
         blank=True,
         null=True,
-        help_text=_('A photo of a presenters')
+        help_text=_('A photo of a presenter')
     )
     bio = models.TextField(
         blank=True,
         null=True,
-        help_text=_('Short description about the presenters')
+        help_text=_('Short description about the presenter')
     )

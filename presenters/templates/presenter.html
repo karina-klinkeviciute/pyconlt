@@ -1,0 +1,14 @@
+{% extends "pyconlt/base.html" %}
+
+{% block content %}
+    <div>
+        {{ object.name }}
+    </div>
+    <div>
+        {{ object.bio }}
+    </div>
+    <div>
+        <img src="{{ object.photo }}">
+    </div>
+
+{% endblock content %}
