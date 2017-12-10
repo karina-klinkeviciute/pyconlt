@@ -5,10 +5,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pycon LT</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'info/css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    {% block head_title %}
+        <title>Pycon LT</title>
+    {% endblock head_title %}
+    {% block head_links %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'info/css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    {% endblock head_links %}
 </head>
 <body>
 <div class="container">
@@ -23,7 +27,7 @@
     <ul>
         <li><a href="/">About</a></li>
         <li><a href="/sponsors/">Sponsors</a></li>
-        <li class="last"><a href="/speakers/">Code of Conduct</a></li>
+        <li><a href="/speakers/">Speakers</a></li>
         <li class="last"><a href="/coc/">Code of Conduct</a></li>
 
 {#    {% for page in flatpages %}#}

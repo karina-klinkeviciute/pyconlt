@@ -2,6 +2,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from ckeditor.fields import RichTextField
 
 
 class Presenter(models.Model):
@@ -28,8 +29,11 @@ class Presenter(models.Model):
         null=True,
         help_text=_('A photo of a presenter')
     )
-    bio = models.TextField(
+    bio = RichTextField(
         blank=True,
         null=True,
         help_text=_('Short description about the presenter')
     )
+
+    class Meta:
+        app_label = 'presenters'

@@ -1,0 +1,34 @@
+{% extends "pyconlt/base.html" %}
+{% load static %}
+
+{% block head_title %}
+    <title>Pycon LT | Speakers </title>
+{% endblock head_title %}
+{% block head_links %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'presenters/css/presenters.css' %}">
+{% endblock head_links %}
+
+{% block content %}
+
+        <h1>Presenters</h1>
+        <div class="container">
+        {% for presenter in presenters %}
+            <div class="presenter-info row">
+                <div class="col-9">
+                <h4 class = "presenter-name">
+                    {{ presenter.name }}
+                </h4>
+                <div class="presenter-bio">
+                    {{ presenter.bio|safe }}
+                </div>
+                </div>
+                <div class="col-3">
+                <div class="presenter-photo">
+                    <img src="{{ presenter.image.url }}">
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock content %}
