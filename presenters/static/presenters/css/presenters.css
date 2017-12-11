@@ -3,7 +3,8 @@
     border-bottom: solid 1px black;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-bottom: 15px;
+    border-radius: 5px;
+/*     margin-bottom: 15px; */
 }
 
 .presenter-photo {
