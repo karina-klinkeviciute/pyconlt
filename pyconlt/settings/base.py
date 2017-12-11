@@ -23,7 +23,7 @@ print(BASE_DIR)
 SECRET_KEY = 'bra($brwxvxr78prqsc0ne9&dv%sdt^nqh^azutqafy%3_uyn_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
