@@ -6,8 +6,8 @@ from presenters.views.presenter import PresenterView, PresentersView
 
 urlpatterns = [
 
-    url(r'^presenters/(?P<pk>[0-9]+)/', PresenterView.as_view()),
-    url(r'^presenters/$', PresentersView.as_view()),
+    url(r'^speakers/(?P<pk>[0-9]+)/', PresenterView.as_view()),
+    url(r'^speakers/$', PresentersView.as_view()),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
