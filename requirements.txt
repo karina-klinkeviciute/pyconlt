@@ -5,6 +5,7 @@ django-heroku==0.2.0
 django-hvad==1.8.0
 django-js-asset==0.1.1
 django-tinymce==2.6.0
+gunicorn==19.7.1
 multilingual-flatpages==0.8.2
 olefile==0.44
 Pillow==4.3.0
