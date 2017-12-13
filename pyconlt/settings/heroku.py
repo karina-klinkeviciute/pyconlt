@@ -23,7 +23,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = ['127.0.0.1', 'pyconlt.herokuapp.com']
 
-DEBUG = False
+
 
 # Configure Django App for Heroku.
 import django_heroku
@@ -32,3 +32,4 @@ django_heroku.settings(locals())
 # import dj_database_url
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(db_from_env)
+DEBUG = True
