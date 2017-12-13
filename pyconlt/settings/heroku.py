@@ -24,3 +24,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = ['127.0.0.1', 'pyconlt.herokuapp.com']
 
 DEBUG = False
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
