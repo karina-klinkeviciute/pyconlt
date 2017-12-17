@@ -14,21 +14,20 @@
 <!--         <h1>Presenters</h1> -->
         <div class="container">
         {% for presenter in presenters %}
-            <div class="presenter-info row">
-                <div class="col-9">
-                <h4 class = "presenter-name">
-                    {{ presenter.name }}
-                </h4>
-                <div class="presenter-bio">
-                    {{ presenter.bio|safe }}
-                </div>
-                </div>
-                <div class="col-3">
-                <div class="presenter-photo">
+
+              <div class="col s12">
+                <h2 class="header">{{ presenter.name }}</h2>
+                <div class="card horizontal">
+                  <div class="card-image">
                     <img src="{{ presenter.image.url }}">
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                      {{ presenter.bio|safe }}
+                    </div>
+                  </div>
                 </div>
-                </div>
-            </div>
+              </div>
         {% endfor %}
         </div>
 {% endblock content %}
