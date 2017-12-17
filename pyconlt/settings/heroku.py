@@ -34,6 +34,8 @@ django_heroku.settings(locals())
 # DATABASES['default'].update(db_from_env)
 DEBUG = False
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
+#
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'pyconlt', 'media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'pyconlt', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'var', 'www', 'static')
