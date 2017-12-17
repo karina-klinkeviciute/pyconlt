@@ -38,4 +38,4 @@ DEBUG = False
 #
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'pyconlt', 'media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'var', 'www', 'static')
+MEDIA_ROOT = STATIC_ROOT
