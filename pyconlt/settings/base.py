@@ -144,6 +144,7 @@ SITE_ID = 1
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
+        'allowedContent': True,
         'toolbar_Custom': [
             ['Bold', 'Italic', 'Underline'],
             ['Format', 'Styles'],
