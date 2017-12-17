@@ -20,34 +20,29 @@
 <div class="container">
 <div class="row">
 <div id="branding">
-    <div id="branding-inner">
-        <img id="logo" src="{% static 'info/img/pyconlt_logo.png' %}">
-    </div>
+ <div id="branding-inner" display="table" marin="0 auto">
+     <img id="logo" src="{% static 'info/img/pyconlt_logo.png' %}" display="block">
+ </div>
 </div>
 <div id="wrapper">
-<nav id="main_nav">
+<nav id="main_nav" class="light-green darken-4">
     <ul>
         <li><a href="/">About</a></li>
         <li><a href="/sponsors/">Sponsors</a></li>
         <li><a href="/speakers/">Speakers</a></li>
         <li class="last"><a href="/coc/">Code of Conduct</a></li>
 
-{#    {% for page in flatpages %}#}
-{#        {% if forloop.last %}#}
-{#        <li class="last"><a href="{{ page.url }}">{{ page.title }}</a></li>#}
-{#        {% else %}#}
-{#        <li><a href="{{ page.url }}">{{ page.title }}</a></li>#}
-{#        {% endif %}#}
-{##}
-{#    {% endfor %}#}
+
     </ul>
 </nav>
 
 <div id="content">
 
-{% block content %}
+<div class="container">
+ {% block content %}
 
-{% endblock content %}
+ {% endblock content %}
+</container>
 </div>
 </div>
 </div>
