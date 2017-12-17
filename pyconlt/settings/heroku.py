@@ -37,5 +37,5 @@ DEBUG = False
 # MEDIA_URL = '/static/'
 #
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'pyconlt', 'media')
-
-MEDIA_ROOT = STATIC_ROOT
+#
+# MEDIA_ROOT = STATIC_ROOT
