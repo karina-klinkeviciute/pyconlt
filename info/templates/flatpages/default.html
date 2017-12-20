@@ -1,9 +1,13 @@
 {% extends "pyconlt/base.html" %}
 
+{% block head_title %}
+    <title>Pycon LT | {{ flatpage.title }}</title>
+{% endblock head_title %}
+
 {% block content %}
-    <h1>
+<!--     <h1>
 {{ flatpage.title }}
-    </h1>
+    </h1> -->
 {{ flatpage.content }}
 
 {% endblock content %}

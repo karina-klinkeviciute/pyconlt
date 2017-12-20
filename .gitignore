@@ -5,3 +5,7 @@ __pycache__
 .DS_Store
 .idea
 local.py
+notes
+/sqlite.db
+/env/
+/pyconlt/settings/local.py

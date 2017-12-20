@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bra($brwxvxr78prqsc0ne9&dv%sdt^nqh^azutqafy%3_uyn_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'info',
-    'ckeditor'
+    'ckeditor',
+    'ckeditor_uploader',
+    'presenters',
 ]
 
 MIDDLEWARE = [
@@ -81,13 +83,13 @@ WSGI_APPLICATION = 'pyconlt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'pyconlt',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'pyconlt',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-    # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
         'PORT': '',  # Set to empty string for default.
     }
 }
@@ -131,18 +133,29 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'var', 'www', 'static')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'var', 'www', 'media')
 
 SITE_ID = 1
 
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
+        'allowedContent': True,
         'toolbar_Custom': [
             ['Bold', 'Italic', 'Underline'],
+            ['Format', 'Styles'],
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
+            ['Image', ],
+            ['RemoveFormat', 'Source'],
         ]
     }
 }
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_IMAGE_BACKEND = 'pillow'

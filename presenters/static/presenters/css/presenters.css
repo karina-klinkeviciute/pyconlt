@@ -1,0 +1,19 @@
+.presenter-info {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+/*     margin-bottom: 15px; */
+}
+
+.presenter-photo {
+    width: 150px;
+    height: auto;
+    padding: 5px;
+}
+
+.presenter-photo img {
+    width: 130px;
+    height: auto;
+}

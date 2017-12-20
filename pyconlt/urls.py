@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.flatpages.views import flatpage
 
@@ -22,5 +22,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
+    url(r'^', include('presenters.urls')),
     url(r'^(?P<url>.*/)$', flatpage),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
