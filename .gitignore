@@ -2,6 +2,7 @@
 *~
 __pycache__
 /static
+/media
 .DS_Store
 .idea
 local.py
@@ -9,3 +10,4 @@ notes
 /sqlite.db
 /env/
 /pyconlt/settings/local.py
+/pyconlt/settings/pythonanywhere.py
