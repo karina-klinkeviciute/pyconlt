@@ -17,36 +17,43 @@
     {% endblock head_links %}
 </head>
 <body>
-<div class="container">
-<div class="row">
-<div id="branding">
- <div id="branding-inner" display="table" marin="0 auto">
-     <img id="logo" src="{% static 'info/img/pyconlt_logo.png' %}" display="block">
- </div>
-</div>
-<div id="wrapper">
-<nav id="main_nav" class="light-green darken-4">
-    <ul>
-        <li><a href="/">About</a></li>
-        <li><a href="/sponsors/">Sponsors</a></li>
-        <li><a href="/speakers/">Speakers</a></li>
-        <li class="last"><a href="/coc/">Code of Conduct</a></li>
 
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div id="branding">
+             <div id="branding-inner">
+                 <img id="logo" src="{% static 'info/img/pyconlt_logo.png' %}">
+             </div>
+            </div>
 
-    </ul>
-</nav>
+            <nav id="main_nav" class="light-green darken-4">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/sponsors/">Sponsors</a></li>
+                    <li><a href="/speakers/">Speakers</a></li>
+                    <li class="last"><a href="/coc/">Code of Conduct</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
-<div id="content">
+<main>
+    <div class="container">
+     {% block content %}
 
-<div class="container">
- {% block content %}
+     {% endblock content %}
+    </div>
+</main>
 
- {% endblock content %}
-</container>
-</div>
-</div>
-</div>
-</div>
+<footer  class="page-footer white">
+    <div class="container light-green darken-4">
+        <div>PyCon LT 2018</div>
+        <div>Email: info@pycon.lt</div>
+    </div>
+</footer>
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
