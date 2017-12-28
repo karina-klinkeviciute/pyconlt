@@ -39,9 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'info',
+
+    # 3rd party apps
     'ckeditor',
     'ckeditor_uploader',
+    'menu',
+
+    # project apps
+    'info',
     'presenters',
 ]
 

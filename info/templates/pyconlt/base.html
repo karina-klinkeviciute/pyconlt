@@ -28,11 +28,18 @@
             </div>
 
             <nav id="main_nav" class="light-green darken-4">
+{#                <ul>#}
+{#                    <li><a href="/">About</a></li>#}
+{#                    <li><a href="/sponsors/">Sponsors</a></li>#}
+{#                    <li><a href="/speakers/">Speakers</a></li>#}
+{#                    <li class="last"><a href="/coc/">Code of Conduct</a></li>#}
+{#                </ul>#}
+
                 <ul>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/sponsors/">Sponsors</a></li>
-                    <li><a href="/speakers/">Speakers</a></li>
-                    <li class="last"><a href="/coc/">Code of Conduct</a></li>
+                    {% load menubuilder %}{% menu main-menu %}
+                    {% for item in menuitems %}
+                        <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>
@@ -47,10 +54,12 @@
     </div>
 </main>
 
-<footer  class="page-footer white">
+<footer  class="page-footer light-green darken-4">
     <div class="container light-green darken-4">
-        <div>PyCon LT 2018</div>
-        <div>Email: info@pycon.lt</div>
+        <div class="row">
+            <div>PyCon LT 2018</div>
+            <div>Email: info@pycon.lt</div>
+        </div>
     </div>
 </footer>
 
