@@ -1,5 +1,5 @@
 #! /bin/bash
-source /.virualenv/bin/activate
+source /.virtualenv/bin/activate
 git pull
 pip install -r requirements.txt
 python manage.py makemigrations
