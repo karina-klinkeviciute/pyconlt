@@ -8,12 +8,12 @@
 }
 
 .presenter-photo {
-    width: 150px;
-    height: auto;
+    height: 200px;
+    width: auto;
     padding: 5px;
 }
 
 .presenter-photo img {
-    width: 130px;
-    height: auto;
+    height: 180px;
+    width: auto;
 }
