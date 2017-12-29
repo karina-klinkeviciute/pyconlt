@@ -1,3 +1,4 @@
+#! /bin/bash
 source /.virualenv/bin/activate
 git pull
 pip install -r requirements.txt
