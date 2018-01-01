@@ -1,5 +1,5 @@
 #! /bin/bash
-source ../.virtualenvs/pyconlt/bin/activate
+source /home/marsaeigis/.virtualenvs/pyconlt/bin/activate
 git pull
 pip install -r requirements.txt
 python manage.py makemigrations
