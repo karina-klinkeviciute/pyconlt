@@ -28,19 +28,23 @@
             </div>
 
             <nav id="main_nav" class="light-green darken-4">
-{#                <ul>#}
-{#                    <li><a href="/">About</a></li>#}
-{#                    <li><a href="/sponsors/">Sponsors</a></li>#}
-{#                    <li><a href="/speakers/">Speakers</a></li>#}
-{#                    <li class="last"><a href="/coc/">Code of Conduct</a></li>#}
-{#                </ul>#}
 
-                <ul>
-                    {% load menubuilder %}{% menu main-menu %}
+            <div class="nav-wrapper">
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="left hide-on-med-and-down">
+                 {% load menubuilder %}{% menu main-menu %}
                     {% for item in menuitems %}
                         <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
                     {% endfor %}
-                </ul>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                {% load menubuilder %}{% menu main-menu %}
+                    {% for item in menuitems %}
+                        <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                    {% endfor %}
+              </ul>
+            </div>
+
             </nav>
         </div>
     </div>
@@ -64,6 +68,11 @@
 </footer>
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+    })
+    </script>
 </body>
 </html>
