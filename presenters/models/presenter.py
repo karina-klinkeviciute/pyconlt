@@ -35,5 +35,11 @@ class Presenter(models.Model):
         help_text=_('Short description about the presenter')
     )
 
+    # expertise = models.TextField(
+    #     help_text=_("Speaker's skills and areas of expertise"),
+    #     blank=True,
+    #     null=True
+    # )
+
     class Meta:
         app_label = 'presenters'
