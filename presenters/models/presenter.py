@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib.auth.models import User
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
@@ -35,11 +36,16 @@ class Presenter(models.Model):
         help_text=_('Short description about the presenter')
     )
 
-    # expertise = models.TextField(
-    #     help_text=_("Speaker's skills and areas of expertise"),
-    #     blank=True,
-    #     null=True
-    # )
+    expertise = ArrayField(
+        models.CharField(
+            max_length=50,
+            blank=True,
+            null=True
+        ),
+        help_text=_("Speaker's skills and areas of expertise"),
+        blank=True,
+        null=True
+    )
 
     class Meta:
         app_label = 'presenters'
