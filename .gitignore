@@ -13,3 +13,4 @@ notes
 /pyconlt/settings/pythonanywhere.py
 manage.py
 deploy.sh
+.env
