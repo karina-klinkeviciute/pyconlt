@@ -25,14 +25,33 @@
                     <div class="card-content">
                         {{ presenter.bio|safe }}
                     </div>
-                      <div class="card-content">
+                    <div class="card-content">
+                        {% if presenter.has_twitter %}
+                            <a href="https://twitter.com/{{ presenter.twitter_handle }}" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
+
+                        {% if presenter.has_github %}
+                            <a href="https://github.com/{{ presenter.github_handle }}" target="_blank">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
+
+                        {% if presenter.has_linkedin %}
+                            <a href="https://www.linkedin.com/in/{{ presenter.linkedin_handle }}/" target="_blank">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="card-content">
                           {% for skill in presenter.expertise %}
                               <div class="chip">
                                 {{ skill }}
                               </div>
                           {% endfor %}
-                    </div>
-                  </div>
+                   </div>
+                 </div>
                 </div>
               </div>
         {% endfor %}
