@@ -6,7 +6,45 @@ from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
 
-class Presenter(models.Model):
+class SocialMixin(object):
+    """
+    Additional fields intended to cover social links
+    """
+
+    # Link length based on: https://gist.github.com/tonybruess/9405134
+    # Maybe bit outdated.
+    twitter_handle = models.CharField(
+            max_length=15,
+            null=True,
+            blank=True,
+            help_text=_("Presenter's twitter handle")
+    )
+
+    github_handle = models.CharField(
+            max_length=39,
+            null=True,
+            blank=True,
+            help_text=_("Presenter's github handle")
+    )
+
+    linkedin_handle = models.CharField(
+            max_length=30,  # As of 2017
+            null=True,
+            blank=True,
+            help_text=_("Presenter's linkedin handle")
+    )
+
+    def has_linkedin(self):
+        return self.linkedin_handle is not None
+
+    def has_twitter(self):
+        return self.twitter_handle is not None
+
+    def has_github(self):
+        return self.github_handle is not None
+
+
+class Presenter(models.Model, SocialMixin):
     """
     A class for conference presenters info
     """
