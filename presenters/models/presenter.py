@@ -9,8 +9,8 @@ from ckeditor.fields import RichTextField
 class SocialMixin(models.Model):
     """
     Additional fields intended to cover social links.
-    It wishes to be mixin, however cruel reality of Django forces to inherit
-    `models.Model`
+
+    Not technically mixin because Django forces us to inherit model class.
     """
 
     # Link length based on: https://gist.github.com/tonybruess/9405134
@@ -49,18 +49,13 @@ class SocialMixin(models.Model):
         abstract = True
 
 
-class Presenter(SocialMixin, models.Model):
+class ProfileMixin(models.Model):
     """
-    A class for conference presenters info
+    Covers personal information.
+
+    Not technically mixin because Django forces us to inherit model class.
     """
-    user = models.ForeignKey(
-        User,
-        null=True,
-        blank=True,
-        help_text=_('If a presenter is also a user in the system, '
-                    'we connect it that user'),
-        on_delete=models.SET_NULL
-    )
+
     name = models.CharField(
         max_length=200,
         null=True,
@@ -88,6 +83,24 @@ class Presenter(SocialMixin, models.Model):
         help_text=_("Speaker's skills and areas of expertise"),
         blank=True,
         null=True
+    )
+
+    class Meta:
+        abstract = True
+
+
+class Presenter(ProfileMixin, SocialMixin, models.Model):
+    """
+    A class to combine conference presenter's info.
+    """
+
+    user = models.ForeignKey(
+        User,
+        null=True,
+        blank=True,
+        help_text=_('If a presenter is also a user in the system, '
+                    'we connect it that user'),
+        on_delete=models.SET_NULL
     )
 
     class Meta:
