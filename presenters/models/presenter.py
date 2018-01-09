@@ -6,9 +6,11 @@ from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
 
-class SocialMixin(object):
+class SocialMixin(models.Model):
     """
-    Additional fields intended to cover social links
+    Additional fields intended to cover social links.
+    It wishes to be mixin, however cruel reality of Django forces to inherit
+    `models.Model`
     """
 
     # Link length based on: https://gist.github.com/tonybruess/9405134
@@ -43,8 +45,11 @@ class SocialMixin(object):
     def has_github(self):
         return self.github_handle is not None
 
+    class Meta:
+        abstract = True
 
-class Presenter(models.Model, SocialMixin):
+
+class Presenter(SocialMixin, models.Model):
     """
     A class for conference presenters info
     """
