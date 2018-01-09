@@ -20,12 +20,7 @@
                 <div class="card horizontal">
                   <div class="card-image presenter-photo">
                     <img src="{{ presenter.image.url }}">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                        {{ presenter.bio|safe }}
-                    </div>
-                    <div class="card-content">
+
                         {% if presenter.has_twitter %}
                             <a href="https://twitter.com/{{ presenter.twitter_handle }}" target="_blank">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -43,6 +38,10 @@
                                 <i class="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
                         {% endif %}
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        {{ presenter.bio|safe }}
                     </div>
                     <div class="card-content">
                           {% for skill in presenter.expertise %}
