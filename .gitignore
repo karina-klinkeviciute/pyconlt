@@ -11,5 +11,5 @@ notes
 /env/
 /pyconlt/settings/local.py
 /pyconlt/settings/pythonanywhere.py
-manage.py
 deploy.sh
+.env
