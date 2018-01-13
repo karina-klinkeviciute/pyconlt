@@ -24,7 +24,6 @@ PROPOSAL_TYPE = (
 )
 
 
-
 class Proposal(models.Model):
     user = models.ForeignKey(
         User,
@@ -58,5 +57,24 @@ class Proposal(models.Model):
         null=True
     )
 
+    def __repr__(self):
+        return '<Proposal type: {0} state: {1} by: {2}>'.format(
+                    self.type,
+                    self.state,
+                    self.user
+                )
+
     class Meta:
         app_label = 'proposals'
+
+
+class Attachment(models.Model):
+    proposal = models.ForeignKey(
+        Proposal,
+        help_text=_('Attachment of proposal'),
+        on_delete=models.CASCADE
+    )
+
+    upload = models.FileField(
+        upload_to='proposal_data/'
+    )
