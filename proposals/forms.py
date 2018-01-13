@@ -4,7 +4,12 @@ from django.utils.translation import ugettext_lazy as _
 from .models.proposal import Proposal, PROPOSAL_TYPE
 
 
-class CFPForm(forms.ModelForm):
+class CFPForm(forms.Form):
+    duration = forms.IntegerField(
+        label=_('Estimated duration (minutes)'),
+        initial=45,
+    )
+
     type = forms.ChoiceField(
         label=_('Type of proposal'),
         choices=PROPOSAL_TYPE,
@@ -30,7 +35,3 @@ class CFPForm(forms.ModelForm):
         label=_('I agree with Code of Conduct'),
         required=True,
     )
-
-    class Meta:
-        model = Proposal
-        fields = ('duration',)
