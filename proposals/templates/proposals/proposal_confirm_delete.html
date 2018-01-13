@@ -7,6 +7,6 @@
         {% blocktrans with object=object %}
             <p>Are you sure you want to delete "{{ object }}"?</p>
         {% endblocktrans %}
-        <input type="submit" value="{% trans "Confirm" %}" />
+        <button type="submit" name="submit" class="btn">{% trans "Confirm" %}</button>
     </form>
 {% endblock %}

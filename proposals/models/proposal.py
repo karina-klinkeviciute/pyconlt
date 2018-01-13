@@ -67,3 +67,5 @@ class Proposal(models.Model):
                     self.state,
                     self.user
                 )
+    def __str__(self):
+        return self.title
