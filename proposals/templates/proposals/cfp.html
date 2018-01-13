@@ -3,10 +3,14 @@
 {% load i18n %}
 
 {% block content %}
-    <form method="POST">
-        {% csrf_token %}
-        {% form form=form %}{% endform %}
-        <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button><Paste>
-    </form>
+    {% if user.is_authenticated %}
+        <form method="POST">
+            {% csrf_token %}
+            {% form form=form %}{% endform %}
+            <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button>
+        </form>
+    {% else %}
+        {% trans "You need to SignIn to submit proposal" %}
+    {% endif %}
 
 {% endblock content %}
