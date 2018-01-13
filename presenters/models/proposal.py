@@ -64,9 +64,6 @@ class Proposal(models.Model):
                     self.user
                 )
 
-    class Meta:
-        app_label = 'proposals'
-
 
 class Attachment(models.Model):
     proposal = models.ForeignKey(
