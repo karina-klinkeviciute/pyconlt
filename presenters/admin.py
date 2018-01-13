@@ -1,5 +1,6 @@
 from django.contrib import admin
 from presenters.models.presenter import Presenter
+from presenters.models.proposal import Proposal, Attachment
 
 
 class PresenterAdmin(admin.ModelAdmin):
@@ -18,3 +19,5 @@ class PresenterAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Presenter, PresenterAdmin)
+admin.site.register(Proposal)
+admin.site.register(Attachment)
