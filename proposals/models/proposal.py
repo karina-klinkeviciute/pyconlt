@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -63,15 +62,3 @@ class Proposal(models.Model):
                     self.state,
                     self.user
                 )
-
-
-class Attachment(models.Model):
-    proposal = models.ForeignKey(
-        Proposal,
-        help_text=_('Attachment of proposal'),
-        on_delete=models.CASCADE
-    )
-
-    upload = models.FileField(
-        upload_to='proposal_data/'
-    )
