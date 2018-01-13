@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'menu',
+    'material',
+    'material.frontend',
 
     # project apps
     'info',

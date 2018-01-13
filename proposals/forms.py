@@ -1,9 +1,18 @@
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 
-from .models.proposal import Proposal
+from .models.proposal import Proposal, PROPOSAL_TYPE
 
 
-class CFPForm(forms.ModelForm):
-    class Meta:
-        model = Proposal
-        fields = ('type', 'duration', 'short_description', 'extra_info')
+class CFPForm(forms.Form):
+    type = forms.ChoiceField(
+        label=_('Type of proposal'),
+        choices=PROPOSAL_TYPE,
+        widget=forms.RadioSelect
+    )
+    # duration = forms.IntegerField()
+
+    agreement = forms.BooleanField(
+        label=_('I agree with Code of Conduct'),
+        required=True,
+    )

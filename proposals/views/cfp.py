@@ -7,7 +7,7 @@ from ..forms import CFPForm
 
 
 class CFPView(View):
-    template_name = 'cfp.html'
+    template_name = 'proposals/cfp.html'
     form_class = CFPForm
 
     def get(self, request, *args, **kwargs):
