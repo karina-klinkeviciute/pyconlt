@@ -31,6 +31,11 @@ class Proposal(models.Model):
         on_delete=models.SET_NULL
     )
 
+    title = models.CharField(
+        max_length=1024,
+        help_text=_('Title of Proposal'),
+    )
+
     state = models.IntegerField(
         choices=PROPOSAL_STATE,
         default=PROPOSAL_PENDING,

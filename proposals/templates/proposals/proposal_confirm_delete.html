@@ -1,0 +1,12 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {% blocktrans with object=object %}
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+        {% endblocktrans %}
+        <input type="submit" value="{% trans "Confirm" %}" />
+    </form>
+{% endblock %}

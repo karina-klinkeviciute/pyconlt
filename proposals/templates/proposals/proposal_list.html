@@ -1,0 +1,49 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    {% trans "Title" %}
+                </th>
+                <th>
+                    {% trans "Type" %}
+                </th>
+                <th>
+                    {% trans "State" %}
+                </th>
+                <th>
+                    {% trans "Actions" %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for proposal in proposals %}
+            <tr>
+                <td>
+                    {{ proposal.title }}
+                </td>
+                <td>
+                    {{ proposal.get_type_display }}
+                </td>
+                <td>
+                    {{ proposal.get_state_display }}
+                </td>
+                <td>
+                    <a href="{% url 'proposal_update' pk=proposal.id %}">{% trans "Update" %}</a>
+                    <a href="{% url 'proposal_delete' pk=proposal.id %}">{% trans "Delete" %}</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4">
+                {% trans "No proposals yet" %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

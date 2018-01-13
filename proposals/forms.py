@@ -5,6 +5,10 @@ from .models.proposal import Proposal, PROPOSAL_TYPE
 
 
 class CFPForm(forms.Form):
+    title = forms.CharField(
+        label=_('Title'),
+        required=True,
+    )
     duration = forms.IntegerField(
         label=_('Estimated duration (minutes)'),
         initial=45,
