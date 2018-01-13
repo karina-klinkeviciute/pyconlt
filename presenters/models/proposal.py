@@ -15,6 +15,14 @@ PROPOSAL_STATE = (
     (PROPOSAL_REJECTED, _('Rejected'))
 )
 
+PROPOSAL_TYPE_WORKSHOP = 0
+PROPOSAL_TYPE_PRESENTATION = 1
+
+PROPOSAL_TYPE = (
+    (PROPOSAL_TYPE_WORKSHOP, _('Workshop')),
+    (PROPOSAL_TYPE_PRESENTATION, _('Presentation'))
+)
+
 
 
 class Proposal(models.Model):
@@ -27,7 +35,27 @@ class Proposal(models.Model):
 
     state = models.IntegerField(
         choices=PROPOSAL_STATE,
-        default=PROPOSAL_PENDING
+        default=PROPOSAL_PENDING,
+        help_text=_('Current state of proposal')
+    )
+
+    type = models.IntegerField(
+        choices=PROPOSAL_TYPE,
+        help_text=_('Type of proposal')
+    )
+
+    duration = models.IntegerField(
+        help_text=_('Estimated duration (minutes)')
+    )
+
+    short_description = RichTextField(
+        help_text=_('Short information about proposal')
+    )
+
+    extra_info = RichTextField(
+        help_text=_('Extra information'),
+        blank=True,
+        null=True
     )
 
     class Meta:
