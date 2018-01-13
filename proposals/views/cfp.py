@@ -24,6 +24,7 @@ class CFPView(View):
             data = form.cleaned_data
             proposal = Proposal(
                 user=request.user,
+                title=data['title'],
                 type=data['type'],
                 duration=data['duration'],
                 short_description=data['short_description'],

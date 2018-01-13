@@ -32,8 +32,12 @@
                     {{ proposal.get_state_display }}
                 </td>
                 <td>
-                    <a href="{% url 'proposal_update' pk=proposal.id %}">{% trans "Update" %}</a>
-                    <a href="{% url 'proposal_delete' pk=proposal.id %}">{% trans "Delete" %}</a>
+                    <a title="{% trans "Update" %}" href="{% url 'proposal_update' pk=proposal.id %}">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    <a title="{% trans "Delete" %}" href="{% url 'proposal_delete' pk=proposal.id %}">
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
                 </td>
             </tr>
         {% empty %}
