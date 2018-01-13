@@ -35,3 +35,19 @@ class CFPForm(forms.Form):
         label=_('I agree with Code of Conduct'),
         required=True,
     )
+
+    def is_valid(self):
+        valid = super(CFPForm, self).is_valid()
+        if not valid:
+            return False
+
+        data = self.cleaned_data
+
+        if not data['agreement']:
+            self._errors['agreement'] = _(
+                    'Code of Conduct needs to be accepted'
+            )
+            return False
+
+        return True
+
