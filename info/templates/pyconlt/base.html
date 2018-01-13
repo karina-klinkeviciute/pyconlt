@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load flatpages %}
+{% load menubuilder %}
 {% get_flatpages as flatpages %}
 <!DOCTYPE html>
 <html lang="en">
@@ -33,13 +34,13 @@
             <div class="nav-wrapper">
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
-                 {% load menubuilder %}{% menu main-menu %}
+                 {% menu main-menu %}
                     {% for item in menuitems %}
                         <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
                     {% endfor %}
               </ul>
               <ul class="side-nav" id="mobile-demo">
-                {% load menubuilder %}{% menu main-menu %}
+                {% menu main-menu %}
                     {% for item in menuitems %}
                         <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
                     {% endfor %}
