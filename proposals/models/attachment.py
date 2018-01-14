@@ -8,7 +8,8 @@ class Attachment(models.Model):
     proposal = models.ForeignKey(
         Proposal,
         help_text=_('Attachment of proposal'),
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='attachments'
     )
 
     upload = models.FileField(
