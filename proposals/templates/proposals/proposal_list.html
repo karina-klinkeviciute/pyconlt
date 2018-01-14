@@ -15,6 +15,9 @@
                     {% trans "State" %}
                 </th>
                 <th>
+                    {% trans "Attachments" %}
+                </th>
+                <th>
                     {% trans "Actions" %}
                 </th>
             </tr>
@@ -30,6 +33,13 @@
                 </td>
                 <td>
                     {{ proposal.get_state_display }}
+                </td>
+                <td>
+                    <ul>
+                    {% for attachment in proposal.attachments.all %}
+                        <li><a href="{{ attachment.upload.url }}">{{ attachment.upload.name }}</a></li>
+                    {% endfor %}
+                    </ul>
                 </td>
                 <td>
                     <a title="{% trans "Update" %}" href="{% url 'proposal_update' pk=proposal.id %}">
