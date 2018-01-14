@@ -23,31 +23,33 @@
 <header class="header">
     <div class="container">
         <div class="row">
-            <div id="branding">
-             <div id="branding-inner">
-                 <img id="logo" src="{% static 'info/img/PYCON_baneris-01.jpg' %}">
-             </div>
-            </div>
+            <div class="cols s12">
 
-            <nav id="main_nav" class="light-green darken-4">
+                <div id="branding">
+                 <div id="branding-inner">
+                     <img id="logo" src="{% static 'info/img/PYCON_baneris-01.jpg' %}">
+                 </div>
+                </div>
 
-            <div class="nav-wrapper">
-              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-              <ul class="left hide-on-med-and-down">
-                 {% load menubuilder %}{% menu main-menu %}
-                    {% for item in menuitems %}
-                        <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
-                    {% endfor %}
-              </ul>
-              <ul class="side-nav" id="mobile-demo">
-                {% load menubuilder %}{% menu main-menu %}
-                    {% for item in menuitems %}
-                        <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
-                    {% endfor %}
-              </ul>
-            </div>
+                <nav id="main_nav" class="light-green darken-4">
+                <div class="nav-wrapper">
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                  <ul class="left hide-on-med-and-down">
+                     {% load menubuilder %}{% menu main-menu %}
+                        {% for item in menuitems %}
+                            <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                        {% endfor %}
+                  </ul>
+                  <ul class="side-nav" id="mobile-demo">
+                    {% load menubuilder %}{% menu main-menu %}
+                        {% for item in menuitems %}
+                            <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                        {% endfor %}
+                  </ul>
+                </div>
 
-            </nav>
+                </nav>
+        </div>
         </div>
     </div>
 </header>
@@ -60,7 +62,7 @@
     </div>
 </main>
 
-<div class="container light-green darken-4">
+<div class="container light-green darken-4 flow-text">
 <footer class="page-footer light-green darken-4">
     <div class="container light-green darken-4">
         <div class="row">
