@@ -1,0 +1,63 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    {% trans "Title" %}
+                </th>
+                <th>
+                    {% trans "Type" %}
+                </th>
+                <th>
+                    {% trans "State" %}
+                </th>
+                <th>
+                    {% trans "Attachments" %}
+                </th>
+                <th>
+                    {% trans "Actions" %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for proposal in proposals %}
+            <tr>
+                <td>
+                    {{ proposal.title }}
+                </td>
+                <td>
+                    {{ proposal.get_type_display }}
+                </td>
+                <td>
+                    {{ proposal.get_state_display }}
+                </td>
+                <td>
+                    <ul>
+                    {% for attachment in proposal.attachments.all %}
+                        <li><a href="{{ attachment.upload.url }}">{{ attachment.upload.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <a title="{% trans "Update" %}" href="{% url 'proposal_update' pk=proposal.id %}">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    <a title="{% trans "Delete" %}" href="{% url 'proposal_delete' pk=proposal.id %}">
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4">
+                {% trans "No proposals yet" %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

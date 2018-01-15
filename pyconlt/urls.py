@@ -23,6 +23,7 @@ urlpatterns = [
 
 urlpatterns += [
     url(r'^', include('presenters.urls')),
+    url(r'^proposals/', include('proposals.urls')),
     url(r'^(?P<url>.*/)$', flatpage),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

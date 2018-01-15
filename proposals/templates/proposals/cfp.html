@@ -1,0 +1,16 @@
+{% extends "pyconlt/base.html" %}
+{% load material_form %}
+{% load i18n %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% form form=form %}{% endform %}
+            <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button>
+        </form>
+    {% else %}
+        {% trans "You need to SignIn to submit proposal" %}
+    {% endif %}
+
+{% endblock content %}
