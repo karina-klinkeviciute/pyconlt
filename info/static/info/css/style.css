@@ -1,4 +1,65 @@
-#logo
-{
+body {
+    font-family: 'Merriweather', serif;
+
+}
+
+#wrapper {
+    width: 960px;
+    margin: auto;
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+    padding: 5px;
+    padding-left: 40px;
+}
+
+#main_nav {
+    /*border-top: solid black 2px;*/
+    padding-top: 15px;
+    /*padding-bottom: 1px;*/
+    margin-bottom: 20px;
+    /*margin-top: 10px;*/
+    border-bottom: solid black 2px;
+}
+
+#main_nav ul li {
+    padding: 0 5px 0 5px;
+    border-left: solid black 1px;
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#main_nav ul li.last {
+    border-right: solid black 1px;
+}
+
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+#branding {
     width: 100%;
+    background-color: #555555;
+    /*padding-left: 35px;*/
+}
+
+#branding-inner {
+    width: 960px;
+    margin: auto;
+    background-color: #555555;
+    /*padding-left: 35px;*/
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
