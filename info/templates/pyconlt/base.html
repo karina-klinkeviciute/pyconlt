@@ -14,7 +14,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         {% include 'material/includes/material_css.html' %}
         {% include 'material/includes/material_js.html' %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{% static 'info/css/style.css' %}">
     {% endblock head_links %}
@@ -31,25 +31,25 @@
                      <img id="logo" src="{% static 'info/img/PYCON_baneris-01.jpg' %}">
                  </div>
                 </div>
-            <nav id="main_nav" class="light-green darken-4">
+                <nav id="main_nav" class="light-green darken-4">
 
-              <div class="nav-wrapper">
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="left hide-on-med-and-down">
-                   {% menu main-menu %}
-                      {% for item in menuitems %}
-                          <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
-                      {% endfor %}
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                  {% menu main-menu %}
-                      {% for item in menuitems %}
-                          <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
-                      {% endfor %}
-                </ul>
-                </div>
+                  <div class="nav-wrapper">
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="left hide-on-med-and-down">
+                       {% load menubuilder %}{% menu main-menu %}
+                          {% for item in menuitems %}
+                              <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                          {% endfor %}
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                      {% load menubuilder %}{% menu main-menu %}
+                          {% for item in menuitems %}
+                              <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                          {% endfor %}
+                    </ul>
+                    </div>
 
-              </nav>
+                  </nav>
         </div>
         </div>
     </div>
