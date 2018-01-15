@@ -10,12 +10,13 @@
         <title>Pycon LT</title>
     {% endblock head_title %}
     {% block head_links %}
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'presenters/css/materialize.min.css' %}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         {% include 'material/includes/material_css.html' %}
         {% include 'material/includes/material_js.html' %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static 'info/css/style.css' %}">
     {% endblock head_links %}
 </head>
 <body>
@@ -23,31 +24,33 @@
 <header class="header">
     <div class="container">
         <div class="row">
-            <div id="branding">
-             <div id="branding-inner">
-                 <img id="logo" src="{% static 'info/img/PYCON_baneris-01.jpg' %}">
-             </div>
-            </div>
+            <div class="cols s12">
 
+                <div id="branding">
+                 <div id="branding-inner">
+                     <img id="logo" src="{% static 'info/img/PYCON_baneris-01.jpg' %}">
+                 </div>
+                </div>
             <nav id="main_nav" class="light-green darken-4">
 
-            <div class="nav-wrapper">
-              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-              <ul class="left hide-on-med-and-down">
-                 {% menu main-menu %}
-                    {% for item in menuitems %}
-                        <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
-                    {% endfor %}
-              </ul>
-              <ul class="side-nav" id="mobile-demo">
-                {% menu main-menu %}
-                    {% for item in menuitems %}
-                        <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
-                    {% endfor %}
-              </ul>
-            </div>
+              <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="left hide-on-med-and-down">
+                   {% menu main-menu %}
+                      {% for item in menuitems %}
+                          <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                      {% endfor %}
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                  {% menu main-menu %}
+                      {% for item in menuitems %}
+                          <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                      {% endfor %}
+                </ul>
+                </div>
 
-            </nav>
+              </nav>
+        </div>
         </div>
     </div>
 </header>
@@ -60,7 +63,7 @@
     </div>
 </main>
 
-<div class="container light-green darken-4">
+<div class="container light-green darken-4 flow-text">
 <footer class="page-footer light-green darken-4">
     <div class="container light-green darken-4">
         <div class="row">
