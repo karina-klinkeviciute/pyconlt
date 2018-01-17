@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
+from presenters.models import Presenter
 
 PROPOSAL_PENDING = 0
 PROPOSAL_ACCEPTED = 1
@@ -60,6 +61,19 @@ class Proposal(models.Model):
         blank=True,
         null=True
     )
+    # Presenter also links to user, which causes denormalization as this model
+    # also has a foreign key to user, but I think that connection to the user
+    # should be through a Presenter model because if someone uploads a proposal
+    # they become potential presenters and it's ok to have their data. Only
+    # they shouldn't be shown then if their presentations are not confirmed.
+    presenter = models.ForeignKey(
+        Presenter,
+        help_text=_('Foreign key to presenter who proposed this '
+                    'talk/workshop'),
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True
+    )
 
     def __repr__(self):
         return '<Proposal type: {0} state: {1} by: {2}>'.format(
@@ -67,5 +81,6 @@ class Proposal(models.Model):
                     self.state,
                     self.user
                 )
+
     def __str__(self):
         return self.title
