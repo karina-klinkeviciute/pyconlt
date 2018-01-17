@@ -28,6 +28,7 @@ class Proposal(models.Model):
     user = models.ForeignKey(
         User,
         null=True,
+        blank=True,
         help_text=_('Issuer of the proposal'),
         on_delete=models.SET_NULL
     )
