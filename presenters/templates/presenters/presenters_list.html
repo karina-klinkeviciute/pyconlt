@@ -14,13 +14,15 @@
 <!--         <h1>Presenters</h1> -->
 
         {% for presenter in presenters %}
-
+            <div class="row">
               <div class="col s12">
-                <h2 class="header">{{ presenter.name }}</h2>
-                <div class="card horizontal">
-                  <div class="card-image presenter-photo">
+                  <div class="center-align">
+                    <h2 class="header">{{ presenter.name }}</h2>
+                  </div>
+                  <div class="center-align">
                     <img src="{{ presenter.image.url }}">
-
+                  </div>
+                  <div class="center-align">
                         {% if presenter.has_twitter %}
                             <a href="https://twitter.com/{{ presenter.twitter_handle }}" target="_blank">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -39,20 +41,19 @@
                             </a>
                         {% endif %}
                   </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
+                  <div>
                         {{ presenter.bio|safe }}
-                    </div>
-                    <div class="card-content">
+                  </div>
+
+                  <div>
                           {% for skill in presenter.expertise %}
                               <div class="chip">
                                 {{ skill }}
                               </div>
                           {% endfor %}
                    </div>
-                 </div>
-                </div>
               </div>
+            </div>
         {% endfor %}
 
 {% endblock content %}
