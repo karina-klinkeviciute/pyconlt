@@ -1,7 +1,8 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from .models.proposal import Proposal, PROPOSAL_TYPE
+from .models.proposal import Proposal\
+    # , PROPOSAL_TYPE
 
 
 class CFPForm(forms.Form):
@@ -16,7 +17,7 @@ class CFPForm(forms.Form):
 
     type = forms.ChoiceField(
         label=_('Type of proposal'),
-        choices=PROPOSAL_TYPE,
+        choices=Proposal.PROPOSAL_TYPE,
         required=True,
     )
 

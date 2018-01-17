@@ -17,8 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.flatpages.views import flatpage
 
+from proposals.views.talks import TalksListView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^talks/', TalksListView.as_view(), name='talks_list'),
 ]
 
 urlpatterns += [
