@@ -43,14 +43,13 @@
                   </div>
                   <div>
                         {{ presenter.bio|safe }}
-                  </div>
 
-                  <div>
                           {% for skill in presenter.expertise %}
-                              <div class="chip">
+                              <span class="chip">
                                 {{ skill }}
-                              </div>
+                              </span>
                           {% endfor %}
+
                    </div>
               </div>
             </div>
