@@ -8,12 +8,9 @@
 }
 
 .presenter-photo {
-    height: 200px;
-    width: auto;
-    padding: 5px;
+    max-width: 200px;
+    height: auto;
+    margin: 5px;
 }
 
-.presenter-photo img {
-    height: 180px;
-    width: auto;
-}
+
