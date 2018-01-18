@@ -13,4 +13,11 @@
         {% trans "You need to Sign in to submit proposal" %}
     {% endif %}
 
+    <script type="text/javascript">
+        {# Some hacks to make materialcss render form #}
+        $(document).ready(function() {
+           $('select').material_select();
+        });
+    </script>
+
 {% endblock content %}
