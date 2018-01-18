@@ -1,23 +1,16 @@
 {% extends "pyconlt/base.html" %}
-{% load material_form %}
 {% load i18n %}
+{% load material_form %}
 
 {% block content %}
     {% if user.is_authenticated %}
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {% form form=form %}{% endform %}
+            {% render_form form=form %}
             <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button>
         </form>
     {% else %}
         {% trans "You need to Sign in to submit proposal" %}
     {% endif %}
-
-    <script type="text/javascript">
-        {# Some hacks to make materialcss render form #}
-        $(document).ready(function() {
-           $('select').material_select();
-        });
-    </script>
 
 {% endblock content %}
