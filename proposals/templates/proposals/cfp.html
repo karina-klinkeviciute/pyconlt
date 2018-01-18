@@ -2,11 +2,20 @@
 {% load i18n %}
 {% load material_form %}
 
+{% block extra_js %}
+    <script type="text/javascript">
+        {# Hacks to make form render #}
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
     {% if user.is_authenticated %}
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {% render_form form=form %}
+            {% form form=form %}{% endform %}
             <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button>
         </form>
     {% else %}
