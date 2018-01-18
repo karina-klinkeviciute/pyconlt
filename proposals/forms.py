@@ -1,8 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from .models.proposal import Proposal\
-    # , PROPOSAL_TYPE
+from .models.proposal import Proposal
 
 
 class CFPForm(forms.Form):
