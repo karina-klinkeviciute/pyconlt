@@ -5,24 +5,6 @@ from ckeditor.fields import RichTextField
 
 from presenters.models import Presenter
 
-# PROPOSAL_PENDING = 0
-# PROPOSAL_ACCEPTED = 1
-# PROPOSAL_REJECTED = 2
-#
-# PROPOSAL_STATE = (
-#     (PROPOSAL_PENDING, _('Pending for approval')),
-#     (PROPOSAL_ACCEPTED, _('Approved')),
-#     (PROPOSAL_REJECTED, _('Rejected'))
-# )
-#
-# PROPOSAL_TYPE_WORKSHOP = 0
-# PROPOSAL_TYPE_PRESENTATION = 1
-#
-# PROPOSAL_TYPE = (
-#     (PROPOSAL_TYPE_WORKSHOP, _('Workshop')),
-#     (PROPOSAL_TYPE_PRESENTATION, _('Presentation'))
-# )
-
 
 class Proposal(models.Model):
 
