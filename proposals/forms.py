@@ -24,11 +24,13 @@ class CFPForm(forms.Form):
     short_description = forms.CharField(
         label=_('Short description'),
         required=True,
+        widget=forms.Textarea
     )
 
     extra_info = forms.CharField(
         label=_('Extra info'),
         required=False,
+        widget=forms.Textarea
     )
 
     attachment = forms.FileField(
