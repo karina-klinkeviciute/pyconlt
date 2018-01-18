@@ -19,6 +19,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{% static 'info/css/style.css' %}">
     {% endblock head_links %}
+    {% block extra_css %}
+    {% endblock %}
 </head>
 <body>
 
@@ -75,12 +77,14 @@
 </footer>
 </div>
 
-  <!-- Compiled and minified JavaScript -->
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
     $( document ).ready(function(){
         $(".button-collapse").sideNav();
     })
     </script>
+    {% block extra_js %}
+    {% endblock %}
 </body>
 </html>
