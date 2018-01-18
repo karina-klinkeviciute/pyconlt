@@ -1,8 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from .models.proposal import Proposal\
-    # , PROPOSAL_TYPE
+from .models.proposal import Proposal
 
 
 class CFPForm(forms.Form):
@@ -24,11 +23,13 @@ class CFPForm(forms.Form):
     short_description = forms.CharField(
         label=_('Short description'),
         required=True,
+        widget=forms.Textarea
     )
 
     extra_info = forms.CharField(
         label=_('Extra info'),
         required=False,
+        widget=forms.Textarea
     )
 
     attachment = forms.FileField(
@@ -37,7 +38,6 @@ class CFPForm(forms.Form):
     )
 
     agreement = forms.BooleanField(
-        label=_('I agree with Code of Conduct'),
         required=True,
     )
 

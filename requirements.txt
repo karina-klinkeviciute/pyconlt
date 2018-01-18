@@ -10,7 +10,7 @@ django-hvad==1.8.0
 django-js-asset==0.1.1
 django-menu==0.1.11
 django-tinymce==2.6.0
-django-material==1.2.2
+django-material==1.1.0
 idna==2.6
 multilingual-flatpages==0.8.2
 oauthlib==2.0.6
