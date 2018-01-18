@@ -39,7 +39,6 @@ class CFPForm(forms.Form):
     )
 
     agreement = forms.BooleanField(
-        label=_('I agree with Code of Conduct'),
         required=True,
     )
 
