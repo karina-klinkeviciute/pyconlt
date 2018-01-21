@@ -159,6 +159,8 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'var', 'www', 'media')
 
 SITE_ID = 1
 
+# ckeditor settings
+
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
@@ -178,6 +180,8 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
+# allauth settings
+
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -185,3 +189,15 @@ AUTHENTICATION_BACKENDS = (
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+
+# SOCIALACCOUNT_PROVIDERS = {
+#     'github': {
+#         'SCOPE': [
+#             'user',
+#             'repo',
+#             'read:org',
+#         ],
+#     }
+# }
