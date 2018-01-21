@@ -1,16 +1,36 @@
 {% extends "pyconlt/base.html" %}
-{% load material_form %}
 {% load i18n %}
+{% load material_form %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        {# Hacks to make form render #}
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+    </script>
+{% endblock %}
 
 {% block content %}
     {% if user.is_authenticated %}
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {% form form=form %}{% endform %}
+            {% form form=form %}
+                {% part form.agreement %}
+                <div class="checkbox-field col s12 required" id="id_agreement_container">
+                    <input class="filled-in " id="id_agreement" name="agreement" type="checkbox" />
+                    <label for="id_agreement">
+                        {% blocktrans %}
+                        I agree with <a href="/coc">Code of Conduct</a>
+                        {% endblocktrans %}
+                    </label>
+                </div>
+                {% endpart %}
+            {% endform %}
             <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button>
         </form>
     {% else %}
-        {% trans "You need to SignIn to submit proposal" %}
+        {% trans "You need to Sign in to submit proposal" %}
     {% endif %}
 
 {% endblock content %}
