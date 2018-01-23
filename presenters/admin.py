@@ -3,10 +3,10 @@ from presenters.models.presenter import Presenter
 
 
 class PresenterAdmin(admin.ModelAdmin):
-    list_display = ('name', )
+    list_display = ('name', 'active')
     fieldsets = (
         (None, {
-            'fields': ('user',), 
+            'fields': ('user', 'active'), 
         }),
         ('Personal Info', {
             'fields': ('name', 'image', 'bio', 'expertise')

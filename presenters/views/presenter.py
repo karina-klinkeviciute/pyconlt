@@ -49,4 +49,4 @@ class PresentersView(ListView):
         will stay on top. Just a temporary measure.
         :return: ordered queryset
         """
-        return super().get_queryset().order_by('id')
+        return super().get_queryset().filter(active=True).order_by('id')
