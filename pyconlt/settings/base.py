@@ -197,6 +197,8 @@ ACCOUNT_ALLOW_REGISTRATION = True
 ACCOUNT_ADAPTER = 'pyconlt.presenters.adapters.AccountAdapter'
 SOCIALACCOUNT_ADAPTER = 'pyconlt.presenters.adapters.SocialAccountAdapter'
 
+AUTH_USER_MODEL = 'auth.User'
+
 # SOCIALACCOUNT_PROVIDERS = {
 #     'github': {
 #         'SCOPE': [
