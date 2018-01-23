@@ -1,11 +1,34 @@
 # -*- coding: utf-8 -*-
-from django.views.generic import DetailView, ListView, UpdateView
+from django.views.generic import DetailView, ListView
+from django.views.generic.edit import UpdateView
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.urls import reverse_lazy
+
 from presenters.models.presenter import Presenter
+from presenters.forms import PresenterInfoForm
 
 
+@method_decorator(login_required, name='dispatch')
 class PresenterUpdateView(UpdateView):
     model = Presenter
     template_name = 'presenters/presenter_update.html'
+    # TODO: Implement custom form
+    #form_class = PresenterInfoForm
+    personal_fields = ('name', 'image', 'bio', 'expertise')
+    social_fields = ('twitter_handle', 'linkedin_handle', 'github_handle')
+    fields = personal_fields + social_fields 
+
+    success_url = reverse_lazy('presenter_update')
+
+    def get_object(self):
+        try:
+            result = self.model.objects.get(user=self.request.user)
+        except self.model.DoesNotExist:
+            result = self.model(user=self.request.user)
+        finally:
+            return result
+
 
 
 class PresenterView(DetailView):
