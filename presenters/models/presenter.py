@@ -103,19 +103,13 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
         on_delete=models.SET_NULL
     )
 
+    active = models.BooleanField(
+        help_text=_('If active, it will appear on speakers page'),
+        default=False
+    )
+
     class Meta:
         app_label = 'presenters'
 
     def __str__(self):
         return self.name
-
-    def is_active(self):
-        """
-        This state should be computed.
-        Proposal - Presenter is active, if has at least one approved proposal 
-        """
-        from proposals.models.proposal import Proposal
-        proposals = Proposal.objects.filter(
-                presenter=self,
-                state=Proposal.PROPOSAL_ACCEPTED)
-        return len(proposals) > 0
