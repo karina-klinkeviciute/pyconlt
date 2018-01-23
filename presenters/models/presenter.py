@@ -7,8 +7,6 @@ from ckeditor.fields import RichTextField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from pyconlt.proposals.models.proposals import Proposal
-
 
 class SocialMixin(models.Model):
     """
@@ -118,6 +116,7 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
         This state should be computed.
         Proposal - Presenter is active, if has at least one approved proposal 
         """
+        from proposals.models.proposal import Proposal
         proposals = Proposal.objects.filter(
                 presenter=self,
                 state=Proposal.PROPOSAL_ACCEPTED)

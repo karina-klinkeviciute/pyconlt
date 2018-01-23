@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, UpdateView
 from presenters.models.presenter import Presenter
+
+
+class PresenterUpdateView(UpdateView):
+    model = Presenter
+    template_name = 'presenters/presenter_update.html'
 
 
 class PresenterView(DetailView):

@@ -22,8 +22,6 @@ from proposals.views.talks import TalksListView
 
 urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^accounts/profile/$',
-        TemplateView.as_view(template_name='account/profile.html')),
     url(r'^admin/', admin.site.urls),
     url(r'^talks/', TalksListView.as_view(), name='talks_list'),
     url(r'^', include('presenters.urls')),
