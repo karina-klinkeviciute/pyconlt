@@ -1,1 +1,22 @@
-{% extends "account/base.html" %}
+{% extends "pyconlt/base.html" %}
+{% load i18n %}
+{% load material_form %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        {# Hacks to make form render #}
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {% form form=form %}
+        {% endform %}
+        <button type="submit" name="_submit" class="btn">{% trans "Save" %}</button>
+    </form>
+
+{% endblock content %}
