@@ -193,6 +193,10 @@ ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 
+ACCOUNT_ALLOW_REGISTRATION = True
+ACCOUNT_ADAPTER = 'pyconlt.presenters.adapters.AccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'pyconlt.presenters.adapters.SocialAccountAdapter'
+
 # SOCIALACCOUNT_PROVIDERS = {
 #     'github': {
 #         'SCOPE': [
