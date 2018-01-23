@@ -13,11 +13,7 @@ from presenters.forms import PresenterInfoForm
 class PresenterUpdateView(UpdateView):
     model = Presenter
     template_name = 'presenters/presenter_update.html'
-    # TODO: Implement custom form
-    #form_class = PresenterInfoForm
-    personal_fields = ('name', 'image', 'bio', 'expertise')
-    social_fields = ('twitter_handle', 'linkedin_handle', 'github_handle')
-    fields = personal_fields + social_fields 
+    form_class = PresenterInfoForm
 
     success_url = reverse_lazy('presenter_update')
 
