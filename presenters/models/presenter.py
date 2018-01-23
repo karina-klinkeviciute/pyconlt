@@ -94,7 +94,7 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
     A class to combine conference presenter's info.
     """
 
-    user = models.ForeignKey(
+    user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
         null=True,
         blank=True,
