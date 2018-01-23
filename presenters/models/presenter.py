@@ -5,6 +5,8 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
+from pyconlt.proposals.models.proposals import Proposal
+
 
 class SocialMixin(models.Model):
     """
@@ -108,3 +110,13 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
 
     def __str__(self):
         return self.name
+
+    def is_active(self):
+        """
+        This state should be computed.
+        Proposal - Presenter is active, if has at least one approved proposal 
+        """
+        proposals = Proposal.objects.filter(
+                presenter=self,
+                state=Proposal.PROPOSAL_ACCEPTED)
+        return len(proposals) > 0
