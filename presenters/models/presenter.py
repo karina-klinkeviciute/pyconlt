@@ -4,6 +4,8 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 from pyconlt.proposals.models.proposals import Proposal
 
@@ -120,3 +122,10 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
                 presenter=self,
                 state=Proposal.PROPOSAL_ACCEPTED)
         return len(proposals) > 0
+
+
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Presenter.objects.create(user=instance)
