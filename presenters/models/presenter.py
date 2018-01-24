@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
@@ -94,13 +94,18 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
     A class to combine conference presenter's info.
     """
 
-    user = models.ForeignKey(
-        User,
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
         null=True,
         blank=True,
         help_text=_('If a presenter is also a user in the system, '
                     'we connect it that user'),
         on_delete=models.SET_NULL
+    )
+
+    active = models.BooleanField(
+        help_text=_('If active, it will appear on speakers page'),
+        default=False
     )
 
     class Meta:
