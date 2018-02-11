@@ -19,21 +19,21 @@ class SocialMixin(models.Model):
             max_length=15,
             null=True,
             blank=True,
-            help_text=_("Presenter's twitter handle")
+            help_text=_("Your twitter handle")
     )
 
     github_handle = models.CharField(
             max_length=39,
             null=True,
             blank=True,
-            help_text=_("Presenter's github handle")
+            help_text=_("Your github handle")
     )
 
     linkedin_handle = models.CharField(
             max_length=30,  # As of 2017
             null=True,
             blank=True,
-            help_text=_("Presenter's linkedin handle")
+            help_text=_("Your linkedin handle")
     )
 
     def has_linkedin(self):
@@ -60,18 +60,20 @@ class ProfileMixin(models.Model):
         max_length=200,
         null=True,
         blank=True,
-        help_text=_("Presenter's full "
-                    "name, if presenter is not connected to a user")
+        verbose_name=_('Full name'),
+        help_text=_("Full name to display in the list of speakers")
     )
     image = models.ImageField(
         blank=True,
         null=True,
-        help_text=_('A photo of a presenter')
+        help_text=_('Your photo')
     )
     bio = RichTextField(
         blank=True,
         null=True,
-        help_text=_('Short description about the presenter')
+        verbose_name=_('Short biography'),
+        help_text=_(
+            'Short description about yourself and your experience with Python')
     )
 
     expertise = ArrayField(
@@ -80,7 +82,7 @@ class ProfileMixin(models.Model):
             blank=True,
             null=True
         ),
-        help_text=_("Speaker's skills and areas of expertise"),
+        help_text=_("Your skills and areas of expertise"),
         blank=True,
         null=True
     )
