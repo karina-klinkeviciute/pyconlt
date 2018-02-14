@@ -8,9 +8,10 @@ django-ckeditor==5.3.1
 django-contact-form==1.4.2
 django-hvad==1.8.0
 django-js-asset==0.1.1
-django-menu==0.1.11
-django-tinymce==2.6.0
 django-material==1.1.0
+django-menu==0.1.11
+django-redis==4.8.0
+django-tinymce==2.6.0
 idna==2.6
 multilingual-flatpages==0.8.2
 oauthlib==2.0.6
@@ -21,6 +22,7 @@ python3-openid==3.1.0
 pytz==2017.3
 requests==2.18.4
 requests-oauthlib==0.8.0
+sorl-thumbnail==12.4.1
 urllib3==1.22
 whitenoise==3.3.1
 python-dotenv==0.7.1
