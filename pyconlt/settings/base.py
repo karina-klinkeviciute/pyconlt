@@ -214,7 +214,7 @@ LOGIN_REDIRECT_URL = 'presenter_update'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://dev/shm/redis.db",
+        "LOCATION": "dev/shm/redis.db",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
