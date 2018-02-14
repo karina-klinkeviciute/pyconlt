@@ -1,5 +1,6 @@
 {% extends "pyconlt/base.html" %}
 {% load static %}
+{% load thumbnail %}
 
 {% block head_title %}
     <title>Pycon LT | Speakers </title>
@@ -20,7 +21,10 @@
                     <h2 class="header">{{ presenter.name }}</h2>
                   </div>
                   <div class="center-align">
-                    <img class="presenter-photo" src="{{ presenter.image.url }}">
+                    {% thumbnail presenter.image "300" as im %}
+                    <img class="presenter-photo" src="{{ im.url }}">
+                      {% endthumbnail %}
+                  <img class="presenter-photo" src="{{ presenter.image.url }}">
                   </div>
                   <div class="center-align">
                         {% if presenter.has_twitter %}
