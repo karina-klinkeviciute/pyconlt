@@ -21,9 +21,9 @@
                     <h2 class="header">{{ presenter.name }}</h2>
                   </div>
                   <div class="center-align">
-                    {% thumbnail presenter.image "300" as im %}
-                    <img class="presenter-photo" src="{{ im.url }}">
-                      {% endthumbnail %}
+{#                    {% thumbnail presenter.image "300" as im %}#}
+{#                    <img class="presenter-photo" src="{{ im.url }}">#}
+{#                      {% endthumbnail %}#}
                   <img class="presenter-photo" src="{{ presenter.image.url }}">
                   </div>
                   <div class="center-align">

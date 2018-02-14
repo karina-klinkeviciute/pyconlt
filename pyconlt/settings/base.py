@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'menu',
     'material',
     'material.frontend',
-    'sorl.thumbnail',
+    # 'sorl.thumbnail',
 
     # allauth
     'allauth',
@@ -211,12 +211,12 @@ LOGIN_REDIRECT_URL = 'presenter_update'
 #     }
 # }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "dev/shm/redis.db",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "dev/shm/redis.db",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
