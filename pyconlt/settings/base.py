@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'material',
     'material.frontend',
     # 'sorl.thumbnail',
+    'easy_thumbnails',
+
 
     # allauth
     'allauth',
