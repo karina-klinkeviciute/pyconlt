@@ -59,3 +59,12 @@ class Slot(models.Model):
         Track,
         help_text=_("The track to which the slot belongs")
     )
+
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        """
+        Returns info about itself and associated talk.
+        """
+        return "{} {}".format(self.name, self.talk.title)
