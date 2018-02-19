@@ -47,11 +47,13 @@ class Slot(models.Model):
         on_delete=models.SET_NULL,
         help_text=_("A slot can be nested inside another slot. "
                     "If this is the case, connect it here"),
-        null=True
+        null=True,
+        blank=True
     )
     talk = models.OneToOneField(
         Proposal,
         null=True,
+        blank=True,
         help_text=_("If it's a slot for a talk, select your talk here."),
         on_delete=models.SET_NULL
     )
