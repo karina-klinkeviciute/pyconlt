@@ -19,8 +19,8 @@ class Slot(models.Model):
         SINGLE_TRACK = 1
         ALL_TRACKS = 2
         SPAN_CHOICES = (
-            (SINGLE_TRACK, _("Slot spans only one track")),
-            (ALL_TRACKS, _("Slot spans all tracks"))
+            (SINGLE_TRACK, _("Single track")),
+            (ALL_TRACKS, _("All tracks"))
         )
 
     track_span = models.IntegerField(
