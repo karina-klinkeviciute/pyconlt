@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'menu',
     'material',
     'material.frontend',
-    # 'sorl.thumbnail',
     'easy_thumbnails',
 
 
@@ -61,7 +60,8 @@ INSTALLED_APPS = [
     # project apps
     'info',
     'presenters',
-    'proposals'
+    'proposals',
+    'program'
 ]
 
 MIDDLEWARE = [
