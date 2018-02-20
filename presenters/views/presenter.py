@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import random
+
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import UpdateView
 from django.contrib.auth.decorators import login_required
@@ -49,4 +51,6 @@ class PresentersView(ListView):
         will stay on top. Just a temporary measure.
         :return: ordered queryset
         """
-        return super().get_queryset().filter(active=True).order_by('id')
+        queryset = super().get_queryset().filter(active=True).order_by('?')
+
+        return queryset
