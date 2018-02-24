@@ -1,0 +1,33 @@
+version: '2'
+
+volumes:
+  postgres_data_local: {}
+  postgres_backup_local: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/django/Dockerfile
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    environment:
+      - POSTGRES_USER=pyconlt
+      - POSTGRES_PASSWORD=pyconlt
+      - USE_DOCKER=yes
+    ports:
+      - "8999:8999"
+    command: /start.sh
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/postgres/Dockerfile
+    volumes:
+      - postgres_data_local:/var/lib/postgresql/data
+      - postgres_backup_local:/backups
+    environment:
+      - POSTGRES_USER=pyconlt
+      - POSTGRES_PASSWORD=pyconlt
