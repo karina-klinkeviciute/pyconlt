@@ -14,6 +14,7 @@ services:
     volumes:
       - .:/app
     environment:
+      - DJANGO_SETTINGS_MODULE=pyconlt.settings.docker
       - POSTGRES_USER=pyconlt
       - POSTGRES_PASSWORD=pyconlt
       - USE_DOCKER=yes
