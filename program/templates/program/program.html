@@ -1,0 +1,94 @@
+{% extends "pyconlt/base.html" %}
+{% load static %}
+
+{% block head_title %}
+    <title>Pycon LT | Program </title>
+{% endblock head_title %}
+
+{% block content %}
+
+      <h1> PyConLt 2018 Agenda</h1>
+        {% for slot in slots %}
+        <div class="row card-panel hoverable">
+            {{ slot.name }}<br>
+
+            {% for subslot in slot.slot_set.all %}
+                {% if subslot.talk %}
+                    <div class="teal lighten-3">
+                        {{ subslot.start_time|time }}.
+                        {{ subslot.talk.presenter.name }}.
+                        {{ subslot.talk.title }}
+                    </div>
+                {% else %}
+                        {% if subslot.track_span == 1 %}
+                            <div class="col s12 m12 l6">
+                        {% else %}
+                            <div class="col s12 m12 l12">
+                        {% endif %}
+                    {{ subslot.name }} <br>
+                    {% for talkslot in subslot.slot_set.all %}
+                        <div class="teal lighten-3">
+                         {{ talkslot.start_time|time }}.
+                         {{ talkslot.talk.presenter.name }}.
+                         {{ talkslot.talk.title }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+        {% endfor %}
+
+{#      </div>#}
+{#      <div class="row">#}
+{#      	<div class="col s12">#}
+{##}
+{##}
+{#            <div class="program-entry"> 9:30 Opening </div>#}
+{#            <div class="program-entry">9:30 <a href="pycon.lt">Mike Muller</a>. <a href="lknk"> Paskaitos pavadinimas</a>((Uzvedus pele ant pavardes ar paskaitos galetu issokt aprasymas.Gal siek tiek geriau nei nuoroda. Gal tiktu modals? http://materializecss.com/modals.html</td></tr>#}
+{##}
+{##}
+{#      	</div>#}
+{#         <div class="col l6 m12 s12">#}
+{##}
+{#            <table class="bordered">#}
+{#               <!-- <thead><th><td>asd</td></th></thead> -->#}
+{#               <tbody>#}
+{#                  <tr><td><h3>Pydata (1st Hall)</h3></td></tr>#}
+{#                  <tr><td>10:10 Darius Barusauskas. Using Python to Win Kaggle Competitions</td></tr>#}
+{#                  <tr><td>10:40 Sebastian Naubauer. Data Science Devops</td></tr>#}
+{#                  <tr><td>11:10 Bhargav. Natural Language With Python</td></tr>#}
+{#                  <tr><td>11:40 Lunch.</td></tr>#}
+{#                  <tr><td>12:40 Egidijus Pilypas. ?</td></tr>#}
+{#                  <tr><td>13:30 Evaldas Kazlauskis. Natural language stuff.</td></tr>#}
+{#                  <tr><td>14:30 Pietro Batiston. Pyconomic: leverage pandas.</td></tr>#}
+{#               </tbody>#}
+{#            </table>#}
+{#         </div>#}
+{#         <div class="col l6 m12 s12">#}
+{#            <table class="bordered">#}
+{#               <tbody>#}
+{#               	  <tr><td><h3>Python (2nd Hall)</h3></td></tr>#}
+{#                  <tr><td>10:10 Petras Zdanavicius. Something.. Something.. Something.. Something..</td></tr>#}
+{#                  <tr><td>10:40 Angela Branaes. Building Responsive Apps with Flask and React</td></tr>#}
+{#                  <tr><td>11:10 Mantas Zimnickas. Somekind of lecture about lots iof interesting things</td></tr>#}
+{#                  <tr><td>11:40 Lunch.</td></tr>#}
+{#                  <tr><td>12:40 Andra Brodul. Packaging Python and stuff.</td></tr>#}
+{#                  <tr><td>13:30 Some name. Pypy: making things go faster</td></tr>#}
+{#                  <tr><td>14:30 Karina Klinkeviciute. ???</td></tr>#}
+{#               </tbody>#}
+{#            </table>#}
+{#         </div>#}
+{#         	<div class="col s12">#}
+{#         	<h3> All kind of workshops </h3>#}
+{#      		<table class="bordered"><tbody>#}
+{#                 <tr><td>13:00 <a href="pycon.lt">Bhargav</a>. <a href="link"> Bhargav. Text Analysis With Python.</a> Register</td><td>Place</td></tr>#}
+{#                 <tr><td>13:00 <a href="pycon.lt">Jurgis Pralgauskis</a>. <a href="link"> Bhargav.</a> Register</td><td>Place</td></tr>#}
+{#              </tbody>#}
+{#          </table>#}
+{##}
+{#      	</div>#}
+{#      </div>#}
+
+{% endblock content %}

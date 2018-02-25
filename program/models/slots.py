@@ -59,7 +59,9 @@ class Slot(models.Model):
     )
     track = models.ForeignKey(
         Track,
-        help_text=_("The track to which the slot belongs")
+        help_text=_("The track to which the slot belongs"),
+        null=True,
+        blank=True
     )
 
     def __str__(self):
