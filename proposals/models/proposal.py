@@ -85,4 +85,4 @@ class Proposal(models.Model):
                 )
 
     def __str__(self):
-        return '<{} by {}>'.format(self.title, self.presenter.name)
+        return self.title
