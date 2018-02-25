@@ -14,7 +14,7 @@
 
             {% for subslot in slot.slot_set.all %}
                 {% if subslot.talk %}
-                    <div class="teal lighten-3">
+                    <div class="teal lighten-3 card-panel hoverable">
                         {{ subslot.start_time|time }}.
                         {{ subslot.talk.presenter.name }}.
                         {{ subslot.talk.title }}
@@ -27,7 +27,7 @@
                         {% endif %}
                     {{ subslot.name }} <br>
                     {% for talkslot in subslot.slot_set.all %}
-                        <div class="teal lighten-3">
+                        <div class="teal lighten-3 card-panel hoverable">
                          {{ talkslot.start_time|time }}.
                          {{ talkslot.talk.presenter.name }}.
                          {{ talkslot.talk.title }}
