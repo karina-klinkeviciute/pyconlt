@@ -4,40 +4,85 @@
 {% block head_title %}
     <title>Pycon LT | Program </title>
 {% endblock head_title %}
+{% block head_links %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'program/css/program.css' %}">
+{% endblock head_links %}
 
 {% block content %}
 
-      <h1> PyConLt 2018 Agenda</h1>
-        {% for slot in slots %}
-        <div class="row card-panel hoverable">
-            {{ slot.name }}<br>
 
-            {% for subslot in slot.slot_set.all %}
-                {% if subslot.talk %}
-                    <div class="teal lighten-3 card-panel hoverable">
-                        {{ subslot.start_time|time }}.
-                        {{ subslot.talk.presenter.name }}.
-                        {{ subslot.talk.title }}
-                    </div>
-                {% else %}
-                        {% if subslot.track_span == 1 %}
-                            <div class="col s12 m12 l6">
+{# Template currently adapted to 2 tracks. For more tracks, adjust col classes. #}
+    <div class="row">
+    {{ tracks.count }}
+
+
+        {% for track in tracks %}
+            <div class="col s12 m12 l6">
+            <div class="slot light-green">
+                {{ track.track.name }} ({{ track.track.room }})
+            </div>
+                {% for slot in track.slots %}
+                    <div class="slot light-green lighten-3">
+                        {{ slot.start_time|time:'H:i' }}.
+                        {% if slot.talk.title %}
+                            {{ slot.talk.title }}
                         {% else %}
-                            <div class="col s12 m12 l12">
+                            {{ slot.name }}
                         {% endif %}
-                    {{ subslot.name }} <br>
-                    {% for talkslot in subslot.slot_set.all|order_by:'start_time' %}
-                        <div class="teal lighten-3 card-panel hoverable">
-                         {{ talkslot.start_time|time }}.
-                         {{ talkslot.talk.presenter.name }}.
-                         {{ talkslot.talk.title }}
-                        </div>
-                    {% endfor %}
                     </div>
-                {% endif %}
-            {% endfor %}
-
-        </div>
+                {% endfor %}
+            </div>
         {% endfor %}
+
+    </div>
+
+
+{#    #}
+{##}
+{#      <h1> PyConLt 2018 Agenda</h1>#}
+{#        <div class="slot row darken-2">#}
+{#            <div class="slot col s12 m12 l6 light-blue lighten-3">PyData</div>#}
+{#            <div class="slot col s12 m12 l6 light-green lighten-3">General</div>#}
+{#        </div>#}
+{#        <div class="slot row darken-2">#}
+{#            <div class="slot col s12 m12 l12 light-blue lighten-3">test1</div>#}
+{#            <div class="slot col s12 m12 light-green lighten-3 hide-on-large-only">test2</div>#}
+{#        </div>#}
+{#        {% for slot in slots %}#}
+{#        <div class="slot row light-blue lighten-4">#}
+{##}
+{#            {% for subslot in slot.slot_set.all %}#}
+{#                {% if subslot.talk %}#}
+{#                    <div class="talk light-blue lighten-4">#}
+{#                        {{ subslot.start_time|time:'H:i' }}.#}
+{#                        {{ subslot.talk.presenter.name }}.#}
+{#                        {{ subslot.talk.title }}#}
+{#                    </div>#}
+{#                {% else %}#}
+{#                        {% if subslot.track_span == 1 %}#}
+{#                            <div class="slot col s12 m12 l6">#}
+{#                        {% else %}#}
+{#                            <div class="slot col s12 m12 l12">#}
+{#                        {% endif %}#}
+{#                    {% for talkslot in subslot.slot_set.all|order_by:'start_time' %}#}
+{#                        {% if talkslot.track.id == 2 %}#}
+{#                        <div class="talk light-blue lighten-4">#}
+{#                        {% else %}#}
+{#                        <div class="talk light-green lighten-4">#}
+{#                        {% endif %}#}
+{#                         {{ talkslot.start_time|time:'H:i' }}.#}
+{#                         {{ talkslot.talk.presenter.name }}.#}
+{#                         {{ talkslot.talk.title }}#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                    </div>#}
+{#                {% endif %}#}
+{#            {% empty %}#}
+{#                {{ slot.start_time|time:'H:i' }} {{ slot.name }}<br>#}
+{#            {% endfor %}#}
+{##}
+{#        </div>#}
+{#        {% endfor %}#}
 
 {% endblock content %}

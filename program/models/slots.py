@@ -71,4 +71,7 @@ class Slot(models.Model):
         """
         Returns info about itself and associated talk.
         """
-        return "{} {}".format(self.name, self.talk.title)
+        if self.talk:
+            return "{} {}".format(self.name, self.talk.title)
+        else:
+            return "{}".format(self.name)

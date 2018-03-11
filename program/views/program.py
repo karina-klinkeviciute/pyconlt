@@ -1,25 +1,38 @@
 # -*- coding: utf-8 -*-
+from django.db.models import Q
 from django.views.generic import TemplateView, ListView
 
-from program.models import Slot
+from program.models import Slot, Track
 
 
 class ProgramView(ListView):
     """
     A view for a program of a conference.
     """
-    model = Slot
+    model = Track
     template_name = 'program/program.html'
-    context_object_name = 'slots'
 
-    def get_queryset(self):
+    def get_context_data(self, **kwargs):
         """
-        Return a queryset for slots.
-        :return: QuerySet
+        Overrides context_data to help organize data by tracks
         """
-        queryset = Slot.objects.filter(parent_slot=None).order_by('start_time')
-        # slots = list(queryset)
-        # for slot in slots:
-        #     children = list(slot.slot_set())
-        #     child = children[0]
-        return queryset
+        context_data = super().get_context_data()
+        tracks = Track.objects.all()
+
+        # slots spanning all tracks, like introduction or lunch break
+        slots_q = Q(track_span=Slot.SpanTypes.ALL_TRACKS)
+
+        tracks_data = list()
+
+        for track in tracks:
+            track_slots_q = Q(track=track)
+
+            track_slots = Slot.objects.filter(
+                slots_q | track_slots_q
+            ).order_by('start_time')
+
+            tracks_data.append({"track": track, "slots": track_slots})
+
+        context_data["tracks"] = tracks_data
+
+        return context_data

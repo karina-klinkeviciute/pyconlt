@@ -26,4 +26,4 @@ class TalksListView(ListView):
         :return: ordered queryset
         """
         return super().get_queryset().filter(
-            state=Proposal.PROPOSAL_ACCEPTED).order_by('id')
+            state=Proposal.PROPOSAL_ACCEPTED).order_by('?')
