@@ -28,6 +28,12 @@ class Slot(models.Model):
         help_text=_("Does the slot span one track or all tracks "
                     "(like keynote talks and breaks)")
     )
+    track = models.ForeignKey(
+        Track,
+        help_text=_("The track to which the slot belongs"),
+        null=True,
+        blank=True
+    )
     name = models.CharField(
         max_length=255,
         blank=True,
@@ -56,12 +62,6 @@ class Slot(models.Model):
         blank=True,
         help_text=_("If it's a slot for a talk, select your talk here."),
         on_delete=models.SET_NULL
-    )
-    track = models.ForeignKey(
-        Track,
-        help_text=_("The track to which the slot belongs"),
-        null=True,
-        blank=True
     )
 
     def __str__(self):
