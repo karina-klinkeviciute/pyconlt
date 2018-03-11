@@ -21,12 +21,19 @@
                 {{ track.track.name }} ({{ track.track.room }})
             </div>
                 {% for slot in track.slots %}
-                    <div class="slot light-green lighten-3">
-                        {{ slot.start_time|time:'H:i' }}.
+
                         {% if slot.talk.title %}
-                            {{ slot.talk.presenter.name }}.
-                            {{ slot.talk.title }}
+                            <div class="slot light-green lighten-2">
+                            {{ slot.start_time|time:'H:i' }}.
+                            <a href="/speakers/#speaker{{ slot.talk.presenter.id }}">
+                                {{ slot.talk.presenter.name }}.
+                            </a>
+                            <a href="/talks/#talk{{ slot.talk.id }}">
+                                {{ slot.talk.title }}
+                            </a>
                         {% else %}
+                            <div class="slot light-green lighten-3">
+                            {{ slot.start_time|time:'H:i' }}.
                             {{ slot.name }}
                         {% endif %}
                     </div>
