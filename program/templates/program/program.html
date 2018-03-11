@@ -24,6 +24,7 @@
                     <div class="slot light-green lighten-3">
                         {{ slot.start_time|time:'H:i' }}.
                         {% if slot.talk.title %}
+                            {{ slot.talk.presenter.name }}.
                             {{ slot.talk.title }}
                         {% else %}
                             {{ slot.name }}
