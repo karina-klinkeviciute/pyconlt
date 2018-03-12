@@ -24,13 +24,11 @@
 <body>
 
 <header class="header">
-    <div class="container">
         <div id="branding">
          <div id="branding-inner">
              <img class="responsive-img" src="{% static 'info/img/pycon_header.jpg' %}">
          </div>
         </div>
-    </div>
 
 <div class="row">
     <nav id="main_nav" class="light-green darken-4">
@@ -41,7 +39,7 @@
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu %}
                   {% for item in menuitems %}
-                      <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                      <li ><a class="main_menu" href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="side-nav" id="mobile-demo">
