@@ -35,7 +35,7 @@
                         {{ slot.start_time|time:'H:i' }}.
                         <a href="/speakers/#speaker{{ slot.talk.presenter.id }}">
                             {{ slot.talk.presenter.name }}.
-                        </a>
+                        </a><br>
                         <a href="/talks/#talk{{ slot.talk.id }}">
                             {{ slot.talk.title }}
                         </a>
@@ -44,6 +44,7 @@
                     <div class="slot">
                         {{ slot.start_time|time:'H:i' }}.
                         {{ slot.name }}
+                        <br><br>
                     </div>
                 {% endif %}
             <hr>
