@@ -1,7 +1,10 @@
 .slot {
     margin: 0 0 1px 0;
-    padding: 0 2px 0 2px;
+    padding: 0 10px 0 10px;
     }
 .program {
     font-size: 0.8em;
+}
+.track-name {
+    font-size: 1.2em;
 }

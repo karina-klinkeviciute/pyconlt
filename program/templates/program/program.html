@@ -16,8 +16,8 @@
     <div class="row hide-on-med-and-down program">
         {% for track in tracks %}
 
-            <div class="col s12 m12 l6">
-                    {{ track.track.name }} ({{ track.track.room }})
+            <div class="col s12 m12 l6 track-name">
+                 {{ track.track.name }} ({{ track.track.room }})
             <hr>
             </div>
         {% endfor %}
@@ -44,7 +44,9 @@
                     <div class="slot">
                         {{ slot.start_time|time:'H:i' }}.
                         {{ slot.name }}
+                        {% if slot.track_span == 1 %}
                         <br><br>
+                        {% endif %}
                     </div>
                 {% endif %}
             <hr>
@@ -59,7 +61,7 @@
         {% for track in tracks %}
             <div class="col s12 m12 l6">
             <div class="slot">
-               <b> {{ track.track.name }} ({{ track.track.room }})</b>
+                <span class="track-name">{{ track.track.name }} ({{ track.track.room }})</span>
                 <hr>
             </div>
                 {% for slot in track.slots %}
