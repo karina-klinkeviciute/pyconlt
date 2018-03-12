@@ -35,4 +35,8 @@ class ProgramView(ListView):
 
         context_data["tracks"] = tracks_data
 
+        slots = Slot.objects.all().order_by('start_time', 'track')
+
+        context_data["slots"] = slots
+
         return context_data

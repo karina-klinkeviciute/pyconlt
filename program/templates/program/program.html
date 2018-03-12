@@ -11,19 +11,60 @@
 
 {% block content %}
 
+    {# Template currently adapted to 2 tracks. For more tracks, adjust col classes. #}
+{#    For desktop #}
+    <div class="row hide-on-med-and-down">
+        {% for track in tracks %}
 
-{# Template currently adapted to 2 tracks. For more tracks, adjust col classes. #}
-    <div class="row">
+            <div class="col s12 m12 l6">
+                    {{ track.track.name }} ({{ track.track.room }})
+            <hr>
+            </div>
+        {% endfor %}
+
+        {% for slot in slots %}
+
+            {% if slot.track_span == 2 %}
+                <div class="col s12 m12 l12">
+            {% else  %}
+                <div class="col s12 m12 l6">
+            {% endif %}
+
+                {% if slot.talk.title %}
+                    <div class="slot">
+                        {{ slot.start_time|time:'H:i' }}.
+                        <a href="/speakers/#speaker{{ slot.talk.presenter.id }}">
+                            {{ slot.talk.presenter.name }}.
+                        </a>
+                        <a href="/talks/#talk{{ slot.talk.id }}">
+                            {{ slot.talk.title }}
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="slot">
+                        {{ slot.start_time|time:'H:i' }}.
+                        {{ slot.name }}
+                    </div>
+                {% endif %}
+            <hr>
+        </div>
+
+        {% endfor %}
+    </div>
+
+{#  for mobile #}
+    <div class="row hide-on-large-only">
 
         {% for track in tracks %}
             <div class="col s12 m12 l6">
-            <div class="slot light-green darken-1">
-                {{ track.track.name }} ({{ track.track.room }})
+            <div class="slot">
+               <b> {{ track.track.name }} ({{ track.track.room }})</b>
+                <hr>
             </div>
                 {% for slot in track.slots %}
 
                         {% if slot.talk.title %}
-                            <div class="slot light-green lighten-2">
+                            <div class="slot">
                             {{ slot.start_time|time:'H:i' }}.
                             <a href="/speakers/#speaker{{ slot.talk.presenter.id }}">
                                 {{ slot.talk.presenter.name }}.
@@ -31,12 +72,14 @@
                             <a href="/talks/#talk{{ slot.talk.id }}">
                                 {{ slot.talk.title }}
                             </a>
+                            </div>
                         {% else %}
-                            <div class="slot light-green lighten-3">
+                            <div class="slot">
                             {{ slot.start_time|time:'H:i' }}.
                             {{ slot.name }}
+                            </div>
                         {% endif %}
-                    </div>
+                        <hr>
                 {% endfor %}
             </div>
         {% endfor %}
