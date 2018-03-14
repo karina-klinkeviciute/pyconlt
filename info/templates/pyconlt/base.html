@@ -31,6 +31,12 @@
         </div>
 
 <div class="row">
+    <ul id="about-dropdown2" class="dropdown-content">
+        {% load menubuilder %}{% menu about-dropdown %}
+          {% for item in menuitems %}
+              <li ><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+    </ul>
     <nav id="main_nav" class="light-green darken-4">
         <div class="container">
         <div class="cols s12">
@@ -39,7 +45,7 @@
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu %}
                   {% for item in menuitems %}
-                      <li ><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+                      <li><a href="{{ item.url }}" class="dropdown-button" data-activates="about-dropdown{{ forloop.counter }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="side-nav" id="mobile-demo">
@@ -78,6 +84,7 @@
     <script>
     $( document ).ready(function(){
         $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown({ hover: true });
     })
     </script>
     {% block extra_js %}
