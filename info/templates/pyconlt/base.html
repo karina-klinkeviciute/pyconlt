@@ -39,13 +39,13 @@
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu %}
                   {% for item in menuitems %}
-                      <li ><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                      <li ><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="side-nav" id="mobile-demo">
               {% load menubuilder %}{% menu main-menu %}
                   {% for item in menuitems %}
-                      <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+                      <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             </div>
