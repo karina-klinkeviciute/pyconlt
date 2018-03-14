@@ -31,8 +31,14 @@
         </div>
 
 <div class="row">
-    <ul id="about-dropdown2" class="dropdown-content">
-        {% load menubuilder %}{% menu about-dropdown %}
+    <ul id="About-dropdown" class="dropdown-content">
+        {% load menubuilder %}{% menu About-dropdown %}
+          {% for item in menuitems %}
+              <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+    </ul>
+        <ul id="Schedule-dropdown" class="dropdown-content">
+        {% load menubuilder %}{% menu Schedule-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
@@ -45,7 +51,7 @@
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu %}
                   {% for item in menuitems %}
-                      <li><a href="{{ item.url }}" class="dropdown-button" data-activates="about-dropdown{{ forloop.counter }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+                      <li><a href="{{ item.url }}" class="dropdown-button light-green darken-4" data-activates="{{ item.title }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="side-nav" id="mobile-demo">
