@@ -34,7 +34,7 @@
     <ul id="about-dropdown2" class="dropdown-content">
         {% load menubuilder %}{% menu about-dropdown %}
           {% for item in menuitems %}
-              <li ><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+              <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
     </ul>
     <nav id="main_nav" class="light-green darken-4">
