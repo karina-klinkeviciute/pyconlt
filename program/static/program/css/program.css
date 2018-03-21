@@ -1,7 +1,15 @@
 .slot {
     margin: 0 0 1px 0;
     padding: 0 10px 0 10px;
+    max-height: 100px;
+    min-height: 100px;
     }
+
+.slot-empty{
+    max-height: 30px;
+    min-height: 30px;
+}
+
 .program {
     font-size: 0.8em;
 }

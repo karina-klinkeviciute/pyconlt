@@ -43,7 +43,7 @@
                         </a>
                     </div>
                 {% else %}
-                    <div class="slot">
+                    <div class="slot slot-empty">
                         {{ slot.start_time|time:'H:i' }}.
                         {{ slot.name }}
                         {% if slot.track_span == 1 %}
