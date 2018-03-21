@@ -33,7 +33,11 @@
             {% endif %}
 
                 {% if slot.talk.title %}
-                    <div class="slot">
+                    {% if slot.track_span == 1 %}
+                        <div class="slot">
+                    {% else %}
+                        <div class="slot slot-flexible">
+                     {% endif %}
                         {{ slot.start_time|time:'H:i' }}.
                         <a href="/speakers/#speaker{{ slot.talk.presenter.id }}">
                             {{ slot.talk.presenter.name }}.

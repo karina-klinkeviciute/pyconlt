@@ -9,6 +9,10 @@
     max-height: 30px;
     min-height: 30px;
 }
+.slot-flexible{
+    max-height: none;
+    min-height: 30px;
+}
 
 .program {
     font-size: 0.8em;
