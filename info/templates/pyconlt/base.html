@@ -31,13 +31,13 @@
         </div>
 
 <div class="row">
-    <ul id="About-dropdown" class="dropdown-content">
+    <ul id="About-dropdown" class="dropdown-content" style="min-width: 200px !important">
         {% load menubuilder %}{% menu About-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
     </ul>
-        <ul id="Schedule-dropdown" class="dropdown-content">
+        <ul id="Schedule-dropdown" class="dropdown-content" style="min-width: 200px !important">
         {% load menubuilder %}{% menu Schedule-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
