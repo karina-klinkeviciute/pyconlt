@@ -17,7 +17,7 @@ class ProgramView(ListView):
         Overrides context_data to help organize data by tracks
         """
         context_data = super().get_context_data()
-        tracks = Track.objects.all()
+        tracks = Track.objects.all().order_by('id')
 
         # slots spanning all tracks, like introduction or lunch break
         slots_q = Q(track_span=Slot.SpanTypes.ALL_TRACKS)
