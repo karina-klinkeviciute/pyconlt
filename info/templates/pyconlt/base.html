@@ -51,7 +51,7 @@
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu %}
                   {% for item in menuitems %}
-                      <li><a href="{{ item.url }}" class="dropdown-button light-green darken-4" data-activates="{{ item.title }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+                      <li><a href="{{ item.url }}" class="dropdown-button light-green darken-4" data-activates="{{ item.title }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}{% if item.title == 'Register' %} class='orange darken-4'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="side-nav" id="mobile-demo">
