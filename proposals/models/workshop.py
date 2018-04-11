@@ -2,6 +2,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from presenters.models import Presenter
+
 
 class Workshop(models.Model):
     """
@@ -27,4 +29,8 @@ class Workshop(models.Model):
     )
     prerequisites = models.TextField(
         help_text='What you should already know before coming to this workshop'
+    )
+    coach = models.ForeignKey(
+        Presenter,
+        help_text='A coach of a workshop'
     )
