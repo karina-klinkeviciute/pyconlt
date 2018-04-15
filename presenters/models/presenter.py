@@ -5,6 +5,8 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
+from conference.mixins.event_many_to_many import EventMTMMixin
+
 
 class SocialMixin(models.Model):
     """
@@ -91,7 +93,7 @@ class ProfileMixin(models.Model):
         abstract = True
 
 
-class Presenter(ProfileMixin, SocialMixin, models.Model):
+class Presenter(EventMTMMixin, ProfileMixin, SocialMixin, models.Model):
     """
     A class to combine conference presenter's info.
     """
