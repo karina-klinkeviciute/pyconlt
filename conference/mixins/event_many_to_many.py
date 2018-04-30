@@ -19,6 +19,5 @@ class EventMTMMixin:
         Event,
         help_text="Event to which this belongs. e.g. PyCon 2018.",
         blank=True,
-        null=True,
-        on_delete=models.SET_NULL
+        null=True
     )

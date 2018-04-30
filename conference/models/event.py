@@ -12,6 +12,7 @@ class Event(models.Model):
         help_text=_("A name of the event e.g. PyConLT 2019")
     )
     url = models.CharField(
+        max_length=255,
         help_text=_("The url path for the main page of the conference. "
                     "e.g. '2018'")
     )
