@@ -11,7 +11,7 @@ class Workshop(models.Model):
     """
     title = models.CharField(
         max_length=255,
-        help_text=_('Workshop title'),
+        help_text=_('Workshop title')
     )
     abstract = models.TextField(
         help_text=_('Describe shortly what this course is about.')
