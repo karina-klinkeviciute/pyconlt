@@ -13,7 +13,7 @@ class Event(models.Model):
     )
     url = models.CharField(
         help_text=_("The url path for the main page of the conference. "
-                    "e.g. '2018'"),
+                    "e.g. '2018'")
     )
     date = models.DateField(
         help_text=_("A date of the event or the date of the first day if "
