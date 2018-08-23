@@ -14,7 +14,6 @@ django-redis==4.8.0
 django-tinymce==2.6.0
 easy-thumbnails==2.5
 idna==2.6
-multilingual-flatpages==0.8.2
 oauthlib==2.0.6
 olefile==0.44
 Pillow==4.3.0
