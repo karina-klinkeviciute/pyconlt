@@ -6,6 +6,7 @@ conference.
 from django.db import models
 
 from conference.models import Event
+from conference.models.event import get_current_event
 
 
 class EventMTMMixin:
@@ -19,5 +20,6 @@ class EventMTMMixin:
         Event,
         help_text="Event to which this belongs. e.g. PyCon 2018.",
         blank=True,
-        null=True
+        null=True,
+        default=get_current_event
     )

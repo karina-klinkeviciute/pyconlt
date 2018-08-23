@@ -6,6 +6,7 @@ conference.
 from django.db import models
 
 from conference.models import Event
+from conference.models.event import get_current_event
 
 
 class EventFKMixin:
@@ -20,5 +21,6 @@ class EventFKMixin:
         help_text="Event to which this belongs. e.g. PyCon 2018.",
         blank=True,
         null=True,
-        on_delete=models.SET_NULL
+        on_delete=models.SET_NULL,
+        default=get_current_event
     )

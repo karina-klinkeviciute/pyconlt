@@ -10,7 +10,7 @@ from presenters.views.presenter import (
 
 urlpatterns = [
 
-    url(r'^speakers/(?P<pk>[0-9]+)/', PresenterView.as_view()),
+    path(r'^speakers/(?P<pk>[0-9]+)/', PresenterView.as_view()),
     url(r'^speakers/$', PresentersView.as_view()),
     url(r'^account/profile/$',
         PresenterUpdateView.as_view(),

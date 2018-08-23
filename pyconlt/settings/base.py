@@ -204,6 +204,8 @@ SOCIALACCOUNT_ADAPTER = 'presenters.adapters.SocialAccountAdapter'
 AUTH_USER_MODEL = 'auth.User'
 LOGIN_REDIRECT_URL = 'presenter_update'
 
+CURRENT_EVENT = '2019'
+
 # SOCIALACCOUNT_PROVIDERS = {
 #     'github': {
 #         'SCOPE': [

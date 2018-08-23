@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -11,7 +12,7 @@ class Event(models.Model):
         max_length=255,
         help_text=_("A name of the event e.g. PyConLT 2019")
     )
-    url = models.CharField(
+    year = models.CharField(
         max_length=255,
         help_text=_("The url path for the main page of the conference. "
                     "e.g. '2018'")
@@ -27,3 +28,14 @@ class Event(models.Model):
         blank=True,
         null=True
     )
+
+    def __str__(self):
+        """
+        Returns representation string for a model.
+        :return: representation string
+        """
+        return self.name
+
+
+def get_current_event():
+    return Event.objects.get_or_create(year=settings.CURRENT_EVENT)
