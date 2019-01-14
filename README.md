@@ -1,5 +1,3 @@
-# ABANDONED project, please look for alternatives, like Pretalx
-
 # pyconlt
 A repository for a page for PyCon Lithuania.
 
