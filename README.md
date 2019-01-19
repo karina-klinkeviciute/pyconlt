@@ -1,5 +1,5 @@
 # pyconlt
-A repository for a page for PyCon Lithuania.
+A repository for a website for PyCon Lithuania.
 
 Deployable on PythonAnywhere.
 
