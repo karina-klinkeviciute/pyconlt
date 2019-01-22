@@ -32,7 +32,8 @@ class Slot(models.Model):
         Track,
         help_text=_("The track to which the slot belongs"),
         null=True,
-        blank=True
+        blank=True,
+        on_delete=models.DO_NOTHING
     )
     name = models.CharField(
         max_length=255,
