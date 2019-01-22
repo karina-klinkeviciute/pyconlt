@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
 
+from conference.models import Event
 from presenters.models.presenter import Presenter
 from presenters.forms import PresenterInfoForm
 
@@ -54,3 +55,14 @@ class PresentersView(ListView):
         queryset = super().get_queryset().filter(active=True).order_by('?')
 
         return queryset
+
+    def get(self, request, *args, **kwargs):
+        """
+        Returns presenters for this year.
+        """
+        year = kwargs.get('year')
+        event = Event.objects.get(year=year)
+        presenters = self.get_queryset().filter(event=event)
+        self.object_list = presenters
+        context = self.get_context_data()
+        return self.render_to_response(context)
