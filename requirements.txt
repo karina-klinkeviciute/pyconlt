@@ -9,7 +9,8 @@ django-contact-form==1.4.2
 django-hvad==1.8.0
 django-js-asset==0.1.1
 django-material==1.3.0
-django-menu
+# django-menu
+-e git@github.com:rossp/django-menu.git
 django-redis==4.8.0
 django-tinymce==2.6.0
 easy-thumbnails==2.5
