@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
 from conference.mixins.event_many_to_many import EventMTMMixin
+from conference.models import Event
 
 
 class SocialMixin(models.Model):
