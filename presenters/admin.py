@@ -7,7 +7,6 @@ class EventInline(admin.TabularInline):
     Inline to show options to choose events.
     """
     model = Presenter.event.through
-    raw_id_fields = ("event",)
 
 
 class PresenterAdmin(admin.ModelAdmin):
@@ -23,6 +22,7 @@ class PresenterAdmin(admin.ModelAdmin):
             'fields': ('linkedin_handle', 'twitter_handle', 'github_handle')
         })
     )
+    inlines = (EventInline, )
 
 
 admin.site.register(Presenter, PresenterAdmin)
