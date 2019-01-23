@@ -10,6 +10,7 @@ from django.urls import reverse_lazy
 from conference.models import Event
 from presenters.models.presenter import Presenter
 from presenters.forms import PresenterInfoForm
+from pyconlt.settings.base import CURRENT_EVENT
 
 
 @method_decorator(login_required, name='dispatch')
@@ -60,7 +61,7 @@ class PresentersView(ListView):
         """
         Returns presenters for this year.
         """
-        year = kwargs.get('year')
+        year = kwargs.get('year', CURRENT_EVENT)
         event = Event.objects.get(year=year)
         presenters = self.get_queryset().filter(event=event)
         self.object_list = presenters
