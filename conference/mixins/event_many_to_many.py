@@ -13,8 +13,6 @@ class EventMTMMixin:
     """
     A mixin to add to a model which points to a conference.
     """
-    class Meta:
-        abstract = True
 
     event = models.ManyToManyField(
         Event,
@@ -22,3 +20,6 @@ class EventMTMMixin:
         blank=True,
         null=True
     )
+
+    class Meta:
+        abstract = True
