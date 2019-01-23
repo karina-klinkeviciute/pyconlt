@@ -1,5 +1,9 @@
 from django.contrib import admin
+
+from conference.models import Event
 from presenters.models.presenter import Presenter
+
+admin.site.register(Event)
 
 
 class EventInline(admin.TabularInline):
