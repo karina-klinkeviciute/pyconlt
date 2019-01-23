@@ -9,6 +9,7 @@ class EventInline(admin.TabularInline):
     Inline to show options to choose events.
     """
     model = Event
+    raw_id_fields = ("year",)
 
 
 class PresenterAdmin(admin.ModelAdmin):
