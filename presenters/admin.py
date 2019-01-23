@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from conference.models import Event
 from presenters.models.presenter import Presenter
 
 
@@ -8,8 +7,7 @@ class EventInline(admin.TabularInline):
     """
     Inline to show options to choose events.
     """
-    model = Event
-    raw_id_fields = ("year",)
+    model = Presenter.event.through
 
 
 class PresenterAdmin(admin.ModelAdmin):
