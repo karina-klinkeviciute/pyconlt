@@ -93,7 +93,7 @@ class ProfileMixin(models.Model):
         abstract = True
 
 
-class Presenter(EventMTMMixin, ProfileMixin, SocialMixin, models.Model):
+class Presenter(ProfileMixin, SocialMixin, models.Model):
     """
     A class to combine conference presenter's info.
     """
@@ -110,6 +110,13 @@ class Presenter(EventMTMMixin, ProfileMixin, SocialMixin, models.Model):
     active = models.BooleanField(
         help_text=_('If active, it will appear on speakers page'),
         default=False
+    )
+
+    event = models.ManyToManyField(
+        Event,
+        help_text="Event to which this belongs. e.g. PyCon 2018.",
+        blank=True,
+        null=True
     )
 
     class Meta:
