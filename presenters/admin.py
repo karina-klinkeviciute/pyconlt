@@ -27,7 +27,6 @@ class PresenterAdmin(admin.ModelAdmin):
     #     })
     # )
     # inlines = (EventInline, )
-    fields = '__all__'
 
 
 admin.site.register(Presenter, PresenterAdmin)
