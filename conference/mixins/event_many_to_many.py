@@ -20,6 +20,5 @@ class EventMTMMixin:
         Event,
         help_text="Event to which this belongs. e.g. PyCon 2018.",
         blank=True,
-        null=True,
-        default=get_current_event
+        null=True
     )
