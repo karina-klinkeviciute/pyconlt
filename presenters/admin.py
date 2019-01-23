@@ -6,7 +6,7 @@ class PresenterAdmin(admin.ModelAdmin):
     list_display = ('name', 'active')
     fieldsets = (
         (None, {
-            'fields': ('user', 'active'), 
+            'fields': ('user', 'active', 'event'),
         }),
         ('Personal Info', {
             'fields': ('name', 'image', 'bio', 'expertise')
