@@ -93,7 +93,7 @@ class ProfileMixin(models.Model):
         abstract = True
 
 
-class Presenter(EventMTMMixin, ProfileMixin, SocialMixin, models.Model):
+class Presenter(ProfileMixin, SocialMixin, models.Model):
     """
     A class to combine conference presenter's info.
     """
