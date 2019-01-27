@@ -12,7 +12,7 @@ from presenters.views.presenter import (
 urlpatterns = [
 
     url(r'^speakers/(?P<pk>[0-9]+)/', PresenterView.as_view()),
-    url(r'^speakers/(?P<year>[0-9]+)/$', PresentersView.as_view()),
+    url(r'^(?P<year>[0-9]+)/speakers/$', PresentersView.as_view()),
     url(r'^account/profile/$',
         PresenterUpdateView.as_view(),
         name='presenter_update'
