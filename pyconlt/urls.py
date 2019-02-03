@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.flatpages.views import flatpage
-from django.views.generic.base import TemplateView
 
 from proposals.views.talks import TalksListView
 
