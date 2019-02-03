@@ -16,14 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.flatpages.views import flatpage
-from django.views.generic.base import TemplateView
 
 from proposals.views.talks import TalksListView
 
 urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^talks/', TalksListView.as_view(), name='talks_list'),
+    url(r'^(?P<year>[0-9]+)/talks/',
+        TalksListView.as_view(),
+        name='talks_list'),
     url(r'^', include('presenters.urls')),
     url(r'^proposals/', include('proposals.urls')),
     url(r'^', include('program.urls')),
