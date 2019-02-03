@@ -7,3 +7,50 @@
 .dropdown-content li > a, .dropdown-content li > span {
 	color: white;
 }
+
+:root {
+    --primary-bg-color: #FFFFFF
+    --primary-text-color: #000000;
+    --secondary-bg-color: #33691e;
+}
+
+body, main {
+   background-color: var(--primary-bg-color);
+   color: var(--primary-text-color);
+}
+
+nav {
+   background-color: var(--secondary-bg-color);
+}
+
+.nav-wrapper {
+   background-color: var(--secondary-bg-color);
+}
+
+.secondary-content > .material-icons.css {
+   color: var(--secondary-bg-color);
+}
+
+.btn {
+   background-color: var(--secondary-bg-color);
+}
+
+.page-footer {
+   background-color: var(--secondary-bg-color);
+}
+
+.input-field {
+   color: var(--secondary-bg-color);
+}
+
+.input-field > .material-icons {
+   color: var(--secondary-bg-color);
+}
+
+.input-field > label {
+   color: var(--secondary-bg-color);
+}
+
+.dropdown-content > li > a {
+   color: var(--secondary-bg-color);
+}

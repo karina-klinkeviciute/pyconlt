@@ -13,7 +13,7 @@
         <title>Pycon LT</title>
     {% endblock head_title %}
     {% block head_links %}
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,16 +36,16 @@
     <ul id="About-dropdown" class="dropdown-content" style="min-width: 200px !important">
         {% load menubuilder %}{% menu About-dropdown %}
           {% for item in menuitems %}
-              <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+              <li><a href="{{ item.url }}"  title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
     </ul>
         <ul id="Schedule-dropdown" class="dropdown-content" style="min-width: 200px !important">
         {% load menubuilder %}{% menu Schedule-dropdown %}
           {% for item in menuitems %}
-              <li><a href="{{ item.url }}" class="light-green darken-4" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
+              <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
     </ul>
-    <nav id="main_nav" class="light-green darken-4">
+    <nav id="main_nav">
         <div class="container">
         <div class="cols s12">
           <div class="nav-wrapper">
@@ -53,10 +53,12 @@
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu-2019 %}
                   {% for item in menuitems %}
-                      <li><a href="{{ item.url }}" class="dropdown-button light-green darken-4" data-activates="{{ item.title }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}{% if item.title == 'Register' %} class='orange darken-4'{% endif %}>{{ item.title }}</a></li>
+                      <li><a href="{{ item.url }}" class="dropdown-button" data-activates="{{ item.title }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}{% if item.title == 'Register' %} class='orange darken-4'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="right hide-on-med-and-down">
+                <li><a class="light">{% trans "Light" %}</a></li>
+                <li><a class="dark">{% trans "Dark" %}</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
                 {% else %}
@@ -69,6 +71,8 @@
                       <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
                   <li><hr /></li>
+                <li><a class="light">{% trans "Light" %}</a></li>
+                <li><a class="dark">{% trans "Dark" %}</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
                 {% else %}
@@ -91,8 +95,8 @@
     </div>
 </main>
 
-<footer class="page-footer light-green darken-4">
-    <div class="container light-green darken-4">
+<footer class="page-footer">
+    <div class="container">
         <div class="row">
             <div>PyCon LT 2019</div>
             <div>Email: info@pycon.lt</div>
@@ -102,14 +106,39 @@
             <div>Website built using <a href="https://www.djangoproject.com/">Django</a> and <a href="http://materializecss.com/">Materializecss</a> and hosted on <a href="https://www.pythonanywhere.com/">PythonAnywhere</a></div>
         </div>
     </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2019, PyCon LT
+        </div>
+    </div>
 </footer>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
+    function setLightTheme() {
+        $(document.body).css("--primary-bg-color", "#ffffff");
+        $(document.body).css("--primary-text-color", "#000000");
+        $(document.body).css("--secondary-bg-color", "#33691e");
+        localStorage.setItem('theme', 'light');
+    }
+
+    function setDarkTheme() {
+        $(document.body).css("--primary-bg-color", "#000000");
+        $(document.body).css("--primary-text-color", "#ffffff");
+        $(document.body).css("--secondary-bg-color", "#001f1f");
+        localStorage.setItem('theme', 'dark');
+    }
+
     $( document ).ready(function(){
+        if (localStorage.getItem('theme') === 'dark') {
+            setDarkTheme();
+        }
+
         $(".button-collapse").sideNav();
         $(".dropdown-button").dropdown({ hover: true });
+        $(".light").click(setLightTheme);
+        $(".dark").click(setDarkTheme);
     })
     </script>
     {% block extra_js %}
