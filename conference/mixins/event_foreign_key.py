@@ -9,7 +9,7 @@ from conference.models import Event
 from conference.models.event import get_current_event
 
 
-class EventFKMixin:
+class EventFKMixin(models.Model):
     """
     A mixin to add to a model which points to a conference.
     """

@@ -3,10 +3,11 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from ckeditor.fields import RichTextField
 
+from conference.mixins.event_foreign_key import EventFKMixin
 from presenters.models import Presenter
 
 
-class Proposal(models.Model):
+class Proposal(EventFKMixin):
 
     PROPOSAL_PENDING = 0
     PROPOSAL_ACCEPTED = 1
