@@ -1,2 +1,2655 @@
-/home/karina/PycharmProjects/pyconlt/pyconlt
-[{"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "sites", "model": "site"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "flatpages", "model": "flatpage"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "presenters", "model": "presenter"}}, {"model": "sessions.session", "pk": "8jxv80ku9ms1bgrqgiyg4gdfqa0jqnyf", "fields": {"session_data": "Y2Q3MjNjMWFjNWY1YmEzZmUzNjRkY2Y1NTNjMjM4NjMyNGFkMDMzOTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyMmNjMWZjZDEwODJkZTZhZjI2NzZhZmZmMzQ0MWRjMGNiYTU4MDdlIn0=", "expire_date": "2017-12-13T15:27:35.983Z"}}, {"model": "sites.site", "pk": 1, "fields": {"domain": "2018.pycon.lt", "name": "2018.pycon.lt"}}, {"model": "flatpages.flatpage", "pk": 1, "fields": {"url": "/", "title": "About", "content": "<div>\r\n<h1>About</h1>\r\n\r\n<h1>Book your date!</h1>\r\n\r\n<p>May 5th, 2018<br />\r\nKaunas, Lithuania</p>\r\n\r\n<h2>PyData track!</h2>\r\n\r\n<p>We will have PyData (Python Data) track, as Python is becoming a standard language for data-related tasks.</p>\r\n\r\n<p>PyData is a community for developers and users of open source data tools. For more information about PyData please check https://pydata.org/</p>\r\n\r\n<h2>International speakers</h2>\r\n\r\n<p>International presenters. A half of presenters will be international, comming from UK, Germany, Italy, Slovenia and other countries. You can already see some of our speakers at <a href=\"https://pydata.org/\">www.pycon.lt/speakers</a>.</p>\r\n\r\n<h2>Free entrace</h2>\r\n\r\n<p>This is the last free Python conference in the region. Take your chance!</p>\r\n\r\n<h2>Venue</h2>\r\n\r\n<p>Conference will take place in a Kaunas a vibrant town in the middle of Lithuania.</p>\r\n\r\n<h2>Call for presentations</h2>\r\n\r\n<p>We would be happy to see you present. If you&#39;d like to submit your presentation, please send us an email: speakers@pycon.lt</p>\r\n\r\n<h2>Sponsorship opportunities</h2>\r\n\r\n<p>We offer several sponsorship packages, please check <a href=\"http://www.pycon.lt/sponsors\">www.pycon.lt/sponsors</a> page</p>\r\n\r\n<h2>For volunteers</h2>\r\n\r\n<p>This is a community event, organized a by community, your help is essential to build this conference.</p>\r\n\r\n<h2>Some links</h2>\r\n\r\n<ul>\r\n\t<li>PyConLT 2018 on facebook https://www.facebook.com/events/141977289721657/</li>\r\n\t<li>VilniusPy https://www.meetup.com/VilniusPy/</li>\r\n\t<li>PyData Kaunas https://www.meetup.com/PyData-Kaunas</li>\r\n\t<li>Python Lithuania on Google+ https://plus.google.com/communities/108018939812342947290</li>\r\n\t<li>Twitter https://twitter.com/pyconlt</li>\r\n</ul>\r\n</div>", "enable_comments": false, "template_name": "", "registration_required": false, "sites": [1]}}, {"model": "flatpages.flatpage", "pk": 2, "fields": {"url": "/coc/", "title": "Code of Conduct", "content": "<p>PyCon Lithuania aims to be a welcoming event where people meet in a friendly environment. Accordingly, all participants are expected to show respect and courtesy to other participants throughout the conference.</p>\r\n\r\n<p>To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at PyCon Lithuania 2018 event are required to conform to the following Code of Conduct. Organizers will enforce this code before and throughout the event (including related activities such as the social events).</p>\r\n\r\n<h3>In short</h3>\r\n\r\n<p>PyCon Lithuania is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion.</p>\r\n\r\n<p>We do not tolerate harassment of conference participants in any form.</p>\r\n\r\n<p>Sexual language and imagery are not appropriate for any conference venue, including talks, evening events, and the conference hotel.</p>\r\n\r\n<p>Be kind to others. Do not insult or put down other attendees. Behave professionally. Don&rsquo;t publish individual photographs of people without their consent. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon Lithuania.</p>\r\n\r\n<p>Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.</p>\r\n\r\n<h3>Longer version</h3>\r\n\r\n<p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>\r\n\r\n<p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>\r\n\r\n<p>Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon Lithuania.</p>\r\n\r\n<p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including a warning to the offender or expulsion from the conference with no refund.</p>\r\n\r\n<p>We expect participants to follow these rules at all conference venues, the conference hotel, and conference-related social events.</p>\r\n\r\n<h3>Reporting harassment</h3>\r\n\r\n<p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact the Conduct team immediately either in person, or by sending an email to NEED TO ENTER EMAIL HERE.</p>\r\n\r\n<p>If the matter is especially urgent, please notify PyCon Lithuania staff via email. We will provide more instant points of contact (Slack, phone) once we are closer to the conference.</p>\r\n\r\n<p>If you&rsquo;re currently afraid of your physical safety or are in danger, contact local law enforcement in Lithuania: Emergency (Fire, Medical, Police): 112</p>\r\n\r\n<p>The PyCon Lithuania staff is well informed on how to deal with the incident and how to further proceed with the situation. Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>", "enable_comments": false, "template_name": "", "registration_required": false, "sites": [1]}}, {"model": "flatpages.flatpage", "pk": 3, "fields": {"url": "/sponsors/", "title": "Sponsors", "content": "We are looking for sponsors for our event.", "enable_comments": false, "template_name": "", "registration_required": false, "sites": [1]}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can add user", "content_type": 4, "codename": "add_user"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can change user", "content_type": 4, "codename": "change_user"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can delete user", "content_type": 4, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add content type", "content_type": 5, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change content type", "content_type": 5, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete content type", "content_type": 5, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can add session", "content_type": 6, "codename": "add_session"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can change session", "content_type": 6, "codename": "change_session"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can delete session", "content_type": 6, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can add site", "content_type": 7, "codename": "add_site"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can change site", "content_type": 7, "codename": "change_site"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can delete site", "content_type": 7, "codename": "delete_site"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can add flat page", "content_type": 8, "codename": "add_flatpage"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can change flat page", "content_type": 8, "codename": "change_flatpage"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can delete flat page", "content_type": 8, "codename": "delete_flatpage"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add presenter", "content_type": 9, "codename": "add_presenter"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change presenter", "content_type": 9, "codename": "change_presenter"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete presenter", "content_type": 9, "codename": "delete_presenter"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$36000$0jrY1KroWmld$Ss/iTGu+eY40Sa8DyH7UauE5GcIxkpZq5pEjDW2FtcM=", "last_login": "2017-11-29T15:27:35.973Z", "is_superuser": true, "username": "karina", "first_name": "", "last_name": "", "email": "karina.klinkeviciute@gmail.com", "is_staff": true, "is_active": true, "date_joined": "2017-11-29T15:25:02.182Z", "groups": [], "user_permissions": []}}, {"model": "presenters.presenter", "pk": 1, "fields": {"user": null, "name": "Django Girl", "image": "17626209_1331934250233155_402606681033410642_n.jpg", "bio": "<p>I code websites with Django.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat ipsum, iaculis eu quam nec, rutrum viverra metus. Mauris facilisis vitae ante a posuere. Praesent eu tempor diam. Vivamus justo augue, bibendum vitae accumsan et, mattis in arcu. Etiam faucibus nibh ut mauris tincidunt molestie. Pellentesque neque ipsum, interdum ut odio et, fermentum malesuada ex. Mauris dictum ornare eros.</p>"}}, {"model": "presenters.presenter", "pk": 2, "fields": {"user": null, "name": "Python Coder", "image": "17800349_10208673282172489_3096042254895362108_n.jpg", "bio": "<p>Maecenas iaculis libero eu nibh interdum, non placerat erat euismod. Etiam justo lacus, vehicula non hendrerit non, pellentesque nec ante. Maecenas sit amet ex at massa sollicitudin pulvinar eu eget justo. Maecenas sed varius risus, et vestibulum dolor. Vivamus congue nisi nisi, in tempor metus porta sed. Nunc purus nunc, volutpat eget consectetur sed, sagittis et ante. Etiam cursus nibh nec accumsan elementum. Nulla facilisi. Fusce id sapien dictum, ultrices urna nec, egestas augue.</p>"}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2017-12-03T14:31:58.312Z", "user": 1, "content_type": 8, "object_id": "1", "object_repr": "/ -- About", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2017-12-03T14:49:37.084Z", "user": 1, "content_type": 8, "object_id": "2", "object_repr": "/coc/ -- Code of Conduct", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2017-12-03T14:59:23.898Z", "user": 1, "content_type": 8, "object_id": "3", "object_repr": "/sponsors/ -- Sponsors", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2017-12-03T15:03:10.638Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "2018.pycon.lt", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"domain\", \"name\"]}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2017-12-03T18:26:19.351Z", "user": 1, "content_type": 8, "object_id": "2", "object_repr": "/coc/ -- Code of Conduct", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"content\"]}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2017-12-10T13:49:14.405Z", "user": 1, "content_type": 8, "object_id": "1", "object_repr": "/ -- About", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"content\"]}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2017-12-10T15:51:43.653Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "Presenter object", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2017-12-10T16:07:44.470Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "Presenter object", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"bio\"]}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2017-12-10T16:57:38.503Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "Presenter object", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"bio\"]}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2017-12-10T17:02:53.360Z", "user": 1, "content_type": 9, "object_id": "2", "object_repr": "Presenter object", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2017-12-10T17:08:57.122Z", "user": 1, "content_type": 9, "object_id": "2", "object_repr": "Presenter object", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"image\", \"bio\"]}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2017-12-10T17:12:19.980Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "Presenter object", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"bio\"]}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2017-12-10T17:50:56.017Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "Presenter object", "action_flag": 2, "change_message": "[]"}}]
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "flatpages",
+    "model": "flatpage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "presenters",
+    "model": "presenter"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "menu",
+    "model": "menu"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "menu",
+    "model": "menuitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "frontend",
+    "model": "module"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "proposals",
+    "model": "attachment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "proposals",
+    "model": "proposal"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialapp"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "account",
+    "model": "emailaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "account",
+    "model": "emailconfirmation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialaccount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialtoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "thumbnail",
+    "model": "kvstore"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "easy_thumbnails",
+    "model": "source"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "easy_thumbnails",
+    "model": "thumbnail"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "easy_thumbnails",
+    "model": "thumbnaildimensions"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "program",
+    "model": "slot"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "program",
+    "model": "track"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "conference",
+    "model": "event"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "www.pycon.lt",
+    "name": "www.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 2,
+  "fields": {
+    "domain": "2017.pycon.lt",
+    "name": "2017.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 3,
+  "fields": {
+    "domain": "2016.pycon.lt",
+    "name": "2016.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 4,
+  "fields": {
+    "domain": "2015.pycon.lt",
+    "name": "2015.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 5,
+  "fields": {
+    "domain": "2014.pycon.lt",
+    "name": "2014.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 6,
+  "fields": {
+    "domain": "2013.pycon.lt",
+    "name": "2013.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 7,
+  "fields": {
+    "domain": "2012.pycon.lt/",
+    "name": "2012.pycon.lt"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 8,
+  "fields": {
+    "domain": "2009.pycon.lt",
+    "name": "2009.pycon.lt"
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 1,
+  "fields": {
+    "url": "/2018/",
+    "title": "Home",
+    "content": "<link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\" />\r\n<div class=\"row\">\r\n<div class=\"col s12 m12 l12 x12\">\r\n<h3>Data Science track</h3>\r\n\r\n<p><a href=\"https://pydata.org/nyc2017/static/images/logo.288981a8dfa8.png\"><img alt=\"\" src=\"https://pydata.org/nyc2017/static/images/logo.288981a8dfa8.png\" style=\"width: 350px; height: 145px; max-width: 100%\" /></a></p>\r\n\r\n<p>PyData is a community for developers and users of open source data tools. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. https://pydata.org/</p>\r\n</div>\r\n\r\n<div class=\"col s12 m12 l12 x12\">\r\n<h3>International speakers</h3>\r\n\r\n<p>At PyConLt try to get a diverse set of speakers. We believe that having a mix of nationalities with various backgrounds is key for interesting conference. A half of presenters will be international, comming from UK, Germany, Italy, Slovenia, Belarus and Russia.</p>\r\n</div>\r\n\r\n<div class=\"col s12 m12 l12 xl12\">\r\n<h3>Free entrance</h3>\r\n<i class=\"large material-icons\">money_off</i></div>\r\n\r\n<p>PyConLT is the last free Python conference in the region.</p>\r\n\r\n<div class=\"center-align\"><a class=\"orange darken-4 btn-large\" href=\"https://tickets.paysera.com/en/event/pyconlt-2018-4e0a\">Register</a></div>\r\n</div>\r\n\r\n<div class=\"divider\">&nbsp;</div>\r\n\r\n<h2>Sponsors</h2>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s7\"><img class=\"responsive-img\" src=\"https://2018.pycon.lt/media/Telesoftas_logo_reg_rgb1.png\" /></div>\r\n\r\n<div class=\"col s5\"><img class=\"responsive-img\" src=\"https://www.euroscipy.org/static/2017/pya_logo.png\" /></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s4\"><img class=\"responsive-img\" src=\"https://www.saimgs.com/imglib/products/logos-hd/logo_5967_hd.png?v=e044149f5006b2cd9c84f21d938f63f8\" /></div>\r\n\r\n<div class=\"col s4\"><img class=\"responsive-img\" src=\"https://2018.pycon.lt/media/geophy_pggm_partnership_23_10_2015_nl-1.jpg\" /></div>\r\n\r\n<div class=\"col s4\"><img class=\"responsive-img\" src=\"https://2018.pycon.lt/media/proposal_data/aidis/930a0029225aa4c28b8ef095b679285eaae27078/versada_logo.png\" /></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s4\"><img class=\"responsive-img\" src=\"https://yt3.ggpht.com/-2putcIPTEcU/AAAAAAAAAAI/AAAAAAAAAAA/zZLC66xybck/s900-c-k-no-mo-rj-c0xffffff/photo.jpg\" /></div>\r\n\r\n<div class=\"col s4\"><img class=\"responsive-img\" src=\"https://img4.androidappsapk.co/300/4/e/0/com.robirent.png\" /></div>\r\n\r\n<div class=\"col s4\"><img class=\"responsive-img\" src=\"https://s3.amazonaws.com/f6s-public/profiles/1037996_original.jpg\" /></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s6\"><img class=\"responsive-img\" src=\"https://2018.pycon.lt/media/logos/Manninglogo_outline.png\" /></div>\r\n\r\n<div class=\"col s6\"><img class=\"responsive-img\" src=\"https://2018.pycon.lt/media/0.png\" /></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s6\"><img class=\"responsive-img\" src=\"https://upload.wikimedia.org/wikipedia/en/9/97/PythonAnywhere_logo.png\" /></div>\r\n\r\n<div class=\"col s6\"><img class=\"responsive-img\" src=\"https://2018.pycon.lt/media/datadog-logo.png\" /></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s6\"><img class=\"responsive-img\" src=\"https://d3tdunqjn7n0wj.cloudfront.net/1400x933/orm_logo_1400pxx950px_center-3a39f4f979a573665fd0b8e348b5d359.png\" /></div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 2,
+  "fields": {
+    "url": "/2018/coc/",
+    "title": "Code of Conduct",
+    "content": "<p>PyCon Lithuania aims to be a welcoming event where people meet in a friendly environment. Accordingly, all participants are expected to show respect and courtesy to other participants throughout the conference.</p>\r\n\r\n<p>To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at PyCon Lithuania 2018 event are required to conform to the following Code of Conduct. Organizers will enforce this code before and throughout the event (including related activities such as the social events).</p>\r\n\r\n<h3>In short</h3>\r\n\r\n<p>PyCon Lithuania is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion.</p>\r\n\r\n<p>We do not tolerate harassment of conference participants in any form.</p>\r\n\r\n<p>Sexual language and imagery are not appropriate for any conference venue, including talks, evening events, and the conference hotel.</p>\r\n\r\n<p>Be kind to others. Do not insult or put down other attendees. Behave professionally. Don&rsquo;t publish individual photographs of people without their consent. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon Lithuania.</p>\r\n\r\n<p>Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.</p>\r\n\r\n<h3>Longer version</h3>\r\n\r\n<p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>\r\n\r\n<p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>\r\n\r\n<p>Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon Lithuania.</p>\r\n\r\n<p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including a warning to the offender or expulsion from the conference with no refund.</p>\r\n\r\n<p>We expect participants to follow these rules at all conference venues, the conference hotel, and conference-related social events.</p>\r\n\r\n<h3>Reporting harassment</h3>\r\n\r\n<p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact the Conduct team immediately either in person, or by sending an email to karina.klinkeviciute@gmail.com.</p>\r\n\r\n<p>If the matter is especially urgent, please notify PyCon Lithuania staff via email. We will provide more instant points of contact (Slack, phone) once we are closer to the conference.</p>\r\n\r\n<p>If you&rsquo;re currently afraid of your physical safety or are in danger, contact local law enforcement in Lithuania: Emergency (Fire, Medical, Police): 112</p>\r\n\r\n<p>The PyCon Lithuania staff is well informed on how to deal with the incident and how to further proceed with the situation. Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 3,
+  "fields": {
+    "url": "/2018/sponsorship/",
+    "title": "Sponsorship",
+    "content": "<div>\r\n<div>\r\n<div>\r\n<h2>Why become a PyConLT sponsor?</h2>\r\n\r\n<div>\r\n<div>\r\n<p>Sponsors are what make this conference possible. PyConLT wouldn&rsquo;t be possible without their support. From free entrance to video recording, the organizations who step forward to support PyCon, in turn support the entire Python community. They make it possible for so many to attend, for so many to be presenters, and for the world at home to watch along.</p>\r\n\r\n<p>Along with the benefits sponsorship gives the conference and the community, we offer an excellent set of benefits to our sponsors.</p>\r\n\r\n<h3>Recruiting</h3>\r\n\r\n<p>What better place to find Python developers than a gathering of 200 of them? If you&rsquo;re looking for talent in Lithuania, PyConLT is the place to be.</p>\r\n\r\n<h3>Marketing</h3>\r\n\r\n<p>Getting your name and product out there through the promotional aspects of our sponsorship packages is a great competitive advantage. If your business is built on Python, you&#39;ll want to be part of the biggest and most prestigious Python conference in Baltic states. You&#39;ll have the opportunity to be matched with those who could potentially become clients or employees and to stay in front of your current customers.</p>\r\n\r\n<h3>Audience</h3>\r\n\r\n<p>PyConLT&rsquo;s attracts from beginners to experts, PyConLT draws attendees from those with zero experience all the way through a significant group of the contributors to the language itself.</p>\r\n\r\n<h3>Competitive Pricing</h3>\r\n\r\n<p>When you consider the cost of conference passes that all packages include, we think you&#39;ll find great value in each PyConLT sponsorship package.</p>\r\n\r\n<h3>Flexibility</h3>\r\n\r\n<p>We want to help you construct a sponsorship package that fits your needs. We&#39;re happy to customize a sponsorship package to give you the freedom to choose what you think works best in order to meet your event participation goals.</p>\r\n\r\n<p>If you have any questions about sponsoring PyConLT, please contact us at <a href=\"http://sponsors@pycon.lt\">sponsors@pycon.lt</a>.</p>\r\n&nbsp;\r\n\r\n<div style=\"margin-left:0pt\">\r\n<h2>Proposals</h2>\r\n\r\n<div>\r\n<h3>Platinum &mdash; &euro; 2000 (Available: 0/1)</h3>\r\n</div>\r\n\r\n<ul>\r\n\t<li>2x size logo on social media and other material.</li>\r\n\t<li>1 full-color ad to be used in rotation in between talks.</li>\r\n\t<li>2x rollups</li>\r\n\t<li>Company logo on PyConLT emails.</li>\r\n\t<li>Logo on conference social media posts.</li>\r\n\t<li>One 100-word company profile featured on the sponsors page of the website.</li>\r\n\t<li>One 100-word corporate profile in the Conference Programme.</li>\r\n\t<li>Company logo listed on the sponsors page in the Conference Programme.</li>\r\n\t<li>Logo in sponsors section on website.</li>\r\n</ul>\r\n\r\n<h3>Gold &mdash; &euro; 1000 (Available: 3/3)</h3>\r\n\r\n<ul>\r\n\t<li>2x rollup.</li>\r\n\t<li>Company logo on PyCon emails.</li>\r\n\t<li>Logo on conference social media posts.</li>\r\n\t<li>One 100-word company profile featured on the sponsors page of the website.</li>\r\n\t<li>One 100-word corporate profile in the Conference Programme.</li>\r\n\t<li>Company logo listed on the sponsors page in the Conference Programme.</li>\r\n\t<li>Logo in sponsors section on website.</li>\r\n</ul>\r\n\r\n<h3>Silver &mdash; &euro; 500</h3>\r\n\r\n<ul>\r\n\t<li>One 100-word company profile featured on the sponsors page of the website.</li>\r\n\t<li>One 100-word corporate profile in the Conference Programme.</li>\r\n\t<li>Company logo listed on the sponsors page in the Conference Programme.</li>\r\n\t<li>Logo in sponsors section on website.</li>\r\n</ul>\r\n\r\n<h3>Bronze &mdash; &euro; 300</h3>\r\n\r\n<ul>\r\n\t<li>Company logo listed on the sponsors page in the Conference Programme.</li>\r\n\t<li>Logo in sponsors section on website.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Contact us:</p>\r\n\r\n<ul>\r\n\t<li>Phone:&nbsp;&nbsp;&nbsp; +370 641 39571</li>\r\n\t<li>Email:&nbsp;&nbsp;&nbsp; sponsors@pycon.lt</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 4,
+  "fields": {
+    "url": "/2018/cfp/",
+    "title": "Call for Proposals",
+    "content": "<p>We are looking for presentations.</p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 5,
+  "fields": {
+    "url": "/2018/team/",
+    "title": "Team",
+    "content": "<p>PyContLT 2018 is organized by bunch of volunteers:</p>\r\n\r\n<ul>\r\n\t<li>Aidis Stukas</li>\r\n\t<li>Karina Klinkevi\u010di\u016bt\u0117</li>\r\n\t<li>&Scaron;ar\u016bnas Navickas</li>\r\n\t<li>Laurynas Spei\u010dys</li>\r\n\t<li>Agnija Ravdo</li>\r\n\t<li>D\u017eiugas Tournau</li>\r\n\t<li>Dovil\u0117 Urbanavi\u010di\u016bt\u0117</li>\r\n</ul>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 6,
+  "fields": {
+    "url": "/2018/workshops/",
+    "title": "Workshops",
+    "content": "<h1>Workshop schedule</h1>\r\n\r\n<p>Workshops will take place in <a href=\"https://goo.gl/maps/HTenL1uXdDk\">Student\u0173 g. 50</a>.</p>\r\n\r\n<p>Registration is mandatory. Use registration links below.</p>\r\n\r\n<ol>\r\n\t<li>Room TBA. 10:00 - 17:00. Django Girls</li>\r\n\t<li>Canceled <del>Room TBA. 10:00 - 17:00. Advanced Data Science with Python</del></li>\r\n\t<li>Room TBA. 10:00 - 13:30. Let&#39;s do high school computer programming exams in Python</li>\r\n\t<li>Room TBA. 14:00 - 16:00. Text analysis workshop</li>\r\n</ol>\r\n\r\n<div class=\"section\">\r\n<h1>Workshops</h1>\r\n\r\n<h2>Django Girls</h2>\r\n\r\n<p>Karina Klinkevi\u010di\u016bt\u0117</p>\r\n\r\n<p>Whole day event</p>\r\n\r\n<p>Django Girls is a non-profit organization and a community that empowers and helps women to organize free, one-day programming workshops by providing tools, resources and support. We are a volunteer run organization with hundreds of people contributing to bring more amazing women into the world of technology. We are making technology more approachable by creating resources designed with empathy.</p>\r\n\r\n<p><a class=\"btn amber darken-1\" href=\"https://djangogirls.org/kaunas/\">More</a></p>\r\n</div>\r\n\r\n<div class=\"divider\">&nbsp;</div>\r\n\r\n<div class=\"section\">\r\n<h2><del>Advanced Data Science with Python </del>Canceled!</h2>\r\n\r\n<p><del>Mike Muller</del></p>\r\n\r\n<p><del>Whole day event</del></p>\r\n<del>This course is directed towards data scientists with good knowledge of Python and of basic Python data science libraries. It is strongly recommended participants have foundations of data science with Python or have inequivalent knowledge. Machine learning and natural language processing are important methods for data science. Python is commonly used in data science. This course provides an overview of important Python libraries for these data science fields.</del>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><a class=\"btn amber darken-1 disabled\" href=\"https://2018.pycon.lt/advanced-data-science-course\">More</a></p>\r\n</div>\r\n\r\n<div class=\"divider\">&nbsp;</div>\r\n\r\n<div class=\"section\">\r\n<h2>Text analysis workshop</h2>\r\n\r\n<p>Lead by Bhargav Srinivasa</p>\r\n\r\n<p>Topic Modelling is an information retrieval technique to identify topics in a large corpus of text documents. This tutorial will guide you through the process of analysing your textual data through topic modelling - from finding and cleaning your data, pre-processing using spaCy, applying topic modelling algorithms using gensim - before moving on to more advanced textual analysis techniques.</p>\r\n\r\n<p><a class=\"btn amber darken-1\" href=\"https://www.eventbrite.com/e/text-analysis-with-python-workshop-learn-spacy-and-gensim-tickets-45196251204\">More</a></p>\r\n</div>\r\n\r\n<div class=\"divider\">&nbsp;</div>\r\n\r\n<div class=\"section\">\r\n<h2>Let&#39;s do high school computer programming exams in Python</h2>\r\n\r\n<p>Lead by Mantas Zimnickas</p>\r\n\r\n<p>Language: Lithuanian</p>\r\n\r\n<p>Currently in Lithuania only C++ and Pascal can be used for solving high school exam tasks. We will try to solve exam tasks using Python and will see if Python could be a good choice for hight school computer programming exams.</p>\r\n\r\n<p><a class=\"btn amber darken-1\" href=\"https://www.eventbrite.com/e/lets-do-high-school-computer-programming-exams-in-python-tickets-45197091718\">More</a></p>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 7,
+  "fields": {
+    "url": "/2018/registration/",
+    "title": "Registration",
+    "content": "<p>Comming soon.</p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 8,
+  "fields": {
+    "url": "/2018/agenda/",
+    "title": "Agenda",
+    "content": "<h1>Agenda</h1>\r\n\r\n<h2>May 5th: Conference</h2>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s12\">\r\n<table class=\"bordered\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>9:30 Opening</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>9:30 <a href=\"pycon.lt\">Mike Muller</a>. <a href=\"lknk\"> Paskaitos pavadinimas</a>((Uzvedus pele ant pavardes ar paskaitos galetu issokt aprasymas.Gal siek tiek geriau nei nuoroda. Gal tiktu modals? http://materializecss.com/modals.html</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n\r\n<div class=\"col l6 m12 s12\">\r\n<table class=\"bordered\"><!-- <thead><th><td>asd</td></th></thead> -->\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<h3>PyData (1st Hall)</h3>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>10:10 Darius Barusauskas. Using Python to Win Kaggle Competitions</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>10:40 Sebastian Naubauer. Data Science Devops</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>11:10 Bhargav. Natural Language With Python</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>11:40 Lunch.</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>12:40 Egidijus Pilypas. ?</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>13:30 Evaldas Kazlauskis. Natural language stuff.</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>14:30 Pietro Batiston. Pyconomic: leverage pandas.</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n\r\n<div class=\"col l6 m12 s12\">\r\n<table class=\"bordered\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<h3>Python (2nd Hall)</h3>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>10:10 Petras Zdanavicius. Something.. Something.. Something.. Something..</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>10:40 Angela Branaes. Building Responsive Apps with Flask and React</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>11:10 Mantas Zimnickas. Somekind of lecture about lots iof interesting things</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>11:40 Lunch.</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>12:40 Andra Brodul. Packaging Python and stuff.</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>13:30 Some name. Pypy: making things go faster</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>14:30 Karina Klinkeviciute. ???</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n\r\n<div class=\"col s12\">\r\n<h2>May 6th: Workshop day</h2>\r\n\r\n<table class=\"bordered\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>13:00 <a href=\"pycon.lt\">Bhargav</a>. <a href=\"link\"> Bhargav. Text Analysis With Python.</a> Register</td>\r\n\t\t\t<td>Place</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>13:00 <a href=\"pycon.lt\">Jurgis Pralgauskis</a>. <a href=\"link\"> Bhargav.</a> Register</td>\r\n\t\t\t<td>Place</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>13:00 <a href=\"pycon.lt\">Mantas Zimnickas</a>. <a href=\"link\"> Mantas.</a> Register</td>\r\n\t\t\t<td>Place</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 9,
+  "fields": {
+    "url": "/2012/",
+    "title": "PyCon LT 2012",
+    "content": "<div class=\"readme blob instapaper_body\" id=\"readme\">\r\n<article class=\"markdown-body entry-content\" itemprop=\"text\">\r\n<h1>Konferencija PyCon-LT 2012</h1>\r\n\r\n<div>\r\n<p><a href=\"http://pycon.akl.lt/2012/programa\" rel=\"nofollow\">Prane&scaron;im\u0173 pristatymai</a></p>\r\n\r\n<p><a href=\"http://www.youtube.com/playlist?list=PL6A2A7C104D79DB89\" rel=\"nofollow\">YouTube grojara&scaron;tis</a></p>\r\n</div>\r\n\r\n<p>Konferencija vyko <strong>2012 m. baland\u017eio 28 d.</strong>, &scaron;e&scaron;tadien\u012f, <strong>nuo 11:30 iki 17:00</strong>, <a href=\"http://eif.viko.lt/\" rel=\"nofollow\">Vilniaus kolegijos elektronikos ir informatikos fakultete</a>, <a href=\"http://osm.org/go/0lP6Pcr5Q--?m=\" rel=\"nofollow\">J. Jasinskio g. 15</a>, Vilniuje, 209 auditorijoje.</p>\r\n\r\n<div>\r\n<div>Daugiau informacijos <a href=\"http://www.konferencijos.lt/mailman/listinfo/python\" rel=\"nofollow\">el. p. konferencijoje</a> ir <a href=\"https://plus.google.com/communities/108018939812342947290\" rel=\"nofollow\">Google+</a>.</div>\r\n</div>\r\n\r\n<div>\r\n<div>Koordinatorius: Mantas Zimnickas &lt;<a href=\"mailto:sirexas@gmail.com\">sirexas@gmail.com</a>&gt;</div>\r\n</div>\r\n</article>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      7
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 10,
+  "fields": {
+    "url": "/2018/tickets/",
+    "title": "Tickets",
+    "content": "<div>Please consider buying Pro tickets. This way you will sponsors our conference.</div>\r\n\r\n<p><iframe allowtransparency=\"true\" frameborder=\"0\" onload=\"(function () {\r\n            var s = document.createElement('script');\r\n            s.type = 'text/javascript';\r\n            s.onload = function() { iFrameResize(); };\r\n            s.src = 'https://tickets.paysera.com/compiled/b0f080f51073b1447e60f84fe2dbb96a.js';\r\n            var x = document.getElementsByTagName('script')[0];\r\n            x.parentNode.insertBefore(s, x);\r\n        })()\" scrolling=\"no\" src=\"https://tickets.paysera.com/en/event-widget/5364E2D6-FB9D-11E7-ADDB-60E24FE58E16\" width=\"100%\"></iframe></p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 11,
+  "fields": {
+    "url": "/2018/dev_program/",
+    "title": "dev progrram",
+    "content": "<meta charset=\"UTF-8\"><!-- Compiled and minified CSS --><script src=\"https://code.jquery.com/jquery-2.1.1.min.js\"></script>\r\n<link href=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css\" rel=\"stylesheet\" />\r\n<link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\" /><!-- Compiled and minified JavaScript --><script src=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js\"></script>\r\n<h1>Conference</h1>\r\n\r\n<table class=\"bordered\">\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>&nbsp;</th>\r\n\t\t\t<th style=\"text-align:center\">\r\n\t\t\t<h3>Python</h3>\r\n\t\t\t</th>\r\n\t\t\t<th style=\"text-align:center\">\r\n\t\t\t<h3>PyData</h3>\r\n\t\t\t</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>9:30</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\">Door Opens</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>10:00</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\">Opening Ceremony</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>10:10</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\">Mike M&uuml;ller. How People are Learning Python - My Experience from 14 Years of Python Teaching</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>11:00</td>\r\n\t\t\t<td>Milda Glebauskait\u0117.<br />\r\n\t\t\tWriting Tests When The Code is Already There: Golden Master Technique</td>\r\n\t\t\t<td>Pietro Battiston. Pandas: Efficient Use of Pyconomist&#39;s Favorite Tool</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>11:30</td>\r\n\t\t\t<td>Angela Branaes. Building a Startup with Python, React and AWS</td>\r\n\t\t\t<td>Sebastian Neubauer. Blue-Yonder 7 Years of Using Python for Data Science DevOps</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>12:00</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\">Coffee</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>12:30</td>\r\n\t\t\t<td>Dmitry Nazarov. Future Pythonic Web: ASGI &amp; Daphne</td>\r\n\t\t\t<td>Bhargav Srinivasa. Text Analysis With SpaCy, NLTK, Gensim, Skearn, Keras and TensorFlow.</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>13:00</td>\r\n\t\t\t<td>&Scaron;ar\u016bnas Navickas. Journey into Monitoring: Paradigms and Stacks</td>\r\n\t\t\t<td>Darius Aliulis. Online Machine Learning - When it&#39;s Infeasible to Train Over The Entire Dataset</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>13:30</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\">Lunch</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>14:00</td>\r\n\t\t\t<td>Andraz &#39;brodul&#39; Brodnik. Distribution of Python Software</td>\r\n\t\t\t<td>Darius Baru&scaron;auskas. Python, Machine Learning and Healthcare</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>14:30</td>\r\n\t\t\t<td>Rokas Tamo&scaron;i\u016bnas. Meet Exa, AI Driven Junior Data Analyst</td>\r\n\t\t\t<td class=\"waves-effect\">Nikolay Karelin. Jupyter Notebook: Between Interactive Document and Specialized Web Application</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>15:00</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\">Coffee</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>15:30</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>16:00</td>\r\n\t\t\t<td>\r\n\t\t\t<ul class=\"collapsible waves-effect\" data-collapsible=\"accordion\">\r\n\t\t\t\t<li>\r\n\t\t\t\t<div class=\"collapsible-header\">Some random speaker</div>\r\n\r\n\t\t\t\t<div class=\"collapsible-body\"><span>Great presentationp</span></div>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<ul class=\"collapsible waves-effect\" data-collapsible=\"accordion\">\r\n\t\t\t\t<li>\r\n\t\t\t\t<div class=\"collapsible-header\">Nikolay Karelin. Jupyter Notebook: Between Interactive Document and Specialized Web Application</div>\r\n\r\n\t\t\t\t<div class=\"collapsible-body\"><span>Here goes a complete description of his workshop</span></div>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>16:30</td>\r\n\t\t\t<td colspan=\"2\" style=\"text-align:center\"><a class=\"waves-effect waves-light modal-trigger\" href=\"#modal1\">Closing Keynote</a></td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&lt; <!-- Modal Structure --></p>\r\n\r\n<div class=\"modal\" id=\"modal1\">\r\n<div class=\"modal-content\">\r\n<h4>Modal Header</h4>\r\n\r\n<p>A bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of textA bunch of text</p>\r\n</div>\r\n\r\n<div class=\"modal-footer\"><a class=\"modal-action modal-close waves-effect waves-green btn-flat\" href=\"#!\">Agree</a></div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n<!-- \r\n</tbody>\r\n</table>\r\n</div>\r\n<div>\r\n  <ul class=\"collapsible\" data-collapsible=\"accordion\">\r\n    <li>\r\n      <div class=\"collapsible-header\"><i class=\"material-icons\">filter_drama</i>First</div>\r\n      <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\r\n    </li>\r\n    <li>\r\n      <div class=\"collapsible-header\"><i class=\"material-icons\">place</i>Second</div>\r\n      <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\r\n    </li>\r\n    <li>\r\n      <div class=\"collapsible-header\"><i class=\"material-icons\">whatshot</i>Third</div>\r\n      <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\r\n    </li>\r\n  </ul>\r\n</div> --><!-- Modal Trigger --><!-- <div>\r\n  <ul class=\"collapsible\" data-collapsible=\"accordion\">\r\n    <li>\r\n    \t<div class=\"collapsible-header\">Third</div>\r\n      <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\r\n    </li>\r\n  </ul>\r\n</div>\r\n --><script>$('.modal').modal();</script>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 12,
+  "fields": {
+    "url": "/2018/sponsors/",
+    "title": "Sponsors",
+    "content": "<h1>Sponsors</h1>\r\n\r\n<div><img alt=\"\" height=\"95\" src=\"https://2018.pycon.lt/media/Telesoftas_logo_reg_rgb1.png\" width=\"402\" /></div>\r\n\r\n<div>TeleSoftas is a world-class consulting and software engineering house with 14 years of expertise in mobile engineering solutions,&nbsp;established in 2004. Today we operate globally from our offices Vilnius, Zurich, Dubai, recently San Francisco and headquarters in Kaunas. Applying our full-spectre in-house knowledge and experience in various tech advancements, we drive strategic business advantage of our clients from all around the globe. We work with leading-edge technologies on the most exciting projects out there, aiming to disrupt the markets and improve people&rsquo;s lives. TeleSoftas is a company, where you can get the tools to persistently improve your expertise, where your talents are nurtured and cultivated. Join us and get inspired to find an exciting challenge every day.</div>\r\n\r\n<p><img alt=\"\" height=\"110\" src=\"https://www.euroscipy.org/static/2017/pya_logo.png\" width=\"275\" /></p>\r\n\r\n<p>Python Academy is specialized in Python training. We offer <a href=\"http://www.python-academy.com/courses/python_course_open.html\">Open Courses</a> as well as <a href=\"http://www.python-academy.com/courses/python_course_company.html\">Company Courses</a> for learning the programming language Python. There are two types of introductory courses: <a href=\"http://www.python-academy.com/courses/python_course_nonprogrammers.html\">Python for Non-Programmers</a> requiring no prior programming experience and <a href=\"http://www.python-academy.com/courses/python_course_programmers.html\">Python for Programmers</a> assuming some general knowledge about programming. We offer courses for many more <a href=\"http://www.python-academy.com/courses/index.html\">topics</a> that can be freely combined for company courses. We also offer a course <a href=\"http://www.python-academy.com/courses/python_course_scientists.html\">Python for Scientists and Engineers</a> dedicated to scientific and technical topics.</p>\r\n\r\n<div>\r\n<p dir=\"ltr\"><img alt=\"\" src=\"https://yt3.ggpht.com/-2putcIPTEcU/AAAAAAAAAAI/AAAAAAAAAAA/zZLC66xybck/s900-c-k-no-mo-rj-c0xffffff/photo.jpg\" style=\"width: 173px; height: 173px;\" /></p>\r\n\r\n<div><meta charset=\"utf-8\">\r\n<p dir=\"ltr\">We are Programmers of Vilnius, a software development company that specializes in web applications in <a href=\"http://www.python.org/\">Python</a>, the <a href=\"https://www.djangoproject.com/\">Django Web framework</a>, the <a href=\"http://www.pylonsproject.org/\">Pyramid/Pylons Project</a>, the <a href=\"http://www.zope.org/\">Zope Toolkit</a>, and also Python micro-frameworks. We offer consulting, as well as custom software development services.</p>\r\n</div>\r\n\r\n<h3 dir=\"ltr\"><img alt=\"\" src=\"https://2018.pycon.lt/media/proposal_data/aidis/930a0029225aa4c28b8ef095b679285eaae27078/versada_logo.png\" style=\"width: 300px; height: 85px;\" /></h3>\r\n\r\n<p dir=\"ltr\">Versada team develops, adapts and implements innovative software solutions for business management. Our customers are small or medium-sized, Lithuanian and Western European companies seeking solutions to optimize their business processes and overcome any management challenges.</p>\r\n\r\n<p dir=\"ltr\">&nbsp;</p>\r\n</div>\r\n\r\n<h3><img alt=\"\" height=\"127\" src=\"https://s3.amazonaws.com/f6s-public/profiles/1037996_original.jpg\" width=\"192\" /></h3>\r\n\r\n<div><meta charset=\"utf-8\">\r\n<p dir=\"ltr\">KTU &ldquo;Startup Space&rdquo; was founded in 2012. The unique space offers access to resources of Kaunas University of Technology and magnificent network for a faster startup development. We are professionals intensively working with innovative startups. Our main objective is to identify the potential of entrepreneurs and encourage them to fulfil their dreams. More than 50 startups have been established since KTU &ldquo;Startup Space&rdquo; was founded. KTU &ldquo;Startup Space&rdquo; is an open community, we search for various partners: mentors, experts, professionals who can contribute to Lithuanian startup society by joining our strong community. We don&rsquo;t limit teams by any criteria; innovative startup ideas are always welcome.</p>\r\n\r\n<h3><img alt=\"datadog\" src=\"https://2018.pycon.lt/media/datadog-logo.png\" style=\"width: 400px; height: 71px;\" /></h3>\r\n\r\n<div>We are software engineers, data scientists and mathematicians. We apply Artificial Intelligence in the real world by building industry specific enterprise applications ranging from products tackling isolated problems to end-to-end supply chain, resource management and optimisation solutions. AI components capable of analysing, interpreting and learning from data will inevitably become part of our everyday lives in the not-so-distant future. We combine business insights with technology and empower organizations to make the shift towards AI driven future.</div>\r\n\r\n<div>\r\n<p><img alt=\"\" height=\"135\" src=\"https://www.saimgs.com/imglib/products/logos-hd/logo_5967_hd.png?v=e044149f5006b2cd9c84f21d938f63f8\" width=\"239\" /></p>\r\n\r\n<p>Revel Systems is a feature-rich business platform transforming the way business is done by integrating all operations and customer channels, driven by the Point of Sale, into a single dashboard. Designed to maximize security, stability, ease of use, and service delivery, Revel&rsquo;s ecosystem replaces bulky, expensive legacy solutions with a quick, intuitive iOS-based POS platform that combines cloud-based technology and the mobility of the iPad. We work with all businesses&mdash;from small merchants to global enterprises&mdash;looking to modernize, future-proof their operations, and implement a system that adds value through incremental revenue, cost reduction, and a better experience for customers and employees.</p>\r\n\r\n<p><img alt=\"\" height=\"120\" src=\"https://2018.pycon.lt/media/geophy_pggm_partnership_23_10_2015_nl-1.jpg\" width=\"288\" /></p>\r\n\r\n<p>In a world demanding ever-greater transparency, property investment remains incredibly opaque. GeoPhy was founded to change just that. We are an independent provider of objective data and analysis for the property and financial sector. We apply cutting-edge technology to an ever-growing amount of data from a wide variety of sources. Our quality score offers an objective and holistic international standard and enables our clients to make data-driven property decisions.</p>\r\n\r\n<p><img alt=\"\" src=\"https://i0.wp.com/lh3.googleusercontent.com/S2-olRagYH-YUXhWIWCouzccvJgguaNnaAU2WcUs1c8y0OD3PaWxh4vm5boTvKZd-A=w185\" style=\"width: 185px; height: 185px;\" /></p>\r\n\r\n<p>UAB RG Consulting (Robirent.com) is an international leading company specializing in rental of equipment.The Robirent.com group has 8 companies in Europe and actively expands its activities to create new businesses. Robirent.com is a steadily growing and purposeful company that continuously invests in new technologies, creating its own unique and innovative IT solutions. The robirent.com team is always looking for innovative, hardworking professionals in their field who want to realize their ideas.</p>\r\n\r\n<p><img alt=\"\" src=\"https://2018.pycon.lt/media/0.png\" style=\"height: 69px; width: 300px;\" /></p>\r\n\r\n<p><img alt=\"\" src=\"ME\" /><img alt=\"\" src=\"https://2018.pycon.lt/media/Opng\" /></p>\r\n\r\n<p>Helis is a 100-strong company building proprietary products for gaming and esports industries in Kaunas. We question the status quo of technologies, methodologies and industries one day at a time, and so we deliver successful projects to the forefront of the competition. We&rsquo;re handling, scraping, analyzing and modifying tremendous amounts of data, and Python has proven itself as the best technology for all this. And much more! For this reason, we&rsquo;ve established a Python team within the company and we&rsquo;re more than happy to contribute to Lithuania&rsquo;s Python ecosystem. We believe that amazing and beautiful things can be achieved with both Python and people who enjoy it!</p>\r\n\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 13,
+  "fields": {
+    "url": "/2018/advanced-data-science-course",
+    "title": "Advanced Data Science with Python",
+    "content": "<div dir=\"ltr\">\r\n<h1>Advanced Data Science with Python</h1>\r\n\r\n<h3>More about a trainer</h3>\r\n\r\n<div>\r\n<p>Mike Muller - CEO at Python Academy CEO, Python Trainer, Serial PyCon Chair.</p>\r\n\r\n<p>Mike M&uuml;ller has been using Python as his primary programming language since 1999. He is a Python trainer and the CEO at Python Academy (<a data-saferedirecturl=\"https://www.google.com/url?q=http://www.python-academy.com&amp;source=gmail&amp;ust=1524068214079000&amp;usg=AFQjCNHIyNbqMltbhdPeDyo6YU4mFo7ZJg\" href=\"http://www.python-academy.com\" target=\"_blank\">www.python-academy.com</a>).</p>\r\n\r\n<p>He teaches a wide variety of Python topics including &quot;Introduction to Python&quot;, &quot;Python for Scientists and Engineers&quot;, &quot;Advanced Python&quot; as well as &quot;Optimization and Extensions of Python Programs&quot;.</p>\r\n\r\n<p>He is the chairman of the Python Software Verband e.V., a PSF fellow, a PSF community service award holder, User Group co-founder. He chaired EuroSciPy 2008 and 2009, PyCon DE 2011 and 2012 as well as EuroPython 2014 in Berlin, Germany.</p>\r\n\r\n<h3>About a course</h3>\r\n\r\n<p>A one day course will be based on <a data-saferedirecturl=\"https://www.google.com/url?q=http://www.python-academy.com/courses/python_course_data_science_advanced.html&amp;source=gmail&amp;ust=1524068214079000&amp;usg=AFQjCNH6wt-33w89XGVetzlBCh9tAR_oxw\" href=\"http://www.python-academy.com/courses/python_course_data_science_advanced.html\" target=\"_blank\">http://www.python-academy.com/<wbr />courses/python_course_data_<wbr />science_advanced.html.</a></p>\r\n\r\n<p>Changes will be according to the needs of participants.</p>\r\n\r\n<p>The preliminary list of topics to select from will consist of:</p>\r\n\r\n<div id=\"m_2108931528068026697inbox-inbox-machine-learning-with-python\">\r\n<h5>Machine Learning with Python</h5>\r\n\r\n<ul>\r\n\t<li>preprocessing</li>\r\n\t<li>dimensional reduction</li>\r\n\t<li>kernel transformations</li>\r\n\t<li>regression and classification</li>\r\n\t<li>model selection</li>\r\n\t<li>cross-validation</li>\r\n\t<li>grid-search</li>\r\n</ul>\r\n</div>\r\n\r\n<div id=\"m_2108931528068026697inbox-inbox-natural-language-processing-with-python\">\r\n<h5>Natural Language Processing with Python</h5>\r\n\r\n<ul>\r\n\t<li>NLP</li>\r\n\t<li>text modeling and classification</li>\r\n\t<li>topic modeling</li>\r\n\t<li>webscraping with bs4 and scrapy</li>\r\n</ul>\r\n</div>\r\n\r\n<div id=\"m_2108931528068026697inbox-inbox-parallel-programming\">\r\n<h5>Parallel Programming</h5>\r\n\r\n<ul>\r\n\t<li>multiprocessing</li>\r\n\t<li>multithreading</li>\r\n\t<li>MPI</li>\r\n\t<li>introduction to hadoop streaming</li>\r\n\t<li>mrjob</li>\r\n\t<li>luigi</li>\r\n\t<li>pyspark</li>\r\n</ul>\r\n</div>\r\n\r\n<h3>Price</h3>\r\n\r\n<p>The course is priced at 50 &euro;.</p>\r\n\r\n<p><a class=\"btn amber darken-4\" data-saferedirecturl=\"https://tickets.paysera.com/en/step/pyconlt-2018-4e0a/select\" href=\"https://tickets.paysera.com/en/step/pyconlt-2018-4e0a/select\" target=\"_blank\"><wbr /><wbr />Ticket</a></p>\r\n\r\n<p>Feel free to contact <a href=\"mailto:info@pycon.lt\" target=\"_blank\">info@pycon.lt</a> if you have any questions.</p>\r\n</div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 14,
+  "fields": {
+    "url": "/2018/venue/",
+    "title": "Venue",
+    "content": "<h1>Venue</h1>\r\n\r\n<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"600\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18348.580719272573!2d23.951380443243984!3d54.91042369152281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7187bbe7d4471%3A0x8c1b805be14148f5!2zS1RVIOKAnlNhbnRha29z4oCdIHNsxJduaXMgLSBtb2tzbG8sIHN0dWRpasWzIGlyIHZlcnNsbyBjZW50cmFz!5e0!3m2!1slt!2slt!4v1524920068422\" style=\"border:0\" width=\"800\"></iframe></p>\r\n\r\n<h3><img alt=\"KTU\" src=\"http://2017.ktu.edu/sites/default/files/galerijos/laukas.jpg\" style=\"height: 667px; width: 800px;\" /></h3>\r\n\r\n<h3>Vilnius aiport to Kaunas</h3>\r\n\r\n<p><a href=\"https://www.ollex.lt/en/express/Vilnius-airport/buy-a-ticket\">www.ollex.lt/en/</a></p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 15,
+  "fields": {
+    "url": "/2019/",
+    "title": "PyConLT 2019",
+    "content": "<h1>PyConLT 2019</h1>\r\n\r\n<h3>Vilnius, Lithuania, May 24-26</h3>\r\n\r\n<div class=\"container flow-text\">\r\n<p>Welcome to PyConLT 2019<br />\r\nThis year, we will meet in<a href=\"https://www.smk.lt/en/\">University of Social Sciences (SMK)</a>, Vilnius, Lithuania, May 24-26.</p>\r\n\r\n\r\n<div><a class=\"btn orange\" href=\"https://tickets.paysera.com/lt/event/pyconlt-2019\">Get Tickets</a></div>\r\n\r\n<h4>Program</h4>\r\n\r\n<ul>\r\n\t<li>- Friday (May 24th): Tutorials</li>\r\n\t<li>- Saturday (May 25th): Conference - keynotes and other presentations</li>\r\n\t<li>- Sunday (May 26th): Conference - keynotes and other presentations</li>\r\n</ul>\r\n\r\n<p><br />\r\nJoin <a href=\"https://mailchi.mp/9f2137843af6/pyconlt-2019\">mailing list</a><br />\r\n<a href=\"https://twitter.com/pyconlt\">@pyconlt</a> on twitter</p>\r\n\r\n<h3>Sponsors</h3>\r\n</div>\r\n\r\n<div class=\"section\">\r\n<div class=\"container\">\r\n<div class=\"flow-text\">We are looking for sponsors</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"section\">\r\n<div class=\"container\">\r\n<h3>Program Committee</h3>\r\n\r\n<div class=\"flow-text\">\r\n<div>Andra\u017e Brodul Brodnik</div>\r\n\r\n<div>Bhargav Srinivasa Desikan</div>\r\n\r\n<div>Dmitry Nazarov</div>\r\n\r\n<div>Karina Klinkevi\u010di\u016bt\u0117</div>\r\n\r\n<div>Mantas Zimnickas</div>\r\n\r\n<div>Petras Zdanavi\u010dius</div>\r\n\r\n<div>Pietro Battiston</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"section\">\r\n<div class=\"container\">\r\n<h3>Discover</h3>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">Conference</div>\r\n\r\n<div>20 presentations including 4 keynotes.</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">Training</div>\r\n<i class=\"material-icons\">add</i>\r\n\r\n<div>Level up with professional trainers</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Helpdesk</div>\r\n<i class=\"material-icons\">money</i>\r\n\r\n<div>Consult with professionals</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Sprints</div>\r\n<i class=\"material-icons\">money</i>\r\n\r\n<div>Contribute to open-source in sprints</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Recruiting</div>\r\n<i class=\"material-icons\">money</i>\r\n\r\n<div>Find your next job opportunity</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Social Events</div>\r\n<i class=\"material-icons\">person</i>\r\n\r\n<div>Enjoy Vilnius with other Pythonistas</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 16,
+  "fields": {
+    "url": "/2019/coc/",
+    "title": "Code of Conduct",
+    "content": "<p>PyCon Lithuania aims to be a welcoming event where people meet in a friendly environment. Accordingly, all participants are expected to show respect and courtesy to other participants throughout the conference.</p>\r\n\r\n<p>To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at PyCon Lithuania 2019 event are required to conform to the following Code of Conduct. Organizers will enforce this code before and throughout the event (including related activities such as the social events).</p>\r\n\r\n<h3>In short</h3>\r\n\r\n<p>PyCon Lithuania is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion.</p>\r\n\r\n<p>We do not tolerate harassment of conference participants in any form.</p>\r\n\r\n<p>Sexual language and imagery are not appropriate for any conference venue, including talks, evening events, and the conference hotel.</p>\r\n\r\n<p>Be kind to others. Do not insult or put down other attendees. Behave professionally. Don&rsquo;t publish individual photographs of people without their consent. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon Lithuania.</p>\r\n\r\n<p>Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.</p>\r\n\r\n<h3>Longer version</h3>\r\n\r\n<p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>\r\n\r\n<p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>\r\n\r\n<p>Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon Lithuania.</p>\r\n\r\n<p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including a warning to the offender or expulsion from the conference with no refund.</p>\r\n\r\n<p>We expect participants to follow these rules at all conference venues, the conference hotel, and conference-related social events.</p>\r\n\r\n<h3>Reporting harassment</h3>\r\n\r\n<p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact the Conduct team immediately either in person, or by sending an email to karina.klinkeviciute@gmail.com.</p>\r\n\r\n<p>If the matter is especially urgent, please notify PyCon Lithuania staff via email. We will provide more instant points of contact (Slack, phone) once we are closer to the conference.</p>\r\n\r\n<p>If you&rsquo;re currently afraid of your physical safety or are in danger, contact local law enforcement in Lithuania: Emergency (Fire, Medical, Police): 112</p>\r\n\r\n<p>The PyCon Lithuania staff is well informed on how to deal with the incident and how to further proceed with the situation. Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 17,
+  "fields": {
+    "url": "/2019/team/",
+    "title": "Organisers",
+    "content": "<p>PyContLT 2019 is organized by bunch of volunteers:</p>\r\n\r\n<ul>\r\n\t<li>Aidis Stukas</li>\r\n\t<li>Laurynas Spei\u010dys</li>\r\n\t<li>Karina Klinkevi\u010di\u016bt\u0117</li>\r\n\t<li>Inga Pliavgo</li>\r\n\t<li>Simonas Vytas</li>\r\n\t<li>Darius Dobravolskas</li>\r\n\t<li>Robertas Murnikovas</li>\r\n</ul>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 18,
+  "fields": {
+    "url": "/2019/sponsors/",
+    "title": "Sponsors",
+    "content": "<p>This page is empty.</p>\r\n\r\n<p>Please have a look at <a href=\"http://www.pycon.lt/2019/sponsorship/\">www.pycon.lt/2019/sponsorship/</a> for more information and sponsorship proposal.</p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 19,
+  "fields": {
+    "url": "/",
+    "title": "PyConLT",
+    "content": "<h1>PyConLT 2019</h1>\r\n\r\n<h3>Vilnius, Lithuania, May 24-26</h3>\r\n\r\n<div class=\"container flow-text\">\r\n<p>Welcome to PyConLT 2019<br />\r\nThis year, we will meet in<a href=\"https://www.smk.lt/en/\">University of Social Sciences (SMK)</a>, Vilnius, Lithuania, May 24-26.</p>\r\n\r\n<div><a class=\"btn orange\" href=\"https://tickets.paysera.com/lt/event/pyconlt-2019\">Get Tickets</a></div>\r\n\r\n<h4>Program</h4>\r\n\r\n<ul>\r\n\t<li>- Friday (May 24th): Tutorials</li>\r\n\t<li>- Saturday (May 25th): Conference - keynotes and other presentations</li>\r\n\t<li>- Sunday (May 26th): Conference - keynotes and other presentations</li>\r\n</ul>\r\n\r\n<p><br />\r\nJoin <a href=\"https://mailchi.mp/9f2137843af6/pyconlt-2019\">mailing list</a><br />\r\n<a href=\"https://twitter.com/pyconlt\">@pyconlt</a> on twitter</p>\r\n\r\n<h3>Sponsors</h3>\r\n</div>\r\n\r\n<div class=\"section\">\r\n<div class=\"container\">\r\n<div class=\"flow-text\">We are looking for sponsors</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"section\">\r\n<div class=\"container\">\r\n<h3>Program Committee</h3>\r\n\r\n<div class=\"flow-text\">\r\n<div>Andra\u017e Brodul Brodnik</div>\r\n\r\n<div>Bhargav Srinivasa Desikan</div>\r\n\r\n<div>Dmitry Nazarov</div>\r\n\r\n<div>Karina Klinkevi\u010di\u016bt\u0117</div>\r\n\r\n<div>Mantas Zimnickas</div>\r\n\r\n<div>Petras Zdanavi\u010dius</div>\r\n\r\n<div>Pietro Battiston</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"section\">\r\n<div class=\"container\">\r\n<h3>Discover</h3>\r\n\r\n<div class=\"row\">\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">Conference</div>\r\n\r\n<div>20 presentations including 4 keynotes.</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">Training</div>\r\n<i class=\"material-icons\">add</i>\r\n\r\n<div>Level up with professional trainers</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Helpdesk</div>\r\n<i class=\"material-icons\">money</i>\r\n\r\n<div>Consult with professionals</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Sprints</div>\r\n<i class=\"material-icons\">money</i>\r\n\r\n<div>Contribute to open-source in sprints</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Recruiting</div>\r\n<i class=\"material-icons\">money</i>\r\n\r\n<div>Find your next job opportunity</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col s4\">\r\n<div class=\"card\">\r\n<div class=\"card-content\">\r\n<div class=\"card-title\">New: Social Events</div>\r\n<i class=\"material-icons\">person</i>\r\n\r\n<div>Enjoy Vilnius with other Pythonistas</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "flatpages.flatpage",
+  "pk": 20,
+  "fields": {
+    "url": "/2019/sponsorship/",
+    "title": "Sponsorship",
+    "content": "<p>For potential sponsors, you can learn more about PyConLT 2019 and its sponsorship opportunities <a href=\"https://docs.google.com/document/d/1QinbQIpap-qPE1P9AnH436evSQtaikld_Kq_Pou_lxo\">here</a></p>\r\n\r\n<p>&nbsp;</p>",
+    "enable_comments": false,
+    "template_name": "",
+    "registration_required": false,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "menu.menu",
+  "pk": 1,
+  "fields": {
+    "name": "Main Menu",
+    "slug": "main-menu",
+    "base_url": "2018",
+    "description": "Main navigation"
+  }
+},
+{
+  "model": "menu.menu",
+  "pk": 3,
+  "fields": {
+    "name": "About dropdown",
+    "slug": "About-dropdown",
+    "base_url": null,
+    "description": ""
+  }
+},
+{
+  "model": "menu.menu",
+  "pk": 4,
+  "fields": {
+    "name": "Schedule dropdown",
+    "slug": "Schedule-dropdown",
+    "base_url": null,
+    "description": "a dropdown menu for a Schedule item in Main menu"
+  }
+},
+{
+  "model": "menu.menu",
+  "pk": 5,
+  "fields": {
+    "name": "Mobile Menu",
+    "slug": "mobile-menu",
+    "base_url": null,
+    "description": ""
+  }
+},
+{
+  "model": "menu.menu",
+  "pk": 6,
+  "fields": {
+    "name": "Main Menu 2019",
+    "slug": "main-menu-2019",
+    "base_url": "/2019/",
+    "description": "Main menu for the conference of 2019"
+  }
+},
+{
+  "model": "menu.menu",
+  "pk": 7,
+  "fields": {
+    "name": "Mobile Menu 2019",
+    "slug": "mobile-menu-2019",
+    "base_url": "/2019/",
+    "description": ""
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 1,
+  "fields": {
+    "menu": 1,
+    "order": 10,
+    "link_url": "/",
+    "title": "About",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 3,
+  "fields": {
+    "menu": 1,
+    "order": 40,
+    "link_url": "/sponsors/",
+    "title": "Sponsors",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 8,
+  "fields": {
+    "menu": 1,
+    "order": 50,
+    "link_url": "/proposals/call_for_proposal",
+    "title": "Call for Proposals",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 11,
+  "fields": {
+    "menu": 1,
+    "order": 70,
+    "link_url": "https://tickets.paysera.com/en/step/pyconlt-2018-4e0a/select",
+    "title": "Register",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 12,
+  "fields": {
+    "menu": 3,
+    "order": 10,
+    "link_url": "/",
+    "title": "PyConLT 2018",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 14,
+  "fields": {
+    "menu": 3,
+    "order": 20,
+    "link_url": "/team/",
+    "title": "Organizers",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 15,
+  "fields": {
+    "menu": 4,
+    "order": 500,
+    "link_url": "/program/",
+    "title": "Conference Day (May 5th)",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 16,
+  "fields": {
+    "menu": 4,
+    "order": 500,
+    "link_url": "/workshops/",
+    "title": "Workshop Day (May 6th)",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 17,
+  "fields": {
+    "menu": 4,
+    "order": 500,
+    "link_url": "/speakers/",
+    "title": "Speakers",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 18,
+  "fields": {
+    "menu": 4,
+    "order": 500,
+    "link_url": "/talks/",
+    "title": "Talks",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 19,
+  "fields": {
+    "menu": 1,
+    "order": 30,
+    "link_url": "/",
+    "title": "Schedule",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 20,
+  "fields": {
+    "menu": 1,
+    "order": 20,
+    "link_url": "/coc/",
+    "title": "Code of Conduct",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 21,
+  "fields": {
+    "menu": 1,
+    "order": 60,
+    "link_url": "/venue/",
+    "title": "Venue",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 22,
+  "fields": {
+    "menu": 5,
+    "order": 10,
+    "link_url": "/",
+    "title": "About",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 23,
+  "fields": {
+    "menu": 5,
+    "order": 100,
+    "link_url": "/team/",
+    "title": "Organizers",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 24,
+  "fields": {
+    "menu": 5,
+    "order": 20,
+    "link_url": "/coc/",
+    "title": "Code of Conduct",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 25,
+  "fields": {
+    "menu": 5,
+    "order": 30,
+    "link_url": "/program/",
+    "title": "Schedule (May 5th)",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 26,
+  "fields": {
+    "menu": 5,
+    "order": 40,
+    "link_url": "/workshops/",
+    "title": "Workshops (May 6th)",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 27,
+  "fields": {
+    "menu": 5,
+    "order": 50,
+    "link_url": "/speakers/",
+    "title": "Speakers",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 28,
+  "fields": {
+    "menu": 5,
+    "order": 60,
+    "link_url": "/talks/",
+    "title": "Talks",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 29,
+  "fields": {
+    "menu": 5,
+    "order": 70,
+    "link_url": "/sponsors/",
+    "title": "Sponsors",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 30,
+  "fields": {
+    "menu": 5,
+    "order": 80,
+    "link_url": "/venue/",
+    "title": "Venue",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 31,
+  "fields": {
+    "menu": 5,
+    "order": 90,
+    "link_url": "https://tickets.paysera.com/en/step/pyconlt-2018-4e0a/select",
+    "title": "Register",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 32,
+  "fields": {
+    "menu": 6,
+    "order": 10,
+    "link_url": "/",
+    "title": "Home",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 33,
+  "fields": {
+    "menu": 6,
+    "order": 20,
+    "link_url": "/2019/coc/",
+    "title": "Code of Conduct",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 34,
+  "fields": {
+    "menu": 6,
+    "order": 30,
+    "link_url": "/2019/sponsors/",
+    "title": "Sponsors",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 35,
+  "fields": {
+    "menu": 6,
+    "order": 40,
+    "link_url": "/2019/team/",
+    "title": "Organisers",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 36,
+  "fields": {
+    "menu": 7,
+    "order": 500,
+    "link_url": "/2019/",
+    "title": "Home",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 37,
+  "fields": {
+    "menu": 7,
+    "order": 500,
+    "link_url": "/2019/coc/",
+    "title": "Code of Conduct",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 38,
+  "fields": {
+    "menu": 7,
+    "order": 500,
+    "link_url": "/2019/sponsors/",
+    "title": "Sponsors",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "menu.menuitem",
+  "pk": 39,
+  "fields": {
+    "menu": 7,
+    "order": 500,
+    "link_url": "/2019/team/",
+    "title": "Organisers",
+    "login_required": false,
+    "anonymous_only": false
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 1,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "pasted_image_0.png",
+    "modified": "2018-02-14T19:56:00.685Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 2,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "massa.png",
+    "modified": "2018-02-14T19:56:00.729Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 3,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "sebastian.png",
+    "modified": "2018-02-14T19:56:01.290Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 4,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "angela.png",
+    "modified": "2018-02-14T19:56:01.339Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 5,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "pietro.png",
+    "modified": "2018-02-14T19:56:01.377Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 6,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "darius.png",
+    "modified": "2018-02-14T19:56:01.413Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 7,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "brodul.png",
+    "modified": "2018-02-14T19:56:01.454Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 8,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "8374816.jpeg",
+    "modified": "2018-02-16T17:24:44.448Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 9,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "0.jpg",
+    "modified": "2018-03-05T17:19:09.262Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 10,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "sarunas_navickas.jpg",
+    "modified": "2018-03-07T17:07:16.759Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 11,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "rivo_laks.png",
+    "modified": "2018-03-22T21:56:56.133Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 12,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "paulius_cepulionis.jpg",
+    "modified": "2018-03-24T08:04:16.788Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 13,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "petras.png",
+    "modified": "2018-04-15T19:15:34.740Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 14,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "Dmitry_Nazarov.jpg",
+    "modified": "2018-04-25T18:41:00.130Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 15,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "13113869.jpg",
+    "modified": "2018-04-25T18:46:57.270Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 16,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "unnamed.jpg",
+    "modified": "2018-04-25T18:50:19.192Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 17,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "3120896.jpg",
+    "modified": "2018-04-25T18:54:10.372Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 18,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "download.jpg",
+    "modified": "2018-04-25T19:01:12.648Z"
+  }
+},
+{
+  "model": "easy_thumbnails.source",
+  "pk": 19,
+  "fields": {
+    "storage_hash": "f9bde26a1556cd667f742bd34ec7c55e",
+    "name": "Darius_Aliulis_tikra.jpg",
+    "modified": "2018-04-29T09:48:21.616Z"
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 1,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pasted_image_0.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:51.811Z",
+    "source": 1
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 2,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "massa.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:51.851Z",
+    "source": 2
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 3,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "sebastian.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:52.460Z",
+    "source": 3
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 4,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "angela.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:52.518Z",
+    "source": 4
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 5,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pietro.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:52.557Z",
+    "source": 5
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 6,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "darius.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:52.595Z",
+    "source": 6
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 7,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "brodul.png.300x200_q85_crop_upscale.jpg",
+    "modified": "2018-02-14T19:45:52.636Z",
+    "source": 7
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 8,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pasted_image_0.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:37.790Z",
+    "source": 1
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 9,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "massa.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:37.830Z",
+    "source": 2
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 10,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "sebastian.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:38.026Z",
+    "source": 3
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 11,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "angela.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:38.071Z",
+    "source": 4
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 12,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pietro.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:38.107Z",
+    "source": 5
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 13,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "darius.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:38.145Z",
+    "source": 6
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 14,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "brodul.png.300x200_q85_upscale.jpg",
+    "modified": "2018-02-14T19:50:38.187Z",
+    "source": 7
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 15,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pasted_image_0.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:32.817Z",
+    "source": 1
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 16,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "massa.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:32.854Z",
+    "source": 2
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 17,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "sebastian.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:33.045Z",
+    "source": 3
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 18,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "angela.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:33.087Z",
+    "source": 4
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 19,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pietro.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:33.120Z",
+    "source": 5
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 20,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "darius.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:33.155Z",
+    "source": 6
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 21,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "brodul.png.300x300_q85_upscale.jpg",
+    "modified": "2018-02-14T19:52:33.195Z",
+    "source": 7
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 22,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pasted_image_0.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:00.693Z",
+    "source": 1
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 23,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "massa.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:00.734Z",
+    "source": 2
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 24,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "sebastian.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:01.296Z",
+    "source": 3
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 25,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "angela.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:01.344Z",
+    "source": 4
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 26,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "pietro.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:01.382Z",
+    "source": 5
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 27,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "darius.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:01.418Z",
+    "source": 6
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 28,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "brodul.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-14T19:56:01.458Z",
+    "source": 7
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 29,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "8374816.jpeg.300x1000_q85_upscale.jpg",
+    "modified": "2018-02-16T17:24:44.454Z",
+    "source": 8
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 30,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "0.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-03-05T17:19:09.270Z",
+    "source": 9
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 31,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "sarunas_navickas.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-03-07T17:07:16.775Z",
+    "source": 10
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 32,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "rivo_laks.png.300x1000_q85_upscale.png",
+    "modified": "2018-03-22T21:56:56.142Z",
+    "source": 11
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 33,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "paulius_cepulionis.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-03-24T08:04:16.806Z",
+    "source": 12
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 34,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "petras.png.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-15T19:15:34.754Z",
+    "source": 13
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 35,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "Dmitry_Nazarov.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-25T18:41:00.142Z",
+    "source": 14
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 36,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "13113869.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-25T18:46:57.275Z",
+    "source": 15
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 37,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "unnamed.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-25T18:50:19.198Z",
+    "source": 16
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 38,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "3120896.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-25T18:54:10.377Z",
+    "source": 17
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 39,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "download.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-25T19:01:12.654Z",
+    "source": 18
+  }
+},
+{
+  "model": "easy_thumbnails.thumbnail",
+  "pk": 40,
+  "fields": {
+    "storage_hash": "d26becbf46ac48eda79c7a39a13a02dd",
+    "name": "Darius_Aliulis_tikra.jpg.300x1000_q85_upscale.jpg",
+    "modified": "2018-04-29T09:48:21.632Z",
+    "source": 19
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 1,
+  "fields": {
+    "twitter_handle": "@pyacademy",
+    "github_handle": "pya",
+    "linkedin_handle": "mike-m%25C3%25BCller-1937695",
+    "name": "Mike M\u00fcller",
+    "image": "pasted_image_0.png",
+    "bio": "<p>CEO at Python Academy CEO, Python Trainer, Serial PyCon Chair.</p>\r\n\r\n<p>Mike M&uuml;ller has been using Python as his primary programming language since 1999. He is a Python trainer and the CEO at Python Academy (www.python-academy.com).</p>\r\n\r\n<p>He teaches a wide variety of Python topics including &quot;Introduction to Python&quot;, &quot;Python for Scientists and Engineers&quot;, &quot;Advanced Python&quot; as well as &quot;Optimization and Extensions of Python Programs&quot;.</p>\r\n\r\n<p>He is the chairman of the Python Software Verband e.V., a PSF fellow, a PSF community service award holder, User Group co-founder. He chaired EuroSciPy 2008 and 2009, PyCon DE 2011 and 2012 as well as EuroPython 2014 in Berlin, Germany.</p>",
+    "expertise": "[\"Education\", \"Science\", \"Performance\", \"Jupyter/iPython Notebook\", \"Functional Programming\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 2,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Harald Armin Massa",
+    "image": "massa.png",
+    "bio": "<p>Managing owner of 2ndQuadrant Deutschland GmbH</p>\r\n\r\n<p>Harald studied computers and economics, he&#39;s self employed since 1999, doing software development in Python and focused on databases; He&#39;s a presenter and trainer and managing owner of 2ndQuadrant Deutschland since spring 2011.</p>\r\n\r\n<p>He is also known as LightningTalkMan, the moderator who has the SuperPower to make your conference awesome.</p>\r\n\r\n<p>http://www.lightningtalkman.com</p>",
+    "expertise": "[]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 3,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Sebastian Neubauer",
+    "image": "sebastian.png",
+    "bio": "<p>Senior Data Scientist at Blue Yonder GmbH</p>\r\n\r\n<blockquote>\r\n<p>After my PhD in physics I realized in my first job as a Data Scientist at Blue Yonder www.blue-yonder.com, that it takes a lot more than just software and algorithms to deliver value to the customers.</p>\r\n\r\n<p>That&#39;s when I dived into configuration management, application lifecycle and the design, development and operation of distributed systems in general.&nbsp;</p>\r\n</blockquote>",
+    "expertise": "[]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 4,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Angela Branaes",
+    "image": "angela.png",
+    "bio": "<div>\r\n<p>Angela is the Founder &amp; CEO of Proximistyle.</p>\r\n\r\n<p>Proximistyle is&nbsp;a RetailTech company that helps you find what you&#39;re looking for nearby, with the aim to transform shopping into an effortless and pleasant experience. It was built using a Python and React stack. Prior to Proximistyle, Angela spent several years developing financial software applications in Python for a systematic hedge fund.&nbsp;</p>\r\n\r\n<p>Angela has a Computing degree from Imperial College London. Last summer she gave a talk at EuroPython titled &quot;<a data-saferedirecturl=\"https://www.google.com/url?q=https://ep2017.europython.eu/conference/talks/building-a-full-stack-web-application-with-python-nodejs-and-react&amp;source=gmail&amp;ust=1519222008751000&amp;usg=AFQjCNFw5GMliJ0b6HiJVrxQqH8LLBnomg\" href=\"https://ep2017.europython.eu/conference/talks/building-a-full-stack-web-application-with-python-nodejs-and-react\" target=\"_blank\">Building a full-stack web application with Python, NPM, Webpack and React</a>&quot;</p>\r\n</div>",
+    "expertise": "[\"Web General\", \"Python 3\", \"Python general\", \"Best Practice\", \"JavaScript Web Frameworks (AngularJS/ReactJS/...)\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 5,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": "toobaz",
+    "linkedin_handle": null,
+    "name": "Pietro Battiston",
+    "image": "pietro.png",
+    "bio": "<p>Pyconomist pietrobattiston.it/economics</p>\r\n\r\n<blockquote>\r\n<p>Ex-almost-mathematician, I moved to economics just in time to not sound too cool, today I&#39;m a researcher.</p>\r\n\r\n<p>I started studying Python for fun, as an apparently harmless curiosity, but along the years it has become more and more difficult for me to keep it from intruding into my working life, and today I&#39;m definitely addicted (and contagious).</p>\r\n</blockquote>",
+    "expertise": "[\"Science\", \"Science Track\", \"Scientific Libraries (Numpy/Pandas/SciKit/...)\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 6,
+  "fields": {
+    "twitter_handle": "tweet_raddar",
+    "github_handle": null,
+    "linkedin_handle": "darius-baru\u0161auskas-ab566b1b",
+    "name": "Darius Baru\u0161auskas",
+    "image": "darius.png",
+    "bio": "<p>Data scientist at Oxipit</p>\r\n\r\n<p>Darius is a winner of multiple kaggle.com data science competitions (<a href=\"https://www.kaggle.com/raddar\" style=\"text-decoration:none;\"><u>https://www.kaggle.com/raddar</u></a>)</p>\r\n\r\n<blockquote>\r\n<p>My working experience mostly involves credit risk modelling applying econometric and machine learning methods. Throughout the years I have gained expert knowledge of credit bureau systems and products, created and validated numerous statistical and machine learning models, including:</p>\r\n\r\n<ol>\r\n\t<li style=\"list-style-type:decimal\">\r\n\t<p>Bankruptcy and default models for Lithuanian SMEs (most widely used in Lithuania);</p>\r\n\t</li>\r\n\t<li style=\"list-style-type:decimal\">\r\n\t<p>Generic credit risk models of individuals of Lithuania and Belarus;</p>\r\n\t</li>\r\n\t<li style=\"list-style-type:decimal\">\r\n\t<p>Multiple models for micro-financing institutions and P2P lending platforms;</p>\r\n\t</li>\r\n</ol>\r\n</blockquote>",
+    "expertise": "[\"kaggle\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 7,
+  "fields": {
+    "twitter_handle": "@brodul",
+    "github_handle": "brodul",
+    "linkedin_handle": "brodul",
+    "name": "Andraz 'brodul' Brodnik",
+    "image": "brodul.png",
+    "bio": "<p>Full-stack Software Engineer and DevOps<br />\r\n<br />\r\nAndraz has worked on multiple prototypes that included web technologies<br />\r\nand hardware. He has been a contractor as a Full-stack Engineer and<br />\r\nDevOps. Currently he is working as a consultant, coaching team leads in<br />\r\nlocal area, developing in Python and JavaScript and reworking<br />\r\ninfrastructure to make the lives of business and developers easier.<br />\r\n<br />\r\nIn his free-time he is helping organizing tech events, drawing PCBs in<br />\r\nKiCAD and playing blues.</p>",
+    "expertise": "[\"Python\", \"Django\", \"Pyramid\", \"Flask\", \"Elm\", \"ReactJs\", \"Electronics\", \"software delivery\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 8,
+  "fields": {
+    "twitter_handle": "bhargavvader",
+    "github_handle": "bhargavvader",
+    "linkedin_handle": "bhargavvader",
+    "name": "Bhargav Srinivasa",
+    "image": "8374816.jpeg",
+    "bio": "<p>Research Engineer at INRIA, France.</p>\r\n\r\n<p>Bhargav works with the MODAL team at Inria, on building better statistical models for human computer interaction. He is a regular contributor to the python scientific computing society, and is a believer in all things open source. He is the maintainer of the python package pycobra and is finishing up writing a book on performing text analysis with python, and enjoys talking about how we can use python and artificial intelligence in our daily lives. When not at work or coding, he likes to read, listen to rock music, and drink IPAs.</p>",
+    "expertise": "[\"text analysis\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 9,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": "279bb298",
+    "name": "Evaldas Kazlauskis",
+    "image": "0.png",
+    "bio": "<p>Data Scientist at CUJO AI</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span class=\"lt-line-clamp__line lt-line-clamp__line--last\">Passionate young developer. Always pushing myself further to improve my skills and always learning new things.</span></p>",
+    "expertise": "[]",
+    "user": null,
+    "active": false,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 10,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Milda Glebauskait\u0117",
+    "image": "0.jpg",
+    "bio": "<p>Software Engineer at Wix.com</p>\r\n\r\n<p>Milda started her career with Python, working in couple Vilnius-based startups, moved to Scala, ended up with NodeJS.<br />\r\n\u200bInterested in quality code, test-driven development, data analysis with Python and R.</p>\r\n\r\n<p>At the end of the day, she loves to do kickboxing and is an owner of the cutest dog in Wix.com office.</p>",
+    "expertise": "[]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 11,
+  "fields": {
+    "twitter_handle": "zaibacu",
+    "github_handle": "zaibacu",
+    "linkedin_handle": "snavickas",
+    "name": "\u0160ar\u016bnas Navickas",
+    "image": "sarunas_navickas.jpg",
+    "bio": "<p>Data Engineer at TokenMill</p>\r\n\r\n<p>Constantly challenging myself to exit comfort zone. This has lead into experimenting and working with various programming languages, programming paradigms and even roles. However, Python tends to be versatile language, thus it constantly finds it&#39;s place in my work and hobby environment.</p>",
+    "expertise": "[\"Python\", \"Scala\", \"Clojure\", \"JVM\", \"Functional Programming\", \"Objective Programming\", \"Machine Learning\", \"Natural Language Processing\"]",
+    "user": 4,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 12,
+  "fields": {
+    "twitter_handle": "nick_karelin",
+    "github_handle": "karelin",
+    "linkedin_handle": "nikolay-karelin",
+    "name": "Nikolay Karelin",
+    "image": "3120896.jpg",
+    "bio": "<div class=\"material\">\r\n<div class=\"material__types material__types_bottom\">\r\n<div class=\"material__content\">\r\n<div>Experience in R\\&amp;D and engineering work both in academia and industry.<br />\r\n<br />\r\nSoftware development background: architecture development of complex software, development of machine learning (ML) solutions, converting R&amp;D results into a software product, requirement management, analysis of algorithms, numerical simulations, GPU-assisted computations, graph-based computations (dataflow-based actor model), customer support, technical writing.<br />\r\n<br />\r\nScientific background: SVD (Singular Value Decomposition; also known as Karhunen-Loeve expansion or Principal Component Analysis, PCA), neural networks, image processing and compression, natural language processing (NLP), laser optics, coherence theory, quantum theory (quantum information and uncertainty relations), optical fiber communication (mutimode fibers, power transients, fiber nonlinearities), image formation, near-field optics.</div>\r\n</div>\r\n</div>\r\n</div>",
+    "expertise": "[\"deep learning\", \"document processing\", \"artificial intelligence\"]",
+    "user": null,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 13,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": "nazarov-tech",
+    "linkedin_handle": "nazarov-tech",
+    "name": "Dmitry Nazarov",
+    "image": "Dmitry_Nazarov.jpg",
+    "bio": "<div>\r\n<div>\r\n<div>\r\n<div>\r\n<div>\r\n<div dir=\"ltr\">Dmitry Nazarov works for&nbsp;<a data-saferedirecturl=\"https://www.google.com/url?q=http://soulplatform.com/&amp;source=gmail&amp;ust=1524857847900000&amp;usg=AFQjCNGhkgw5E3RkLF-uNtSKT8YMyXW80w\" href=\"http://soulplatform.com/\" target=\"_blank\">soulplatform.com</a>&nbsp;in St. Petersburg (2nd biggest city in Russia).</div>\r\n\r\n<div dir=\"ltr\">\r\n<div>&nbsp;</div>\r\n\r\n<div>Organizer of PiterPy Meetup (Python meetup in St. Petersburg), co-founder of Django Girls SPb,<br />\r\nPiterPy conference program committee member, PSF managing member.</div>\r\n\r\n<div>Public European speaker (Berlin, Moscow, Minsk, Lisbon).</div>\r\n\r\n<div>He is also a strong believer in both Python &amp; the modern web.</div>\r\n</div>\r\n</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><font style=\"color:#212121\"><a data-saferedirecturl=\"https://www.google.com/url?q=https://t.me/nazarov_tech&amp;source=gmail&amp;ust=1524857847900000&amp;usg=AFQjCNGxXjqj3tmXFqeb-AzuXhrE9KclYw\" href=\"https://t.me/nazarov_tech\" target=\"_blank\">https://t.me/nazarov_tech</a><br />\r\n<a data-saferedirecturl=\"https://www.google.com/url?q=https://www.facebook.com/nazarov.tech&amp;source=gmail&amp;ust=1524857847900000&amp;usg=AFQjCNHTFRZ0fGKsA2jiVlc1dnyxqUlaNg\" href=\"https://www.facebook.com/nazarov.tech\" target=\"_blank\">https://www.facebook.com/<wbr />nazarov.tech</a></font></div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+    "expertise": "[]",
+    "user": null,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 14,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Darius Aliulis",
+    "image": "Darius_Aliulis_tikra.jpg",
+    "bio": "<p>Software Engineer and Data Scientist @ DATA DOG<br />\r\nGuest Lecturer @ KTU Business Big Data Analytics Master&#39;s study programme</p>\r\n\r\n<p>Darius uses Python for R&amp;D prototyping, machine learning and data analysis at Data Dog, a company that builds custom enterprise resource planning, supply chain, sales and customer service solutions. He works together with Data Dog&rsquo;s partners from London - Satalia, which is becoming well known in London&#39;s tech scene as one of the leading AI companies. He also uses Python to teach large scale machine learning to master students at Kaunas University of Technology. Having a strong background in Applied Mathematics, Darius is interested in operational machine learning, streaming analytics, functional and reactive programming - both in Python and JVM languages.<br />\r\n&nbsp;</p>",
+    "expertise": "[]",
+    "user": null,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 15,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": "tamosiunasrokas",
+    "name": "Rokas Tamo\u0161i\u016bnas",
+    "image": "",
+    "bio": "<p>data scientist / mathematician / educologist</p>\r\n\r\n<div>\r\n<p>Exacaster<br />\r\n<br />\r\nThree years experience as data scientist at Exacaster - big data predictive analytics technology company, partners with Cloudera; where I was responsible for retail and telco related R&amp;D projects and had an opportunity to work extensively with spark, hadoop and python. Lifelong learner with problem-solving attitude; more than 20 data science related certificates. Strong mathematical background; currently studying PhD in analytic number theory. Used to explain complicated concepts; experienced as teacher and lecturer. Passionate to automate repetitive tasks and use right tools for the job, experienced with test driven Python and Scala development.</p>\r\n</div>",
+    "expertise": "[\"data science\", \"mathematics\", \"educology\", \"big data\"]",
+    "user": null,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 16,
+  "fields": {
+    "twitter_handle": "petraszd",
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Petras Zdanavi\u010dius",
+    "image": "petras.png",
+    "bio": "<p>- Python developer having more than 8 years of experience<br />\r\n- Professional Web developer<br />\r\n- Hobbyist game developer<br />\r\n- Regular PyCon LT speaker<br />\r\n- <a href=\"http://petraszd.com\">http://petraszd.com</a></p>",
+    "expertise": "[\"gamedev\", \"webdev\", \"flamewars\"]",
+    "user": 5,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 17,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Rivo Laks",
+    "image": "rivo_laks.png",
+    "bio": "<p>Rivo Laks is an experienced software developer and systems architect. Python, Django and React.js hacker. Currently Co-founder and Lead Engineer at Thorgate.</p>",
+    "expertise": "[\"api\", \"django\", \"react\"]",
+    "user": null,
+    "active": true,
+    "event": [
+      2
+    ]
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 18,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": "paulius-cepulionis",
+    "name": "Paulius \u010cepulionis",
+    "image": "paulius_cepulionis.jpg",
+    "bio": "<p>Data Scientist at GeoPhy<br />\r\nAs a data scientist at GeoPhy, Paulius is responsible for disrupting the real estate industry in the USA. His efforts focus on automating the valuation of real estate objects by ways of advanced algorithms which tap into thousands of unique data sources. In this AI-driven model, Python is key. From data analysis to quality assurance and from data modeling to predictive analysis, Python has been a long-trusted tool of Paulius. Apart from being a data scientist at GeoPhy, Paulius is a Master in Mathematics and currently studies for a PhD in Measurement Engineering at the Kaunas University of Technology.</p>\r\n\r\n<p>&nbsp;</p>",
+    "expertise": "[]",
+    "user": null,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 19,
+  "fields": {
+    "twitter_handle": "chompomonim",
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Jaro",
+    "image": "unnamed.jpg",
+    "bio": "<p>For the last 15 years I was managing IT projects, building products and running startup companies. I had experience designing intranets, social networks and business management apps as well as experience in managing small teams (2-&shy;7 people) of developers.<br />\r\n<br />\r\nSkills &amp; Expertise:<br />\r\n* Areas of interests: Data&shy; driven product design, data analytics, market research and analysis, A/B testing, user experience (UX), user testing, mockuping and prototyping;<br />\r\n* Software development skills: Python, JavaScript/NodeJs, React.js, Redux, HTML5/CSS3, PostCSS...<br />\r\n<br />\r\nPassion:<br />\r\nMartial Arts, Open Source, Crypto-currencies, Theology, Philosophy, Psychology.<br />\r\n<br />\r\nSocial activity:<br />\r\nFrom 2009 I&#39;m organizer of Lithuanian BarCamp events and active member of Lithuanian startups community. In the past I was active OpenSource community member, one of Lithuanian OpenSource movement founders and president of association OpenSource for Lithuania (Atviras kodas Lietuvai). I&#39;m also an instructor of WonHwaDo martial art.<br />\r\n<br />\r\nI&#39;m using Linux on desktop for more than 20 years and have Linux servers administration experience.</p>",
+    "expertise": "[\"data analytics\", \"Python\", \"JavaScript/NodeJs\", \"React.js\", \"Redux\", \"HTML5/CSS3\", \"PostCSS\", \"crypto-currencies\", \"martial-arts\"]",
+    "user": 6,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 20,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": "suryansh-tibarewal",
+    "linkedin_handle": null,
+    "name": "Suryansh Tibarewala",
+    "image": "13113869.jpg",
+    "bio": "<div jsan=\"7.uyb8Gf\" jsinstance=\"1\" jstcache=\"3398\">\r\n<div jstcache=\"3399\">\r\n<div jsaction=\"jsl._\" jsan=\"7.pv,22.jsaction\" jstcache=\"3451\">\r\n<div dir=\"ltr\"><br />\r\nAlexa calls me Suryansh. My current adventure involves working at Booking.com exploring what impact voice interfaces are going to have on the travel industry.<br />\r\nI moved to Amsterdam a year back after my graduation, and have been travelling ever since. Love to connect with people from all over the world, and presenting I believe is the best way to connect.<br />\r\nApart from this I love startups and the impact of technology, thus have been exploring voice industry for a while.</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div jsan=\"7.uyb8Gf\" jsinstance=\"2\" jstcache=\"3398\">\r\n<div jstcache=\"3399\">\r\n<div jsaction=\"jsl._\" jsan=\"7.F3hlO,22.jsaction\" jstcache=\"3451\">&nbsp;</div>\r\n</div>\r\n</div>",
+    "expertise": "[\"conversational interface\", \"bots\", \"aws\", \"alexa\"]",
+    "user": null,
+    "active": true,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 21,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "Simonas Vytas",
+    "image": "ss.jpg",
+    "bio": "",
+    "expertise": "[]",
+    "user": 11,
+    "active": false,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 22,
+  "fields": {
+    "twitter_handle": "Glutexo",
+    "github_handle": "Glutexo",
+    "linkedin_handle": "Glutexo",
+    "name": "Glutexo",
+    "image": "Glutexo.png",
+    "bio": "Czech, programmer, linguist, likes craft beer, cycling and learning anything.",
+    "expertise": "[\"A long-time fan of Ruby\", \"now working mostly in Python\", \"coming from the world of PHP.\"]",
+    "user": 14,
+    "active": false,
+    "event": []
+  }
+},
+{
+  "model": "presenters.presenter",
+  "pk": 24,
+  "fields": {
+    "twitter_handle": null,
+    "github_handle": null,
+    "linkedin_handle": null,
+    "name": "test",
+    "image": "",
+    "bio": "<p>just for test</p>",
+    "expertise": "[\"testing\"]",
+    "user": null,
+    "active": false,
+    "event": [
+      1
+    ]
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 2,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "7 Years of Using Python for Data Science DevOps",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>aka: Data Science, Python, Production &ndash; Choose Three</p>\r\n\r\n<p>Data science, big data or AI are buzzwords no one can escape in the last years. With a grain of salt, in the past it was sufficient for many companies to just buy a Hadoop cluster in order to show that one is really doing &ldquo;this data stuff&rdquo;. Times are changing and the companies slowly realize that data buried in a datacenter is worth nothing.</p>\r\n\r\n<p>The biggest value of data science lies in data-driven automation of business decisions and therefore as an active part of a company&rsquo;s value stream.</p>\r\n\r\n<p>This implies that ultimately, data science is about building enterprise grade applications. While Python evolved into the de-facto standard programming language in the data science universe, it is still not the language of choice for building enterprise grade, mission critical software. In this talk I will briefly show you why. Luckily, despite the big tensions between the three &ldquo;opponents&rdquo;, you can bring them together by applying the principles of the DevOps methodology.</p>\r\n\r\n<p>At Blue Yonder, we have more than seven years of (sometimes painful) experience delivering and operating data science applications as-a-service for our customers using python only. In this talk I will share important lessons learned, how we deploy, how we test, how we monitor and how we &ldquo;crunch the numbers&rdquo;. In short, I will take you for a walk through our &ldquo;pythonic enterprise grade data science delivery pipeline&rdquo;.</p>",
+    "extra_info": "",
+    "presenter": 3
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 4,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Distribution of Python Software",
+    "state": 1,
+    "type": 1,
+    "duration": 25,
+    "short_description": "<p>In the talk we will cover how to handle packaging and distribution of python projects.</p>\r\n\r\n<p>When distributing software we need to be sure, that the package/container/procedure works in order to deliver the value of the product.</p>\r\n\r\n<p>The talk will cover the basic of Virtualenv, pip installer, wheels. We will take a look at setup.py files and how to distribute a package to pypi. We will discuss solutions with dependencies of C/C++ extensions.<br />\r\n&nbsp;</p>",
+    "extra_info": "",
+    "presenter": 7
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 6,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Pandas: Efficient Use of Pyconomist's Favorite Tool",
+    "state": 1,
+    "type": 1,
+    "duration": 25,
+    "short_description": "<p>aka: Data analysis in Python - come in, don&#39;t get lost</p>\r\n\r\n<p>&quot;I think the problem, to be quite honest with you, is that you&#39;ve never actually known what the question is&quot;, says Deep Thought in The Hitchhiker&#39;s Guide to the Galaxy. The Python ecosystem for data analysis has flourished in the last years, but as a consequence, choosing the right tool for the job is not always simple. This talk will briefly draw a landscape of some of the most relevant libraries, and of the different puroposes they pursue. We will then take a look at the daily workflow of a &quot;pyconomist&quot;</p>",
+    "extra_info": "",
+    "presenter": 5
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 7,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Text Analysis With SpaCy, NLTK, Gensim, Skearn, Keras and TensorFlow.",
+    "state": 1,
+    "type": 1,
+    "duration": 25,
+    "short_description": "<p dir=\"ltr\" id=\"docs-internal-guid-1a5ec844-9fdf-dcac-fb21-e4b7b870a790\">The explosion in Artificial Intelligence and Machine Learning is unprecedented now - and text analysis is likely the most easily accessible and understandable part of this. And with python, it is crazy easy to do this - python has been used as a parsing langauge forever, and with the rich set of Natural Language Processing and Computational Linguistic tools, it&#39;s worth doing text analysis even if you don&#39;t want to.</p>\r\n\r\n<p dir=\"ltr\">The purpose of this talk is to convince the python community to do text analysis - and explain both the hows and the whys. Python has traditionally been a very good parsing language, aruguably replacing perl for all text file handling tasks. Reading files, regular expressions, writring to files, crawling on the web for textual data have all been standard ways to use python - and now with the Machine Learning and AI explosion - we have a great set of tools in python to understand all the textual data we can so easily play with.</p>\r\n\r\n<p dir=\"ltr\">I will be briefly talking aboubt the merits, de-merits and use-cases of the most popular text processing libraries. In particular, these will be spaCy, NLTK, gensim. I will also talk about how to use traditional Machine Learning libraries for text analysis, such as scikit-learn, Keras and TensorFlow.</p>\r\n\r\n<p dir=\"ltr\">Pre-processing is the one of the most important steps of Text Analysis, and I will talk more about this - after all, garbage in, garbage out!</p>\r\n\r\n<p dir=\"ltr\">The final part of the talk will be about where to get your data - and how to create your own textual data as well. You could analyse anything, from your own emails and whatsapp conversations to freely available British Parliament transcripts!</p>",
+    "extra_info": "",
+    "presenter": 8
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 8,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Building a Startup with Python, React and AWS",
+    "state": 1,
+    "type": 1,
+    "duration": 25,
+    "short_description": "<p class=\"m_-4638710543214550254inbox-inbox-p1\"><span class=\"m_-4638710543214550254inbox-inbox-s1\">In January I launched a startup built on a Python, React and AWS stack. It took some learning curve to get there, which is why I would like to share some of the quick wins with you. I will explain why using React and Python is a great choice, especially as a small company, and you will see how to quickly and easily get a new React project up and running. You will also learn how to quickly get started with AWS and you get a brief overview of some of the most commonly used AWS features for a standard Python/React project, to dramatically cut down your research time.</span></p>",
+    "extra_info": "",
+    "presenter": 4
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 9,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Writing Tests When The Code is Already There: Golden Master Technique",
+    "state": 1,
+    "type": 1,
+    "duration": 25,
+    "short_description": "<div>Inheriting someone else&rsquo;s code is scary. It might be ugly, unreadable and the intentions are not always clear. Especially if there are no tests. How to deal with it? Characterization tests come to the rescue.</div>\r\n\r\n<div>There is no doubt, that test coverage brings safety when refactoring or adding new features to code. However, legacy code tend to be untestable and often we&rsquo;re stuck in a vicious circle were to test, we must refactor, and to refactor, we have to write tests. The purpose of characterization test known as Golden Master is to minimize the refactoring and maximize the safety in these situations.</div>\r\n\r\n<div>In this session we will learn when and how to apply Golden Master and try to implement it ourselves.</div>",
+    "extra_info": "",
+    "presenter": 10
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 10,
+  "fields": {
+    "event": 2,
+    "user": 4,
+    "title": "Journey into Monitoring: Paradigms and Stacks",
+    "state": 1,
+    "type": 1,
+    "duration": 45,
+    "short_description": "<p>Monitoring is not a trivial task. And there&#39;s no &quot;right&quot; or &quot;wrong&quot; way, it always depends...</p>\r\n\r\n<p>I&#39;ll cover main paradigms:</p>\r\n\r\n<ul>\r\n\t<li>reactive monitoring;</li>\r\n\t<li>proactive monitoring;</li>\r\n</ul>\r\n\r\n<p>Most popular stacks:</p>\r\n\r\n<ul>\r\n\t<li>Graphite + Grafana</li>\r\n\t<li>ELK (ElasticSearch + Logstash + Kibana)</li>\r\n\t<li>Prometheus</li>\r\n\t<li>Nagios</li>\r\n</ul>\r\n\r\n<p>And some short guidelines about alerting. Purpose of this talk is mainly show whole landscape, educate about pros and cons of each approach, and give some brief look how they work at low level.</p>",
+    "extra_info": "",
+    "presenter": 11
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 11,
+  "fields": {
+    "event": 2,
+    "user": 2,
+    "title": "asdas",
+    "state": 0,
+    "type": 0,
+    "duration": 45,
+    "short_description": "asdfa",
+    "extra_info": "asdfas",
+    "presenter": null
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 12,
+  "fields": {
+    "event": 2,
+    "user": 2,
+    "title": "asd",
+    "state": 0,
+    "type": 0,
+    "duration": 45,
+    "short_description": "asdas",
+    "extra_info": "asdasd",
+    "presenter": null
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 13,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Jupyter Notebook: Between Interactive Document and Specialized Web Application",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>Jupyter Notebooks (previously IPython Notebooks) has already become the product of choice for many scientific and education projects, ranging from particle physics and cosmology to data science and all kinds or tutorials. For majority of notebook users, it works like (semi-)interactive document: one may combine descriptive text (with Markdown formatting), executable code, and computation results, including plots and images and save the notebook for future non-interactive work. On the other hand, Jupyter notebooks support various kinds of interactive widgets, ranging from geographic maps to complex dashboards, resulting in specialized web interface. In my talk, I will explain how these two kinds of usage are reflected in the notebook architecture and discuss how to select the approach for your product.</p>\r\n\r\n<div>\r\n<div>\r\n<div>\r\n<div>&nbsp;</div>\r\n</div>\r\n</div>\r\n</div>",
+    "extra_info": "",
+    "presenter": 12
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 14,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "How People are Learning Python - My Experience from 14 Years of Python Teaching",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>TBA</p>",
+    "extra_info": "",
+    "presenter": 1
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 15,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Future Pythonic Web: ASGI & Daphne",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>The web evolves. There is an increasing demand for asynchronous programming. More and more protocols that do not follow the pattern of HTTP-style request/response cycle (most notably, WebSocket). There are brand-new concepts. Gladly, so evolves Python to answer the call.</p>\r\n\r\n<div>\r\n<div>\r\n<div>\r\n<div>In this speech we will examine the part of it that deserves your very attention: ASGI (Asynchronous Server Gateway Interface, the spec that is currently in-progress, but is now mostly complete) and Daphne (ASGI server).<br />\r\nWe&#39;ll go through the stuff you&#39;re already familiar with: website on templates, REST API, WebSocket/HTTP/2. We&#39;ll see how it feels in action on Django/Flask cases. We&#39;ll also discuss distribution matters (e.g. Docker) and other nuances.</div>\r\n</div>\r\n</div>\r\n</div>",
+    "extra_info": "",
+    "presenter": 13
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 16,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Python, Machine Learning and Healthcare",
+    "state": 0,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>TBA</p>",
+    "extra_info": "",
+    "presenter": 6
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 17,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Online Machine Learning - When it's Infeasible to Train Over The Entire Dataset",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>The talk will be an introduction to online machine learning, a method of machine learning that needs only a small fraction of data to update model parameters as opposed to the commonly used batch learning that requires the full data set to make a parameter update.&nbsp;</p>\r\n\r\n<p>This method can be used when it is infeasible to load the full dataset in memory or when the use of adaptive models is needed.</p>\r\n\r\n<p>Multiple online machine learning libraries are available for different technology stacks, we will look at these from a Python user perspective and focus more on Vowpal Wabbit - a fast out-of-core machine learning system library.<br />\r\n&nbsp;</p>",
+    "extra_info": "",
+    "presenter": 14
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 18,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Meet Exa, AI Driven Junior Data Analyst",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>TBA</p>",
+    "extra_info": "",
+    "presenter": 15
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 19,
+  "fields": {
+    "event": 2,
+    "user": 5,
+    "title": "Functions: What a Concept",
+    "state": 1,
+    "type": 1,
+    "duration": 25,
+    "short_description": "<p>We will start with basics. What is a function? What is a programming language&#39;s function? What is a Python&#39;s function? And than we will start digging deeper. What is a bound function? What is an unbound function? What is a closure? How a function is represented in CPython C code? And so and so on until time runs out.</p>",
+    "extra_info": "",
+    "presenter": 16
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 20,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Creating Solid APIs",
+    "state": 1,
+    "type": 1,
+    "duration": 60,
+    "short_description": "<p>Increasingly, our apps are used not by humans but by other apps - via their APIs. Thus it is increasingly important that your APIs are well-designed and easy to consume for other developers.<br />\r\nI will share tips and good practices on authentication, versioning, documentation, response structure, and why it all matters.<br />\r\n<br />\r\n<br />\r\nAdding a few API endpoints to your application for internal consumption is easy. Creating APIs that other developers will love to use is a much harder problem.<br />\r\nYou&#39;ll need to think about solving variety of topics such as versioning, authentication, response structure, documentation and more. There are existing good practices for each of them, but often developers who haven&#39;t done a lot of API work aren&#39;t familiar with them.<br />\r\n<br />\r\nMy talk will show how to build on top of Django and DRF and find reasonable solutions for those problems.<br />\r\nI will talk about JSON API, OAuth2, and other technologies and show how they fit into the puzzle.<br />\r\nBenefits of standardized response structure, as well as auto-generated documentation will also be discussed.<br />\r\n<br />\r\nI&#39;ll introduce OAuth2, discussing when it is a good choice and when not, as well as some trickier parts of it.<br />\r\nNext we&#39;ll look at why a standardized response structure such as JSON API makes lives of 3rd-party developers easier. We&#39;ll then move on to versioning and how you can change your API without breaking all existing apps. And the talk wouldn&#39;t be complete without looking at documenting your APIs and why the docs should be auto-generated.</p>",
+    "extra_info": "",
+    "presenter": 17
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 21,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Automated Valuation Model: From Data Exploration to Results Validation",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>Paulius will take you along through our data universe and show how he uses Python to make sense of an endless stream of data and how Python is being used in predictive analysis. Step-by-step he will reveal the secrets of big data analysis: from the exploration and quality of data to the interpretation and validation of results.</p>",
+    "extra_info": "",
+    "presenter": 18
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 22,
+  "fields": {
+    "event": 2,
+    "user": 6,
+    "title": "Python in Blockchain",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<div>Last year, with Bitcoin&#39;s all time hight and thousands of ICOs programming for Blockchain became quite hot topic. I&#39;d like to give short overview of Bitcoin and Ethereum and what kind of development is possible there. As well I&#39;ll share what kind of python libs are available there and in what kind of projects is python most popular in Bitcoin and Ethereum communities.<br />\r\n<br />\r\nYou can look at this talk as to short introduction possibilities for Python developers in Blockchain world.</div>\r\n\r\n<p>&nbsp;</p>",
+    "extra_info": "",
+    "presenter": 19
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 23,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "Talking to Amazon Alexa using Python",
+    "state": 1,
+    "type": 1,
+    "duration": 30,
+    "short_description": "<p>I will be talking about:</p>\r\n\r\n<div>- What is an Alexa Skill<br />\r\n- Why knowing how to develop an Alexa skill is important<br />\r\n- How to make an Alexa Skill using Python<br />\r\n<br />\r\nMore than 20 million Alexa devices are getting sold every quarter, and its becoming a part of our life day-by-day. But, still we have less than 20,000 skills developed for the Alexa platform as of yet.<br />\r\nI see that as an opportunity, an opportunity to harness the power of an amazing platform.<br />\r\n<br />\r\nAnd this talk is exactly designed for that, to give you a glimpse of what it is all about and how can you yourself teach Alexa to talk to you.<br />\r\n<br />\r\nBy the end of this talk, you will know what is all the craze about Alexa. What exactly is it! How to teach Alexa &lsquo;skills&rsquo;, and customise it for your use-cases. And the crux of the talk, I will give a live hands-on demo of how to do all this using Python.</div>",
+    "extra_info": "",
+    "presenter": 20
+  }
+},
+{
+  "model": "proposals.proposal",
+  "pk": 24,
+  "fields": {
+    "event": 2,
+    "user": null,
+    "title": "The tribes of Python and PostgreSQL: How Open Source and their communities shaped my life.",
+    "state": 1,
+    "type": 1,
+    "duration": 60,
+    "short_description": "<p>Python saved the day in one of my development project at the beginning of the century.</p>\r\n\r\n<div>\r\n<div>Since then, I have been involved within the Python language and</div>\r\n\r\n<div>its community. For&nbsp; multiple years&nbsp;I was allowed to contribute to the EuroPython conference,&nbsp;</div>\r\n\r\n<div>as well as helping Python conferences in United Kingdom and Ireland.&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>Being a part of the Python community shaped a big part of my professional and personal life.</div>\r\n\r\n<div>The long term of involvement also helped me to see the evolving and changeing of the Python communitie.</div>\r\n\r\n<div>Shareing episodes, experiences from language and communtiy I will try to inspire you to&nbsp;</div>\r\n\r\n<div>harness the power of open source to create a rewarding live.</div>\r\n</div>",
+    "extra_info": "",
+    "presenter": 2
+  }
+},
+{
+  "model": "proposals.attachment",
+  "pk": 2,
+  "fields": {
+    "proposal": 11,
+    "upload": "proposal_data/aidis/930a0029225aa4c28b8ef095b679285eaae27078/versada_logo.png"
+  }
+},
+{
+  "model": "program.track",
+  "pk": 1,
+  "fields": {
+    "name": "PyData",
+    "room": "Room 102",
+    "moderator": null
+  }
+},
+{
+  "model": "program.track",
+  "pk": 2,
+  "fields": {
+    "name": "General",
+    "room": "Room 101",
+    "moderator": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 1,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Door opens",
+    "start_time": "2018-05-05T06:30:00Z",
+    "length": 45,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 2,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Greeting",
+    "start_time": "2018-05-05T07:00:00Z",
+    "length": 15,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 3,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Keynote",
+    "start_time": "2018-05-05T07:10:00Z",
+    "length": 50,
+    "parent_slot": null,
+    "talk": 24
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 7,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Morning coffee break",
+    "start_time": "2018-05-05T09:00:00Z",
+    "length": 60,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 11,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Lunch",
+    "start_time": "2018-05-05T10:15:00Z",
+    "length": 60,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 13,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Afternoon coffee break",
+    "start_time": "2018-05-05T12:15:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 19,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "talk Sebastian",
+    "start_time": "2018-05-05T11:15:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 2
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 20,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "talk Andraz",
+    "start_time": "2018-05-05T11:45:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 4
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 21,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "talk Pietro",
+    "start_time": "2018-05-05T12:30:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 6
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 22,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "talk Bhargav",
+    "start_time": "2018-05-05T09:15:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 7
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 23,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "talk Angela",
+    "start_time": "2018-05-05T09:15:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 8
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 25,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "Alexa",
+    "start_time": "2018-05-05T12:30:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 23
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 26,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "talk Milda",
+    "start_time": "2018-05-05T08:00:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 9
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 27,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "Jupyter",
+    "start_time": "2018-05-05T08:00:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 13
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 28,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "Pythonic web",
+    "start_time": "2018-05-05T09:45:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 15
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 29,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "Monitoring",
+    "start_time": "2018-05-05T11:15:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 10
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 30,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "talk Darius Aliulis",
+    "start_time": "2018-05-05T13:00:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 17
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 31,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "talk Darius",
+    "start_time": "2018-05-05T08:30:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 16
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 32,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "talk Petras",
+    "start_time": "2018-05-05T08:30:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 19
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 33,
+  "fields": {
+    "track_span": 1,
+    "track": 2,
+    "name": "Jaro talk",
+    "start_time": "2018-05-05T13:00:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 22
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 35,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "Exa",
+    "start_time": "2018-05-05T09:45:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 18
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 37,
+  "fields": {
+    "track_span": 1,
+    "track": 1,
+    "name": "talk Paulius",
+    "start_time": "2018-05-05T11:45:00Z",
+    "length": 30,
+    "parent_slot": null,
+    "talk": 21
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 38,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Closing keynote",
+    "start_time": "2018-05-05T13:45:00Z",
+    "length": 45,
+    "parent_slot": null,
+    "talk": 20
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 39,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "Quizes and prizes",
+    "start_time": "2018-05-05T13:30:00Z",
+    "length": 15,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "program.slot",
+  "pk": 40,
+  "fields": {
+    "track_span": 2,
+    "track": null,
+    "name": "End",
+    "start_time": "2018-05-05T14:30:00Z",
+    "length": 0,
+    "parent_slot": null,
+    "talk": null
+  }
+},
+{
+  "model": "conference.event",
+  "pk": 1,
+  "fields": {
+    "name": "PyCon LT 2019",
+    "year": "2019",
+    "date": "2019-05-24",
+    "duration": 2
+  }
+},
+{
+  "model": "conference.event",
+  "pk": 2,
+  "fields": {
+    "name": "PyCon LT 2018",
+    "year": "2018",
+    "date": "2018-04-20",
+    "duration": 3
+  }
+}
+]
