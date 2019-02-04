@@ -38,4 +38,5 @@ class Event(models.Model):
 
 
 def get_current_event():
-    return Event.objects.get_or_create(year=settings.CURRENT_EVENT)
+    """Returns an id of a current event"""
+    return Event.objects.get_or_create(year=settings.CURRENT_EVENT)[0].id

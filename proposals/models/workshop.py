@@ -2,10 +2,11 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from conference.mixins.event_foreign_key import EventFKMixin
 from presenters.models import Presenter
 
 
-class Workshop(models.Model):
+class Workshop(EventFKMixin, models.Model):
     """
     Model for workshop
     """
@@ -32,5 +33,6 @@ class Workshop(models.Model):
     )
     coach = models.ForeignKey(
         Presenter,
-        help_text='A coach of a workshop'
+        help_text='A coach of a workshop',
+        on_delete=models.SET_NULL
     )
