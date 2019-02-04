@@ -86,3 +86,7 @@ nav {
 .light, .dark {
    color: var(--links-color);
 }
+
+.parallax {
+    z-index: 0;
+}
