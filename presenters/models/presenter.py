@@ -117,7 +117,6 @@ class Presenter(ProfileMixin, SocialMixin, models.Model):
         Event,
         help_text="Event to which this belongs. e.g. PyCon 2018.",
         blank=True,
-        null=True
     )
 
     class Meta:
