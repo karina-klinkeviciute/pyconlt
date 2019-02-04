@@ -15,4 +15,9 @@ deploy.sh
 .env
 paysera.html
 .python-version
-
+pyconlt/wsgi.py
+data.dump.json
+data.json
+dump.sh
+dumps/
+program.json
