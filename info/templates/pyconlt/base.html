@@ -120,13 +120,17 @@
         $(document.body).css("--primary-bg-color", "#ffffff");
         $(document.body).css("--primary-text-color", "#000000");
         $(document.body).css("--secondary-bg-color", "#33691e");
+        $(document.body).css("--links-color", "#039be5");
+        $(document.body).css("--header-text-color", "#ffffff");
         localStorage.setItem('theme', 'light');
     }
 
     function setDarkTheme() {
-        $(document.body).css("--primary-bg-color", "#272822");
+        $(document.body).css("--primary-bg-color", "#3E3D32");
         $(document.body).css("--primary-text-color", "#F8F8F2");
-        $(document.body).css("--secondary-bg-color", "#3E3D32");
+        $(document.body).css("--secondary-bg-color", "#272822");
+        $(document.body).css("--links-color", "#baba1b");
+        $(document.body).css("--header-text-color", "#F8F8F2");
         localStorage.setItem('theme', 'dark');
     }
 

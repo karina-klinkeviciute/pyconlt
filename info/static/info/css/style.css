@@ -12,11 +12,21 @@
     --primary-bg-color: #FFFFFF
     --primary-text-color: #000000;
     --secondary-bg-color: #33691e;
+    --links-color: #039be5;
+    --header-text-color: #fffff;
 }
 
 body, main {
    background-color: var(--primary-bg-color);
    color: var(--primary-text-color);
+}
+
+a, a:visited {
+    color: var(--links-color);
+}
+
+a.orange {
+    color: black;
 }
 
 nav {
@@ -40,19 +50,19 @@ nav {
 }
 
 .input-field {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .input-field > .material-icons {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .input-field > label {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .dropdown-content > li > a {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .card {
@@ -60,11 +70,19 @@ nav {
    color: var(--primary-text-color);
 }
 
-.side-nav, .side-nav li > a {
+.header a {
+   color: var(--header-text-color);
+}
+
+.side-nav, .side-nav li > a  {
    background-color: var(--primary-bg-color);
    color: var(--primary-text-color);
 }
 
 .side-nav li > a:hover {
    background-color: var(--secondary-bg-color);
+}
+
+.light, .dark {
+   color: var(--links-color);
 }
