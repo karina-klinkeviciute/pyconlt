@@ -83,6 +83,10 @@ nav {
    background-color: var(--secondary-bg-color);
 }
 
+blockquote {
+   border-left: 5px solid var(--links-color);
+}
+
 .light, .dark {
    color: var(--links-color);
 }
