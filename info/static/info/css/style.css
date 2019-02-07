@@ -21,6 +21,16 @@ body, main {
    color: var(--primary-text-color);
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 a, a:visited {
     color: var(--links-color);
 }
@@ -81,6 +91,10 @@ nav {
 
 .side-nav li > a:hover {
    background-color: var(--secondary-bg-color);
+}
+
+blockquote {
+   border-left: 5px solid var(--links-color);
 }
 
 .light, .dark {
