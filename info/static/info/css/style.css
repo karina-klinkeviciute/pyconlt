@@ -11,9 +11,9 @@
 :root {
     --primary-bg-color: #FFFFFF
     --primary-text-color: #000000;
-    --secondary-bg-color: #33691e;
-    --links-color: #039be5;
-    --header-text-color: #fffff;
+    --secondary-bg-color: #d8ffd1;
+    --links-color: #2813b0;
+    --header-text-color: #363440;
 }
 
 body, main {
@@ -56,6 +56,12 @@ nav {
 }
 
 .page-footer {
+   color: var(--header-text-color);
+   background-color: var(--secondary-bg-color);
+}
+
+.page-footer .footer-copyright {
+   color: var(--header-text-color);
    background-color: var(--secondary-bg-color);
 }
 
@@ -97,7 +103,7 @@ blockquote {
    border-left: 5px solid var(--links-color);
 }
 
-.light, .dark {
+.lighttheme, .darktheme {
    color: var(--links-color);
 }
 

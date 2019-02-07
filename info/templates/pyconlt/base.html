@@ -57,8 +57,8 @@
                   {% endfor %}
             </ul>
             <ul class="right hide-on-med-and-down">
-                <li><a class="light">{% trans "Light" %}</a></li>
-                <li><a class="dark">{% trans "Dark" %}</a></li>
+                <li><a class="lighttheme">{% trans "Light" %}</a></li>
+                <li><a class="darktheme">{% trans "Dark" %}</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
                 {% else %}
@@ -71,8 +71,8 @@
                       <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
                   <li><hr /></li>
-                <li><a class="light">{% trans "Light" %}</a></li>
-                <li><a class="dark">{% trans "Dark" %}</a></li>
+                <li><a class="lighttheme">{% trans "Light" %}</a></li>
+                <li><a class="darktheme">{% trans "Dark" %}</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
                 {% else %}
@@ -117,30 +117,34 @@
     function setLightTheme() {
         $(document.body).css("--primary-bg-color", "#ffffff");
         $(document.body).css("--primary-text-color", "#000000");
-        $(document.body).css("--secondary-bg-color", "#33691e");
-        $(document.body).css("--links-color", "#039be5");
-        $(document.body).css("--header-text-color", "#ffffff");
+        $(document.body).css("--secondary-bg-color", "#d8ffd1");
+        $(document.body).css("--links-color", "#2813b0");
+        $(document.body).css("--header-text-color", "#363440");
+        $('#header').attr('src', $('#header').data('light'));
         localStorage.setItem('theme', 'light');
     }
 
     function setDarkTheme() {
-        $(document.body).css("--primary-bg-color", "#272822");
+        $(document.body).css("--primary-bg-color", "#262623");
         $(document.body).css("--primary-text-color", "#F8F8F2");
         $(document.body).css("--secondary-bg-color", "#171812");
         $(document.body).css("--links-color", "#baba1b");
         $(document.body).css("--header-text-color", "#F8F8F2");
+        $('#header').attr('src', $('#header').data('dark'));
         localStorage.setItem('theme', 'dark');
     }
 
     $( document ).ready(function(){
         if (localStorage.getItem('theme') === 'dark') {
             setDarkTheme();
+        } else {
+            setLightTheme();
         }
 
         $(".button-collapse").sideNav();
         $(".dropdown-button").dropdown({ hover: true });
-        $(".light").click(setLightTheme);
-        $(".dark").click(setDarkTheme);
+        $(".lighttheme").click(setLightTheme);
+        $(".darktheme").click(setDarkTheme);
     })
     </script>
     {% block extra_js %}
