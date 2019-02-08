@@ -8,14 +8,6 @@
 	color: white;
 }
 
-:root {
-    --primary-bg-color: #FFFFFF
-    --primary-text-color: #000000;
-    --secondary-bg-color: #3776aa;
-    --links-color: #ff9b48;
-    --header-text-color: #ffffff;
-}
-
 body, main {
    background-color: var(--primary-bg-color);
    color: var(--primary-text-color);

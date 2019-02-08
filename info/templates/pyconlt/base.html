@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {% if request.COOKIES.theme == 'dark' %}
+        <link rel="stylesheet" href="{% static 'info/css/dark.css' %}">
+        {% else %}
+        <link rel="stylesheet" href="{% static 'info/css/light.css' %}">
+        {% endif %}
         <link rel="stylesheet" href="{% static 'info/css/style.css' %}">
     {% endblock head_links %}
     {% block extra_css %}
@@ -115,6 +120,21 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
+    {% if request.COOKIES.theme == 'dark' %}
+    const g_theme = 'dark';
+    {% else %}
+    const g_theme = 'light';
+    {% endif %}
+
+    function setCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
     function setHeader(theme) {
         var img = $('#header-data').data(theme);
         if (img) {
@@ -129,7 +149,7 @@
         $(document.body).css("--links-color", "#ff9b48");
         $(document.body).css("--header-text-color", "#ffffff");
         setHeader('light');
-        localStorage.setItem('theme', 'light');
+        setCookie('theme', 'light', 366);
     }
 
     function setDarkTheme() {
@@ -139,16 +159,11 @@
         $(document.body).css("--links-color", "#baba1b");
         $(document.body).css("--header-text-color", "#F8F8F2");
         setHeader('dark');
-        localStorage.setItem('theme', 'dark');
+        setCookie('theme', 'dark', 366);
     }
 
     $( document ).ready(function(){
-        if (localStorage.getItem('theme') === 'dark') {
-            setDarkTheme();
-        } else {
-            setLightTheme();
-        }
-
+        setHeader(g_theme);
         $(".button-collapse").sideNav();
         $(".dropdown-button").dropdown({ hover: true });
         $(".lighttheme").click(setLightTheme);
