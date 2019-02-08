@@ -88,6 +88,7 @@
 </header>
 
 <main>
+    <img style="display: none" id="header" alt="header"/>
     <div class="container flow-text">
      {% block content %}
 
@@ -114,13 +115,20 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
+    function setHeader(theme) {
+        var img = $('#header-data').data(theme);
+        if (img) {
+            $('#header').attr('src', img).attr('style', 'width: 100%');
+        }
+    }
+
     function setLightTheme() {
         $(document.body).css("--primary-bg-color", "#ffffff");
         $(document.body).css("--primary-text-color", "#000000");
-        $(document.body).css("--secondary-bg-color", "#d8ffd1");
-        $(document.body).css("--links-color", "#2813b0");
-        $(document.body).css("--header-text-color", "#363440");
-        $('#header').attr('src', $('#header').data('light'));
+        $(document.body).css("--secondary-bg-color", "#3776aa");
+        $(document.body).css("--links-color", "#ff9b48");
+        $(document.body).css("--header-text-color", "#ffffff");
+        setHeader('light');
         localStorage.setItem('theme', 'light');
     }
 
@@ -130,7 +138,7 @@
         $(document.body).css("--secondary-bg-color", "#171812");
         $(document.body).css("--links-color", "#baba1b");
         $(document.body).css("--header-text-color", "#F8F8F2");
-        $('#header').attr('src', $('#header').data('dark'));
+        setHeader('dark');
         localStorage.setItem('theme', 'dark');
     }
 

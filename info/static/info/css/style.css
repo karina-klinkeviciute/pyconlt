@@ -11,9 +11,9 @@
 :root {
     --primary-bg-color: #FFFFFF
     --primary-text-color: #000000;
-    --secondary-bg-color: #d8ffd1;
-    --links-color: #2813b0;
-    --header-text-color: #363440;
+    --secondary-bg-color: #3776aa;
+    --links-color: #ff9b48;
+    --header-text-color: #ffffff;
 }
 
 body, main {
@@ -58,6 +58,12 @@ nav {
 .page-footer {
    color: var(--header-text-color);
    background-color: var(--secondary-bg-color);
+}
+
+.page-footer a {
+    color: var(--header-text-color);
+    border-bottom: 1px dotted var(--header-text-color);
+    text-decoration: none;
 }
 
 .page-footer .footer-copyright {
