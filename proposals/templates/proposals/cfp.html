@@ -16,6 +16,16 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {% form form=form %}
+                {% part form.speaker_grant %}
+                <div class="checkbox-field col s12 required" id="id_speaker_grant_container">
+                    <input class="filled-in " id="id_speaker_grant" name="speaker_grant" type="checkbox" />
+                    <label for="id_speaker_grant">
+                        {% blocktrans %}
+                        Speaker grant
+                        {% endblocktrans %}
+                    </label>
+                </div>
+                {% endpart %}
                 {% part form.agreement %}
                 <div class="checkbox-field col s12 required" id="id_agreement_container">
                     <input class="filled-in " id="id_agreement" name="agreement" type="checkbox" />

@@ -66,11 +66,13 @@ class ProfileMixin(models.Model):
         verbose_name=_('Full name'),
         help_text=_("Full name to display in the list of speakers")
     )
+
     image = models.ImageField(
         blank=True,
         null=True,
         help_text=_('Your photo')
     )
+
     bio = RichTextField(
         blank=True,
         null=True,
@@ -88,6 +90,14 @@ class ProfileMixin(models.Model):
         help_text=_("Your skills and areas of expertise"),
         blank=True,
         null=True
+    )
+
+    speaking_experience = models.CharField(
+        max_length=1024,
+        null=True,
+        blank=True,
+        verbose_name=_('Public speaking experience'),
+        help_text=_('Short description about your public speaking experience')
     )
 
     class Meta:
