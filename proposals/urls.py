@@ -8,7 +8,7 @@ from proposals.views.manage import (
 )
 
 urlpatterns = [
-    url(r'^call_for_proposal$', CFPView.as_view()),
+    url(r'(?P<pk>\d+)/cfp_form', CFPView.as_view()),
     url(r'^$', ProposalListView.as_view(), name='proposal_list'),
     url(
         r'(?P<pk>\d+)/delete',
