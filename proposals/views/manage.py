@@ -25,6 +25,8 @@ class ProposalDeleteView(DeleteView, OwnerRequiredMixin):
 
 class ProposalUpdateView(OwnerRequiredMixin, UpdateView):
     model = Proposal
-    fields = ('title', 'type', 'short_description', 'extra_info')
+    fields = ('title', 'type', 'short_description', 'extra_info',
+              'audience_experience', 'target_audience', 'speaker_grant',
+              'grant_description')
     template_name_suffix = '_update'
     success_url = reverse_lazy('proposal_list')
