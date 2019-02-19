@@ -209,9 +209,7 @@ CURRENT_EVENT = '2019'
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
         'SCOPE': [
-            'user',
-            'repo',
-            'read:org',
+            'read:user',
         ],
     },
     'google': {
