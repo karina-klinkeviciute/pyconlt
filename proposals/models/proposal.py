@@ -27,6 +27,15 @@ class Proposal(EventFKMixin):
         (PROPOSAL_TYPE_PRESENTATION, _('Presentation'))
     )
 
+    AUDIENCE_JUNIOR = 0
+    AUDIENCE_INTERMEDIATE = 1
+    AUDIENCE_EXPERT = 2
+    AUDIENCE_EXPERIENCE = (
+        (AUDIENCE_JUNIOR, _('Junior')),
+        (AUDIENCE_INTERMEDIATE, _('Intermediate')),
+        (AUDIENCE_EXPERT, _('Expert'))
+    )
+
     user = models.ForeignKey(
         User,
         null=True,
@@ -63,6 +72,31 @@ class Proposal(EventFKMixin):
         help_text=_('Extra information'),
         blank=True,
         null=True
+    )
+
+    audience_experience = models.IntegerField(
+        choices=AUDIENCE_EXPERIENCE,
+        default=AUDIENCE_JUNIOR,
+        help_text=_('Audience level')
+    )
+
+    target_audience = RichTextField(
+        help_text=_('Target audience'),
+        blank=True,
+        null=True
+    )
+
+    speaker_grant = models.BooleanField(
+        help_text=_('Check if you need a speaker grant'),
+        default=False
+    )
+
+    grant_description = models.CharField(
+        max_length=1024,
+        blank=True,
+        null=True,
+        help_text=_(
+            'Short description about travel expenses or expected grant amount')
     )
     # Presenter also links to user, which causes denormalization as this model
     # also has a foreign key to user, but I think that connection to the user

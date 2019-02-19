@@ -28,7 +28,11 @@ class CFPView(View):
             type=data['type'],
             duration=data['duration'],
             short_description=data['short_description'],
-            extra_info=data['extra_info']
+            extra_info=data['extra_info'],
+            audience_experience=data['audience_experience'],
+            target_audience=data['target_audience'],
+            speaker_grant=data['speaker_grant'],
+            grant_description=data['grant_description']
         )
         proposal.save()
         if data['attachment'] is not None:

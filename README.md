@@ -15,3 +15,43 @@ Existing tools:
 Planned features:
 
 * Having multiple events in one page, e.g. for different years of conference.
+
+## Setting development environment
+
+If you prefer Docker follow instructions in docker-compose.rst.
+Docker workflow might save you some time.
+
+Alternative workflow:
+
+* Install pipenv (e.g. `pip3 install --user pipenv`).
+
+* Install all requires packages `pipenv install`.
+
+* Run pipenv shell `pipenv shell`.
+
+* Install posgresql DB and create pysql database.
+
+* Create /pyconlt/settings/local.py with following content:
+
+```python
+import os
+
+from .base import *
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pyconlt',
+    }
+}
+```
+
+* Run `python manage.py migrate`
+
+* Import data `python manage.py loaddata data.json` - ask for
+  data.json from team members.
+
+* Run `python manage.py runserver`
+
+Now you can develop.

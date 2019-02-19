@@ -26,10 +26,31 @@ class CFPForm(forms.Form):
         widget=forms.Textarea
     )
 
+    audience_experience = forms.ChoiceField(
+        label=_('Audience level'),
+        choices=Proposal.AUDIENCE_EXPERIENCE,
+        required=True,
+    )
+
+    target_audience = forms.CharField(
+        label=_('Target Audience'),
+        required=False,
+        widget=forms.Textarea
+    )
+
     extra_info = forms.CharField(
         label=_('Extra info'),
         required=False,
         widget=forms.Textarea
+    )
+
+    speaker_grant = forms.BooleanField(
+        required=False,
+    )
+
+    grant_description = forms.CharField(
+        label=_('Grant description'),
+        required=False,
     )
 
     attachment = forms.FileField(
@@ -48,6 +69,12 @@ class CFPForm(forms.Form):
 
         data = self.cleaned_data
 
+        if data['speaker_grant'] and not data['grant_description']:
+            self._errors['grant_description'] = _(
+                'You must provide more information about expected grant'
+            )
+            return False
+
         if not data['agreement']:
             self._errors['agreement'] = _(
                     'Code of Conduct needs to be accepted'
@@ -55,4 +82,3 @@ class CFPForm(forms.Form):
             return False
 
         return True
-

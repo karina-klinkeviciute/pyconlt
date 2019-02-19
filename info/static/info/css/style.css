@@ -8,15 +8,27 @@
 	color: white;
 }
 
-:root {
-    --primary-bg-color: #FFFFFF
-    --primary-text-color: #000000;
-    --secondary-bg-color: #33691e;
-}
-
 body, main {
    background-color: var(--primary-bg-color);
    color: var(--primary-text-color);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+a, a:visited {
+    color: var(--links-color);
+}
+
+a.orange {
+    color: black;
 }
 
 nav {
@@ -36,21 +48,63 @@ nav {
 }
 
 .page-footer {
+   color: var(--header-text-color);
+   background-color: var(--secondary-bg-color);
+}
+
+.page-footer a {
+    color: var(--header-text-color);
+    border-bottom: 1px dotted var(--header-text-color);
+    text-decoration: none;
+}
+
+.page-footer .footer-copyright {
+   color: var(--header-text-color);
    background-color: var(--secondary-bg-color);
 }
 
 .input-field {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .input-field > .material-icons {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .input-field > label {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
 }
 
 .dropdown-content > li > a {
-   color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
+}
+
+.card {
+   background-color: var(--primary-bg-color);
+   color: var(--primary-text-color);
+}
+
+.header a {
+   color: var(--header-text-color);
+}
+
+.side-nav, .side-nav li > a  {
+   background-color: var(--primary-bg-color);
+   color: var(--primary-text-color);
+}
+
+.side-nav li > a:hover {
+   background-color: var(--secondary-bg-color);
+}
+
+blockquote {
+   border-left: 5px solid var(--links-color);
+}
+
+.lighttheme, .darktheme {
+   color: var(--links-color);
+}
+
+.parallax {
+    z-index: 0;
 }
