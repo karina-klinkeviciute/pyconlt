@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.linkedin',
     # 'allauth.socialaccount.providers.linkedin_oauth2',
 
@@ -206,12 +206,21 @@ LOGIN_REDIRECT_URL = 'presenter_update'
 
 CURRENT_EVENT = '2019'
 
-# SOCIALACCOUNT_PROVIDERS = {
-#     'github': {
-#         'SCOPE': [
-#             'user',
-#             'repo',
-#             'read:org',
-#         ],
-#     }
-# }
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    },
+    'google': {
+            'SCOPE': [
+                'profile',
+                'email',
+            ],
+            'AUTH_PARAMS': {
+                'access_type': 'offline',
+            }
+        }
+}
