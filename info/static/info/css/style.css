@@ -5,7 +5,7 @@
     font-size: 0.95rem;
 }
 .dropdown-content li > a, .dropdown-content li > span {
-	color: white;
+	color: black;
 }
 
 body, main {
