@@ -3,5 +3,10 @@ from proposals.models.proposal import Proposal
 from proposals.models.attachment import Attachment
 
 
-admin.site.register(Proposal)
+class ProposalAdmin(admin.ModelAdmin):
+    list_display = ('title', 'presenter', 'event', 'state', 'type')
+    list_filter = ('event', 'state', 'type')
+
+
+admin.site.register(Proposal, ProposalAdmin)
 admin.site.register(Attachment)
