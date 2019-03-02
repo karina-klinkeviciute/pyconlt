@@ -11,11 +11,11 @@ notes
 /env/
 /pyconlt/settings/local.py
 /pyconlt/settings/pythonanywhere.py
+/pyconlt/wsgi.py
 deploy.sh
 .env
 paysera.html
 .python-version
-pyconlt/wsgi.py
 data.dump.json
 data.json
 dump.sh
