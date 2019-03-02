@@ -11,7 +11,7 @@ class CFPForm(forms.Form):
     )
     duration = forms.IntegerField(
         label=_('Estimated duration (minutes)'),
-        initial=45,
+        initial=30,
     )
 
     type = forms.ChoiceField(
