@@ -1,7 +1,7 @@
+from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from ckeditor.fields import RichTextField
 
 from conference.mixins.event_foreign_key import EventFKMixin
 from presenters.models import Presenter
@@ -97,6 +97,15 @@ class Proposal(EventFKMixin):
         null=True,
         help_text=_(
             'Short description about travel expenses or expected grant amount')
+    )
+
+    review_committee = models.ForeignKey(
+        "committee.Committee",
+        on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        verbose_name=_("Committee of the Proposal"),
+        help_text=_("Committee of the Proposal"),
     )
     # Presenter also links to user, which causes denormalization as this model
     # also has a foreign key to user, but I think that connection to the user
