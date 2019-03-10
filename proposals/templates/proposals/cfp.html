@@ -1,6 +1,12 @@
 {% extends "pyconlt/base.html" %}
 {% load i18n %}
 {% load material_form %}
+{% load static %}
+
+{% block head_links %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'proposals/css/proposals-form.css' %}">
+{% endblock %}
 
 {% block extra_js %}
     <script type="text/javascript">

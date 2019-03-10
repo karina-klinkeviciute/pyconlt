@@ -18,3 +18,7 @@ input#id_speaker_grant {
 .container {
   margin-bottom: 10px;
 }
+
+form.edit-proposal .help-block {
+  display: none;
+}
