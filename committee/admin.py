@@ -4,8 +4,8 @@ from .models.committee import Committee
 
 
 class CommitteeAdmin(admin.ModelAdmin):
-    list_display = ()
-    list_filter = ()
+    list_display = ("title",)
+    list_filter = ("proposal",)
 
 
 admin.site.register(Committee, CommitteeAdmin)

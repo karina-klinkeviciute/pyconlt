@@ -106,6 +106,7 @@ class Proposal(EventFKMixin):
         null=True,
         verbose_name=_("Committee of the Proposal"),
         help_text=_("Committee of the Proposal"),
+        related_name=_("Committee"),
     )
     # Presenter also links to user, which causes denormalization as this model
     # also has a foreign key to user, but I think that connection to the user

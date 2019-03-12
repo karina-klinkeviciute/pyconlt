@@ -7,22 +7,18 @@ from proposals.models.proposal import Proposal
 class Committee(models.Model):
     title = models.CharField(
         max_length=1024,
-        help_text=_('Title of Proposal'),
-        verbose_name=_("Title"),
-    )
-    event = models.ForeignKey(
-        "proposals.Proposal",
-        on_delete=models.PROTECT,
+        help_text=_("Reviewing Committee"),
+        verbose_name=_("Reviewing Committee"),
         blank=False,
         null=False,
-        verbose_name=_("Event"),
     )
+    proposal = models.ForeignKey("proposals.Proposal", on_delete=models.PROTECT, verbose_name=_("Proposal"))
 
-    def get_event(self, pk):
-        event = Proposal.objects.filter(id=pk).first()
-        if event and event.titile:
-            return event.title
+    def get_proposal(self, pk):
+        proposal = Proposal.objects.filter(id=pk).first()
+        if proposal and proposal.title:
+            return proposal.title
         return "Untitled event"
 
     def __repr__(self):
-        return f"Committee of {self.get_event(self.event)}"
+        return f"Review Committee of {self.get_proposal(self.proposal)}"

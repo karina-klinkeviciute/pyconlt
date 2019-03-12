@@ -4,8 +4,8 @@ from .models.committee_member import CommitteeMember
 
 
 class CommitteeMemberAdmin(admin.ModelAdmin):
-    list_display = ()
-    list_filter = ()
+    list_display = ("user",)
+    list_filter = ("committee",)
 
 
 admin.site.register(CommitteeMember, CommitteeMemberAdmin)

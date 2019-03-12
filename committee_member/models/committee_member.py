@@ -1,5 +1,8 @@
-from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
+from django.contrib.auth.models import Group, Permission, User
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 class CommitteeMember(models.Model):
@@ -8,13 +11,19 @@ class CommitteeMember(models.Model):
     # This field is required
     user = models.OneToOneField(User, on_delete=models.PROTECT)
 
-    committee = models.ForeignKey(
-        "committee.Committee",
-        on_delete=models.PROTECT,
-        blank=False,
-        null=False,
-    )
+    bio = RichTextField(help_text=_("Committee member bio"), blank=True, null=True)
 
-    # permissions = what?
-    # TODO  -> make a validation if when creating committee member a user is already created. If not, Base user has to
-    #  be created, but on what basis? (email?)
+    committee = models.ForeignKey("committee.Committee", on_delete=models.PROTECT)
+
+    def save(self, *args, **kwargs):
+        """Overridden save method in order to save CommitteeMember's User account to a new permission group."""
+        committee_members_group = Group.objects.get_or_create(name="committee_members")
+        content_type = ContentType.objects.get_for_model(User)
+        committee_member_permissions = Permission.objects.get_or_create(
+            codename="is_committee_member",
+            name="Belongs to some Reviewing Committee",
+            content_type=content_type,
+        )
+        committee_members_group.permissions.add(committee_member_permissions)
+        super(CommitteeMember, self).save(*args, **kwargs)
+        CommitteeMember.user.groups.add(committee_members_group)
