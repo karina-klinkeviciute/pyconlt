@@ -7,4 +7,4 @@ class CommitteeForm(ModelForm):
 
     class Meta:
         model = Committee
-        fields = ("proposal", "title",)
+        fields = ("event", "title",)

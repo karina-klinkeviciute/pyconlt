@@ -15,6 +15,18 @@ class CommitteeMember(models.Model):
 
     committee = models.ForeignKey("committee.Committee", on_delete=models.PROTECT)
 
+    @property
+    def first_name(self):
+        return self.user.first_name
+
+    @property
+    def last_name(self):
+        return self.user.last_name
+
+    @property
+    def email(self):
+        return self.user.email
+
     def save(self, *args, **kwargs):
         """Overridden save method in order to save CommitteeMember's User account to a new permission group."""
         committee_members_group = Group.objects.get_or_create(name="committee_members")

@@ -98,16 +98,6 @@ class Proposal(EventFKMixin):
         help_text=_(
             'Short description about travel expenses or expected grant amount')
     )
-
-    review_committee = models.ForeignKey(
-        "committee.Committee",
-        on_delete=models.PROTECT,
-        blank=True,
-        null=True,
-        verbose_name=_("Committee of the Proposal"),
-        help_text=_("Committee of the Proposal"),
-        related_name=_("Committee"),
-    )
     # Presenter also links to user, which causes denormalization as this model
     # also has a foreign key to user, but I think that connection to the user
     # should be through a Presenter model because if someone uploads a proposal
