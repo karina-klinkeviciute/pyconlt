@@ -63,6 +63,8 @@ INSTALLED_APPS = [
     'proposals',
     'program',
     'conference',
+    'committee',
+    'committee_member',
 ]
 
 MIDDLEWARE = [
