@@ -13,7 +13,7 @@ class CommitteeMember(models.Model):
 
     bio = RichTextField(help_text=_("Committee member bio"), blank=True, null=True)
 
-    committee = models.ForeignKey("committee.Committee", on_delete=models.PROTECT)
+    committee = models.ForeignKey("committee.Committee", on_delete=models.CASCADE)
 
     @property
     def first_name(self):
@@ -29,13 +29,14 @@ class CommitteeMember(models.Model):
 
     def save(self, *args, **kwargs):
         """Overridden save method in order to save CommitteeMember's User account to a new permission group."""
-        committee_members_group = Group.objects.get_or_create(name="committee_members")
+        committee_members_group, created_group = Group.objects.get_or_create(name="committee_members")
         content_type = ContentType.objects.get_for_model(User)
-        committee_member_permissions = Permission.objects.get_or_create(
+        committee_member_permissions, created_permissions = Permission.objects.get_or_create(
             codename="is_committee_member",
             name="Belongs to some Reviewing Committee",
             content_type=content_type,
         )
-        committee_members_group.permissions.add(committee_member_permissions)
+        if created_group:
+            committee_members_group.permissions.add(committee_member_permissions)
         super(CommitteeMember, self).save(*args, **kwargs)
-        CommitteeMember.user.groups.add(committee_members_group)
+        self.user.groups.add(committee_members_group)

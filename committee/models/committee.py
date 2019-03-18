@@ -19,11 +19,12 @@ class Committee(models.Model):
         verbose_name=_("Event"),
     )
 
-    def get_event(self):
+    @property
+    def get_event_name(self):
         event = Event.objects.filter(year=settings.CURRENT_EVENT).only("name").first()
         if event.name:
             return event.name
         return "Untitled Event"
 
-    def __repr__(self):
-        return f"Review Committee of {self.get_event}"
+    def __str__(self):
+        return f"Review Committee of {self.get_event_name}"
