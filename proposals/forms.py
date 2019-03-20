@@ -2,6 +2,7 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from .models.proposal import Proposal
+from .models.comment import Comment
 
 
 class CFPForm(forms.Form):
@@ -82,3 +83,10 @@ class CFPForm(forms.Form):
             return False
 
         return True
+
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ("author", "text",)

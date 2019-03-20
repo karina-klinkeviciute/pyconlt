@@ -1,7 +1,7 @@
+from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from ckeditor.fields import RichTextField
 
 from conference.mixins.event_foreign_key import EventFKMixin
 from presenters.models import Presenter
