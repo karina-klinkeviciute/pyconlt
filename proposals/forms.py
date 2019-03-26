@@ -22,7 +22,7 @@ class CFPForm(forms.Form):
     )
 
     short_description = forms.CharField(
-        label=_('Short description'),
+        label=_('Short description (1000-2000 characters)'),
         required=True,
         widget=forms.Textarea
     )
@@ -55,7 +55,9 @@ class CFPForm(forms.Form):
     )
 
     attachment = forms.FileField(
-        label=_('Attachments'),
+        label=_(
+            'Attachments (optional). '
+            'Can be anything you would like us to see.'),
         required=False,
     )
 
