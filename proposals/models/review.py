@@ -1,0 +1,48 @@
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
+
+class Review(models.Model):
+
+    LOW = 1
+    ABOVE_LOW = 2
+    AVERAGE = 3
+    ABOVE_AVERAGE = 4
+    HIGH = 5
+
+    RATING_CHOICES = (
+        (LOW, _("Low")),
+        (ABOVE_LOW, _("Above Low")),
+        (AVERAGE, _("Average")),
+        (ABOVE_AVERAGE, _("Above Average")),
+        (HIGH, _("High")),
+    )
+
+    author = models.ForeignKey(
+        "committee_member.CommitteeMember",
+        on_delete=models.SET_NULL,
+        verbose_name=_("Author"),
+        related_name="comments",
+        null=True
+    )
+
+    proposal = models.ForeignKey(
+        "proposals.Proposal",
+        on_delete=models.CASCADE,
+        verbose_name=_("Proposal"),
+        related_name="comments",
+    )
+
+    rating = models.IntegerField(
+        choices=RATING_CHOICES,
+        verbose_name=_("Rating"),
+        null=True
+    )
+
+    created_at = models.DateTimeField(_("Date created"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("Date updated"), auto_now=True)
+
+    text = models.TextField()
+
+    def __str__(self):
+        return self.text

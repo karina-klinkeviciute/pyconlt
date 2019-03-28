@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from proposals.models.attachment import Attachment
 from proposals.models.proposal import Proposal
-from proposals.models.comment import Comment
+from proposals.models.review import Review
 
 
 class ProposalAdmin(admin.ModelAdmin):
@@ -12,4 +12,4 @@ class ProposalAdmin(admin.ModelAdmin):
 
 admin.site.register(Proposal, ProposalAdmin)
 admin.site.register(Attachment)
-admin.site.register(Comment)
+admin.site.register(Review)

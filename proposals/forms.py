@@ -1,8 +1,8 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
+from .models.review import Review
 from .models.proposal import Proposal
-from .models.comment import Comment
 
 
 class CFPForm(forms.Form):
@@ -87,8 +87,8 @@ class CFPForm(forms.Form):
         return True
 
 
-class CommentForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
 
     class Meta:
-        model = Comment
-        fields = ("author", "text",)
+        model = Review
+        fields = ("author", "text", "rating")

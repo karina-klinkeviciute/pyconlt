@@ -1,0 +1,55 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    {% trans "Title" %}
+                </th>
+                <th>
+                    {% trans "Type" %}
+                </th>
+                <th>
+                    {% trans "State" %}
+                </th>
+                <th>
+                    {% trans "Attachments" %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{ proposal.title }}
+                </td>
+                <td>
+                    {{ proposal.get_type_display }}
+                </td>
+                <td>
+                    {{ proposal.get_state_display }}
+                </td>
+                <td>
+                    <ul>
+                    {% for attachment in proposal.attachments.all %}
+                        <li><a href="{{ attachment.upload.url }}">{{ attachment.upload.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    {% if reviews %}
+        {% for review in reviews %}
+            <div class="review">
+                <div class="date">{{ review.created_at }}</div>
+                <strong>{{ review.author }}</strong>
+                <p>{{ review.text|linebreaks }}</p>
+                <div>{{ review.rating }}</div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No reviews here yet :(</p>
+{% endblock %}

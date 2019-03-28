@@ -40,3 +40,6 @@ class CommitteeMember(models.Model):
             committee_members_group.permissions.add(committee_member_permissions)
         super(CommitteeMember, self).save(*args, **kwargs)
         self.user.groups.add(committee_members_group)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
