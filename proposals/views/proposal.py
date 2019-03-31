@@ -3,7 +3,7 @@ import logging
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.http import HttpResponseForbidden
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.decorators import method_decorator
 from django.views.generic import View
 
@@ -36,8 +36,10 @@ class ProposalView(View):
         if not user.has_perm("is_committee_member"):
             return HttpResponseForbidden()
 
-        proposal = Proposal.objects.filter(id=self.kwargs.get("pk")).first()
-        reviews = Review.objects.filter(proposal=self.kwargs.get("pk"))
+        proposal_id = self.kwargs.get("pk")
+
+        proposal = get_object_or_404(Proposal, pk=proposal_id)
+        reviews = Review.objects.filter(proposal=proposal_id)
         form = self.form_class()
         context = {"proposal": proposal, "reviews": reviews, "form": form}
 

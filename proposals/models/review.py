@@ -10,6 +10,14 @@ class Review(models.Model):
     ABOVE_AVERAGE = 4
     HIGH = 5
 
+    PENDING = 0
+    DONE = 1
+
+    STATUS_CHOICES = (
+        (PENDING, _("Pending")),
+        (DONE, _("Done")),
+    )
+
     RATING_CHOICES = (
         (LOW, _("Low")),
         (ABOVE_LOW, _("Above Low")),
@@ -37,6 +45,12 @@ class Review(models.Model):
         choices=RATING_CHOICES,
         verbose_name=_("Rating"),
         null=True
+    )
+
+    status = models.IntegerField(
+        choices=STATUS_CHOICES,
+        verbose_name=_("Status"),
+        default=0,
     )
 
     created_at = models.DateTimeField(_("Date created"), auto_now_add=True)
