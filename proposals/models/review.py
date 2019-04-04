@@ -58,5 +58,10 @@ class Review(models.Model):
 
     text = models.TextField()
 
+    def get_status(self):
+        for status_value in self.STATUS_CHOICES:
+            if self.status in status_value:
+                return status_value[1]
+
     def __str__(self):
-        return self.text
+        return f"Review from {self.author.first_name} {self.author.last_name} of {self.proposal.title} proposal"

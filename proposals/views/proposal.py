@@ -28,12 +28,12 @@ class ProposalView(View):
         )
         review.rating = data["rating"]
         review.text = data["text"]
+        review.status = data["status"]
         review.save()
 
     @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
-        user = request.user
-        if not user.has_perm("is_committee_member"):
+        if not request.user.has_perm("auth.is_committee_member"):
             return HttpResponseForbidden()
 
         proposal_id = self.kwargs.get("pk")
@@ -48,14 +48,14 @@ class ProposalView(View):
     @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         user = request.user
-        if not user.has_perm("is_committee_member"):
+        if not user.has_perm("auth.is_committee_member"):
             return HttpResponseForbidden()
 
         form = self.form_class(request.POST)
 
         if form.is_valid():
             try:
-                self._save(request.user, form)
+                self._save(user, form)
             except Exception as ex:
                 form.add_error(None, _(
                         'Unable to update Review for this Proposal. '

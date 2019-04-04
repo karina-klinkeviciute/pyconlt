@@ -17,6 +17,9 @@
                 <th>
                     {% trans "Attachments" %}
                 </th>
+                <th>
+                    {% trans "Review" %}
+                </th>>
             </tr>
         </thead>
         <tbody>
@@ -37,20 +40,26 @@
                     {% endfor %}
                     </ul>
                 </td>
+                <!-- TODO add link or something to redirect a user to a review form for submission? -->
+                <td>
+                    <a href="what goes here ?" class="btn">Add review</a>
+                </td>
             </tr>
         </tbody>
     </table>
     <hr>
     {% if reviews %}
         {% for review in reviews %}
-            <div class="review">
-                <div class="date">{{ review.created_at }}</div>
-                <strong>{{ review.author }}</strong>
-                <p>{{ review.text|linebreaks }}</p>
-                <div>{{ review.rating }}</div>
-                <div>{{ review.status }}</div>
-            </div>
+            <p class="review">
+                <div class="date"><strong>Date: </strong>{{ review.created_at }}</div>
+                <strong>Author: </strong>{{ review.author }}
+                <div><strong>Comment: </strong>{{ review.text }}</div>
+                <div><strong>Rating: </strong>{{ review.rating }}</div>
+                <div><strong>Status of the review: </strong>{{ review.get_status }}</div>
+                <hr>
         {% endfor %}
-    {% else %}
+    {% endif %}
+    {% if not reviews %}
         <p>No reviews here yet :(</p>
-{% endblock %}
+    {% endif %}
+{% endblock content %}
