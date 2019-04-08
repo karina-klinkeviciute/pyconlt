@@ -85,7 +85,7 @@ nav {
 }
 
 .header a {
-   color: var(--header-text-color);
+   color: var(--nav-text-color);
 }
 
 .side-nav, .side-nav li > a  {
