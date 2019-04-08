@@ -1,0 +1,77 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h4 align="center">Proposals Review</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    {% trans "Author" %}
+                </th>
+                <th>
+                    {% trans "Title" %}
+                </th>
+                <th>
+                    {% trans "Type" %}
+                </th>
+                <th>
+                    {% trans "State" %}
+                </th>
+                <th>
+                    {% trans "Attachments" %}
+                </th>
+                <th>
+                    {% trans "Rating" %}
+                </th>
+                <th>
+                    {% trans "Actions" %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if proposals %}
+                {% for proposal in proposals %}
+                    <tr>
+                        <td>
+                            {% if proposal.user.first_name and proposal.user.last_name %}
+                                {{ proposal.user.first_name }} {{ proposal.user.last_name }}
+                            {% else %}
+                                Unknown
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ proposal.title }}
+                        </td>
+                        <td>
+                            {{ proposal.get_type_display }}
+                        </td>
+                        <td>
+                            {{ proposal.get_state_display }}
+                        </td>
+                        <td>
+                            {% if proposal.attachments.all %}
+                                <ul>
+                                {% for attachment in proposal.attachments.all %}
+                                    <li><a href="{{ attachment.upload.url }}">Download files</a></li>
+                                {% endfor %}
+                                </ul>
+                            {% else %}
+                                <p>No attachments</p>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ proposal.get_review_rating }}
+                        </td>
+                        <td>
+                            <a href="/proposals/{{ proposal.pk }}/proposal/" class="btn">View</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    {% if not proposals %}
+        <p align="center">No proposals here yet :(</p>
+    {% endif %}
+{% endblock content %}

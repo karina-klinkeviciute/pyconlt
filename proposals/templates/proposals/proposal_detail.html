@@ -2,11 +2,12 @@
 {% load i18n %}
 
 {% block content %}
+    <h4 align="center">{{ proposal.title }}</h4>
     <table>
         <thead>
             <tr>
                 <th>
-                    {% trans "Title" %}
+                    {% trans "Author" %}
                 </th>
                 <th>
                     {% trans "Type" %}
@@ -18,6 +19,9 @@
                     {% trans "Attachments" %}
                 </th>
                 <th>
+                    {% trans "Rating" %}
+                </th>
+                <th>
                     {% trans "Review" %}
                 </th>>
             </tr>
@@ -25,7 +29,11 @@
         <tbody>
             <tr>
                 <td>
-                    {{ proposal.title }}
+                    {% if proposal.user.first_name and proposal.user.last_name %}
+                        {{ proposal.user.first_name }} {{ proposal.user.last_name }}
+                    {% else %}
+                        Unknown
+                    {% endif %}
                 </td>
                 <td>
                     {{ proposal.get_type_display }}
@@ -34,15 +42,22 @@
                     {{ proposal.get_state_display }}
                 </td>
                 <td>
-                    <ul>
-                    {% for attachment in proposal.attachments.all %}
-                        <li><a href="{{ attachment.upload.url }}">{{ attachment.upload.name }}</a></li>
-                    {% endfor %}
-                    </ul>
+                    {% if proposal.attachments.all %}
+                        <ul>
+                        {% for attachment in proposal.attachments.all %}
+                            <li><a href="{{ attachment.upload.url }}">Download files</a></li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No attachments</p>
+                    {% endif %}
                 </td>
-                <!-- TODO add link or something to redirect a user to a review form for submission? -->
                 <td>
-                    <a href="what goes here ?" class="btn">Add review</a>
+                    {{ proposal.get_review_rating }}
+                </td>
+                <td>
+                    <!-- TODO add review form html and add it to this botton for redirection? -->
+                    <a href="add something in here" class="btn">Add review</a>
                 </td>
             </tr>
         </tbody>
@@ -58,8 +73,7 @@
                 <div><strong>Status of the review: </strong>{{ review.get_status }}</div>
                 <hr>
         {% endfor %}
-    {% endif %}
-    {% if not reviews %}
-        <p>No reviews here yet :(</p>
+    {% else %}
+        <p align="center">No reviews here yet :(</p>
     {% endif %}
 {% endblock content %}

@@ -7,6 +7,8 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.decorators import method_decorator
 from django.views.generic import View
 
+from conference.models.event import Event
+from pyconlt.settings.base import CURRENT_EVENT
 from ..forms import ReviewForm
 from ..models.proposal import Proposal
 from ..models.review import Review
@@ -65,3 +67,22 @@ class ProposalView(View):
             else:
                 return redirect('proposal_list')
         return render(request, self.template, {'form': form})
+
+
+class ProposalsViews(View):
+    """Displaying proposals that are ready to be reviewed."""
+    template = "proposals/proposals_to_review.html"
+
+    @method_decorator(login_required)
+    def get(self, request, *args, **kwargs):
+        if not request.user.has_perm("auth.is_committee_member"):
+            return HttpResponseForbidden()
+
+        event = Event.objects.filter(year=CURRENT_EVENT).first()
+
+        if event:
+            proposals = Proposal.objects.filter(event=event.pk, state=0)
+
+        context = {"proposals": proposals if event else None}
+
+        return render(request, self.template, context)
