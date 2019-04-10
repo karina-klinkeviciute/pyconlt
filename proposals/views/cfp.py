@@ -1,16 +1,15 @@
 import logging
 
-from django.views.generic import View
-from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
 from django.db import transaction
+from django.shortcuts import redirect, render
+from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext_lazy as _
+from django.views.generic import View
 
 from ..forms import CFPForm
-from ..models.proposal import Proposal
 from ..models.attachment import Attachment
-
+from ..models.proposal import Proposal
 
 logger = logging.getLogger(__name__)
 

@@ -6,7 +6,6 @@ conference.
 from django.db import models
 
 from conference.models import Event
-from conference.models.event import get_current_event
 
 
 class EventMTMMixin:

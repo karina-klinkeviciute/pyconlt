@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
+from ckeditor.fields import RichTextField
+from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
-from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from ckeditor.fields import RichTextField
 
-from conference.mixins.event_many_to_many import EventMTMMixin
 from conference.models import Event
 
 
