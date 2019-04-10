@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('committee_member', '0002_auto_20190318_1350'),
+        ('committee_member', '0002_committee_member'),
         ('proposals', '0002_new_fields_in_proposal_model'),
     ]
 
