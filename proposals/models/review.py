@@ -34,11 +34,12 @@ class Review(models.Model):
         null=True
     )
 
-    proposal = models.ForeignKey(
+    proposal = models.OneToOneField(
         "proposals.Proposal",
         on_delete=models.CASCADE,
         verbose_name=_("Proposal"),
         related_name="comments",
+        primary_key=True
     )
 
     rating = models.IntegerField(

@@ -91,4 +91,4 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ("author", "text", "rating", "status")
+        fields = ("text", "rating", "status")
