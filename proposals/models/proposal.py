@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from conference.mixins.event_foreign_key import EventFKMixin
 from presenters.models import Presenter
+from .review import Review
 
 
 class Proposal(EventFKMixin):
@@ -111,6 +112,13 @@ class Proposal(EventFKMixin):
         blank=True,
         null=True
     )
+
+    def get_review_rating(self):
+        reviews = Review.objects.filter(proposal=self.pk).only("rating")
+        ratings = [review.rating for review in reviews if review.rating]
+        if ratings:
+            return sum(ratings) / len(ratings)
+        return "No rating"
 
     def __repr__(self):
         return '<Proposal type: {0} state: {1} by: {2}>'.format(

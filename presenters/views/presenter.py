@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
-import random
 
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import UpdateView
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
-from django.urls import reverse_lazy
 
 from conference.models import Event
-from presenters.models.presenter import Presenter
 from presenters.forms import PresenterInfoForm
+from presenters.models.presenter import Presenter
 from pyconlt.settings.base import CURRENT_EVENT
 
 

@@ -1,13 +1,8 @@
-from django.conf.urls import url
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
-from django.urls import path
 
-from presenters.views.presenter import (
-    PresenterView,
-    PresentersView,
-    PresenterUpdateView
-)
+from presenters.views.presenter import (PresenterUpdateView, PresenterView, PresentersView)
 
 urlpatterns = [
 

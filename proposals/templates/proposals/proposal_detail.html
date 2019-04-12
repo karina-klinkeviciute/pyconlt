@@ -1,0 +1,79 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h4 align="center">{{ proposal.title }}</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    {% trans "Author" %}
+                </th>
+                <th>
+                    {% trans "Type" %}
+                </th>
+                <th>
+                    {% trans "State" %}
+                </th>
+                <th>
+                    {% trans "Attachments" %}
+                </th>
+                <th>
+                    {% trans "Rating" %}
+                </th>
+                <th>
+                    {% trans "Review" %}
+                </th>>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {% if proposal.user.first_name and proposal.user.last_name %}
+                        {{ proposal.user.first_name }} {{ proposal.user.last_name }}
+                    {% else %}
+                        Unknown
+                    {% endif %}
+                </td>
+                <td>
+                    {{ proposal.get_type_display }}
+                </td>
+                <td>
+                    {{ proposal.get_state_display }}
+                </td>
+                <td>
+                    {% if proposal.attachments.all %}
+                        <ul>
+                        {% for attachment in proposal.attachments.all %}
+                            <li><a href="{{ attachment.upload.url }}">Download files</a></li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No attachments</p>
+                    {% endif %}
+                </td>
+                <td>
+                    {{ proposal.get_review_rating }}
+                </td>
+                <td>
+                    <!-- TODO add review form html and add it to this botton for redirection? -->
+                    <a href="add something in here" class="btn">Add review</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    {% if reviews %}
+        {% for review in reviews %}
+            <p class="review">
+                <div class="date"><strong>Date: </strong>{{ review.created_at }}</div>
+                <strong>Author: </strong>{{ review.author }}
+                <div><strong>Comment: </strong>{{ review.text }}</div>
+                <div><strong>Rating: </strong>{{ review.rating }}</div>
+                <div><strong>Status of the review: </strong>{{ review.get_status }}</div>
+                <hr>
+        {% endfor %}
+    {% else %}
+        <p align="center">No reviews here yet :(</p>
+    {% endif %}
+{% endblock content %}
