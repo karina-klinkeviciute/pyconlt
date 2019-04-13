@@ -1,0 +1,27 @@
+{% extends 'pyconlt/base.html' %}
+{% load material_form %}
+{% load i18n %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        {# Hacks to make form render #}
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <div>
+      <p>This is review for: <b>{{proposal.title}}</b> proposal<br  />
+      Short description: {{proposal.short_description|safe}}</p>
+    </div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% form form=form %}
+            {% endform %}
+            <button type="submit" name="_submit" class="btn">{% trans "Submit" %}</button>
+        </form>
+     {% endif %}
+{% endblock %}

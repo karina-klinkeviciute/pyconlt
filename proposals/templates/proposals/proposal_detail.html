@@ -3,7 +3,9 @@
 
 {% block content %}
     <h4 align="center">{{ proposal.title }}</h4>
-    <table>
+    <p>Rating: {{ proposal.get_review_rating }}</p>
+    <a href="{% url 'proposal_list' %}" class="btn">Go Back</a>
+<!--    <table>
         <thead>
             <tr>
                 <th>
@@ -23,7 +25,7 @@
                 </th>
                 <th>
                     {% trans "Review" %}
-                </th>>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -56,12 +58,11 @@
                     {{ proposal.get_review_rating }}
                 </td>
                 <td>
-                    <!-- TODO add review form html and add it to this botton for redirection? -->
-                    <a href="add something in here" class="btn">Add review</a>
+                    <a href="/proposals/{{ proposal.id }}/review" class="btn">Add review</a>
                 </td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
     <hr>
     {% if reviews %}
         {% for review in reviews %}
