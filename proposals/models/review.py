@@ -1,3 +1,5 @@
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -27,7 +29,7 @@ class Review(models.Model):
     )
 
     author = models.ForeignKey(
-        "committee_member.CommitteeMember",
+        User,
         on_delete=models.SET_NULL,
         verbose_name=_("Author"),
         related_name="comments",

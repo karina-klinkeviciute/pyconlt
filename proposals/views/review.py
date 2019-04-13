@@ -1,5 +1,6 @@
 import logging
 
+from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.http import HttpResponseForbidden
@@ -37,20 +38,21 @@ class ReviewView(View):
             return HttpResponseForbidden()
 
         form = self.form_class(request.POST)
-        id = kwargs.get('pk')
+        pk = kwargs.get('pk')
 
         if form.is_valid():
             data = form.cleaned_data
             try:
                 review, created = Review.objects.get_or_create(
                     author=request.user,
-                    proposal_id=id,
+                    proposal_id=pk,
                 )
-                review.proposal = data["proposal"]
+                # review.proposal = Proposal.objects.get(id=pk)
                 review.rating = data["rating"]
                 review.text = data["text"]
                 review.status = data["status"]
                 review.save()
+                return redirect('review_list')
             except Exception as ex:
                 form.add_error(None, _(
                     'Unable to store CFP. '

@@ -1,5 +1,6 @@
 *.pyc
 *~
+manage.py
 __pycache__
 /static
 /media
@@ -21,4 +22,3 @@ data.json
 dump.sh
 dumps/
 program.json
-manage.py
