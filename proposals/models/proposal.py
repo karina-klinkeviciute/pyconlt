@@ -1,6 +1,7 @@
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models import Avg
 from django.utils.translation import ugettext_lazy as _
 
 from conference.mixins.event_foreign_key import EventFKMixin
@@ -114,11 +115,12 @@ class Proposal(EventFKMixin):
     )
 
     def get_review_rating(self):
-        reviews = Review.objects.filter(proposal=self.pk).only("rating")
-        ratings = [review.rating for review in reviews if review.rating]
-        if ratings:
-            return sum(ratings) / len(ratings)
-        return "No rating"
+        rating = Review.objects.filter(
+            proposal=self.pk,
+            rating__isnull=False
+            ).aggregate(Avg('rating')).get('rating__avg', None)
+
+        return rating if rating else "No rating"
 
     def __repr__(self):
         return '<Proposal type: {0} state: {1} by: {2}>'.format(

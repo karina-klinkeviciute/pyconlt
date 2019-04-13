@@ -108,3 +108,16 @@ blockquote {
 .parallax {
     z-index: 0;
 }
+
+.account-select {
+  margin-top: 9.5px;
+}
+
+.account-select > input {
+  margin-bottom: 0px !important;
+  border-bottom: none !important;
+}
+
+.account-select .caret {
+  display: none;
+}

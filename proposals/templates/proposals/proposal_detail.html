@@ -3,7 +3,9 @@
 
 {% block content %}
     <h4 align="center">{{ proposal.title }}</h4>
-    <table>
+    <p>Rating: {{ proposal.get_review_rating }}</p>
+    <a href="{% url 'proposal_list' %}" class="btn">Go Back</a>
+<!--    <table>
         <thead>
             <tr>
                 <th>
@@ -23,7 +25,7 @@
                 </th>
                 <th>
                     {% trans "Review" %}
-                </th>>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -60,7 +62,7 @@
                 </td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
     <hr>
     {% if reviews %}
         {% for review in reviews %}
