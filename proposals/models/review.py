@@ -21,11 +21,11 @@ class Review(models.Model):
     )
 
     RATING_CHOICES = (
-        (LOW, _("Low")),
-        (ABOVE_LOW, _("Above Low")),
-        (AVERAGE, _("Average")),
-        (ABOVE_AVERAGE, _("Above Average")),
-        (HIGH, _("High")),
+        (LOW, _("1")),
+        (ABOVE_LOW, _("2")),
+        (AVERAGE, _("3")),
+        (ABOVE_AVERAGE, _("4")),
+        (HIGH, _("5")),
     )
 
     author = models.ForeignKey(
