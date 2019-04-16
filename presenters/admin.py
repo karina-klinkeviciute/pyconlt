@@ -11,7 +11,7 @@ class EventInline(admin.TabularInline):
 
 
 class PresenterAdmin(admin.ModelAdmin):
-    list_display = ('name', 'active')
+    list_display = ('name', 'user', 'active')
     fieldsets = (
         (None, {
             'fields': ('user', 'active'),
