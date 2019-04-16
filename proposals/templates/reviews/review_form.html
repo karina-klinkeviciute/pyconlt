@@ -14,8 +14,17 @@
 {% block content %}
     {% if user.is_authenticated %}
     <div>
-      <p>This is review for: <b>{{proposal.title}}</b> proposal<br  />
-      Short description: {{proposal.short_description|safe}}</p>
+      <p>This is review for: <b>{{proposal.title}}</b> proposal<br/></p>
+
+      <p>Short description: <br>{{proposal.short_description|safe}}</p>
+
+      <p>Type: {{ proposal.type }}</p>
+
+      <p>Extra information: <br>{{ proposal.extra_info }}</p>
+
+      <p>Audience experience: {{ proposal.audience_experience }}</p>
+
+      <p>Target audience: {{ proposal.target_audience }}</p>
     </div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
