@@ -14,13 +14,13 @@ class Proposal(EventFKMixin):
     PROPOSAL_PENDING = 0
     PROPOSAL_ACCEPTED = 1
     PROPOSAL_REJECTED = 2
-    PROPOSAL_CANCELED = 3
+    PROPOSAL_CANCELLED = 3
 
     PROPOSAL_STATE = (
         (PROPOSAL_PENDING, _('Pending for approval')),
         (PROPOSAL_ACCEPTED, _('Approved')),
         (PROPOSAL_REJECTED, _('Rejected')),
-        (PROPOSAL_CANCELED, _('Canceled'))
+        (PROPOSAL_CANCELLED, _('Cancelled'))
     )
 
     PROPOSAL_TYPE_WORKSHOP = 0
