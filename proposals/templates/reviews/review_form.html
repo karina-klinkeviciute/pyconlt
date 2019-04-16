@@ -20,11 +20,15 @@
 
       <p><strong>Audience experience:</strong> {{ proposal.get_audience_experience_display }}</p>
 
-      <p><strong>Target audience:</strong> {{ proposal.target_audience|safe }}</p>
+      {% if proposal.target_audience %}
+        <p><strong>Target audience:</strong> {{ proposal.target_audience|safe }}</p>
+      {% endif %}
 
       <p><strong>Short description:</strong> <br>{{proposal.short_description|safe}}</p>
 
-      <p><strong>Extra information:</strong> <br>{{ proposal.extra_info|safe }}</p>
+      {% if proposal.extra_info %}
+        <p><strong>Extra information:</strong> <br>{{ proposal.extra_info|safe }}</p>
+      {% endif %}
 
     </div>
         <form method="POST" enctype="multipart/form-data">
