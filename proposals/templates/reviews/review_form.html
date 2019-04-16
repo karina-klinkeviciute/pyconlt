@@ -14,17 +14,17 @@
 {% block content %}
     {% if user.is_authenticated %}
     <div>
-      <p>This is review for: <b>{{proposal.title}}</b></p>
+      <p><strong>Title:</strong> {{proposal.title}}</p>
 
-      <p>Type: {{ proposal.get_type_display }}</p>
+      <p><strong>Type:</strong> {{ proposal.get_type_display }}</p>
 
-      <p>Audience experience: {{ proposal.get_audience_experience_display }}</p>
+      <p><strong>Audience experience:</strong> {{ proposal.get_audience_experience_display }}</p>
 
-      <p>Target audience: {{ proposal.target_audience|safe }}</p>
+      <p><strong>Target audience:</strong> {{ proposal.target_audience|safe }}</p>
 
-      <p>Short description: <br>{{proposal.short_description|safe}}</p>
+      <p><strong>Short description:</strong> <br>{{proposal.short_description|safe}}</p>
 
-      <p>Extra information: <br>{{ proposal.extra_info|safe }}</p>
+      <p><strong>Extra information:</strong> <br>{{ proposal.extra_info|safe }}</p>
 
     </div>
         <form method="POST" enctype="multipart/form-data">
