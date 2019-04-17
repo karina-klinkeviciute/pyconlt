@@ -1,19 +1,13 @@
-import logging
-
 from django.contrib.auth.decorators import login_required
-from django.db import transaction
 from django.http import HttpResponseForbidden
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 from django.views.generic import View
 
 from conference.models.event import Event
 from pyconlt.settings.base import CURRENT_EVENT
-from ..forms import ReviewForm
 from ..models.proposal import Proposal
 from ..models.review import Review
-
-logger = logging.getLogger(__name__)
 
 
 class ProposalReviewView(View):

@@ -120,7 +120,7 @@ class Proposal(EventFKMixin):
             rating__isnull=False
             ).aggregate(Avg('rating')).get('rating__avg', None)
 
-        return rating if rating else "No rating"
+        return format(rating, '.2f') if rating else "No rating"
 
     def __repr__(self):
         return '<Proposal type: {0} state: {1} by: {2}>'.format(
