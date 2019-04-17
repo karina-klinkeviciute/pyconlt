@@ -1,8 +1,8 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from .models.review import Review
 from .models.proposal import Proposal
+from .models.review import Review
 
 
 class CFPForm(forms.Form):

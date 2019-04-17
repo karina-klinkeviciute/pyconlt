@@ -70,7 +70,9 @@
                     <select class="account-select" name="" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                       <option value="{% url 'presenter_update' %}">{% trans "Account" %}</option>
                       <option value="{% url 'proposal_list' %}">{% trans "Proposals" %}</option>
-                      <option value="{% url 'review_list' %}">{% trans "Reviews" %}</option>
+                        {% ifequal user.user_permissions.all.0.name "is_committee_member" %}
+                            <option value="{% url 'review_list' %}">{% trans "Reviews" %}</option>
+                        {% endifequal %}
                       <option value="{% url 'account_logout' %}">{% trans "Sign out" %}</option>
                     </select>
                   </li>
