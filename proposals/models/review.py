@@ -46,7 +46,8 @@ class Review(models.Model):
     rating = models.IntegerField(
         choices=RATING_CHOICES,
         verbose_name=_("Rating"),
-        null=True
+        null=True,
+        blank=True
     )
 
     status = models.IntegerField(
@@ -58,7 +59,11 @@ class Review(models.Model):
     created_at = models.DateTimeField(_("Date created"), auto_now_add=True)
     updated_at = models.DateTimeField(_("Date updated"), auto_now=True)
 
-    text = models.TextField()
+    text = models.TextField(
+        verbose_name=_("Please leave your review here"),
+        null=True,
+        blank=True
+    )
 
     def get_status(self):
         for status_value in self.STATUS_CHOICES:
