@@ -1,15 +1,13 @@
 import logging
 
-from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.decorators import login_required
-from django.db import transaction
+from django.forms.models import model_to_dict
 from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.decorators import method_decorator
+from django.utils.translation import ugettext_lazy as _
 from django.views.generic import View
 
-from conference.models.event import Event
-from pyconlt.settings.base import CURRENT_EVENT
 from ..forms import ReviewForm
 from ..models.proposal import Proposal
 from ..models.review import Review
@@ -28,7 +26,13 @@ class ReviewView(View):
 
         id = kwargs.get('pk')
         proposal = get_object_or_404(Proposal, id=id)
-        form = self.form_class()
+
+        # Checking if this user has already made a pending review, if yes then prepopulate the form else blank form.
+        review = Review.objects.filter(author=request.user, proposal=proposal.pk, status=0).first()
+        if review:
+            form = self.form_class(initial=model_to_dict(review))
+        else:
+            form = self.form_class()
 
         return render(request, self.template, {'form': form, 'proposal': proposal})
 
@@ -55,7 +59,7 @@ class ReviewView(View):
                 return redirect('review_list')
             except Exception as ex:
                 form.add_error(None, _(
-                    'Unable to store CFP. '
+                    'Unable to store Review. '
                     'Please report this to site administrator'
                     ))
                 logger.exception(ex)

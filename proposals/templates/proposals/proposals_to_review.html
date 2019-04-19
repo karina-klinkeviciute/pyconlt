@@ -34,8 +34,8 @@
                 {% for proposal in proposals %}
                     <tr>
                         <td>
-                            {% if proposal.user.first_name and proposal.user.last_name %}
-                                {{ proposal.user.first_name }} {{ proposal.user.last_name }}
+                            {% if proposal.presenter.name %}
+                                {{ proposal.presenter.name }}
                             {% else %}
                                 Unknown
                             {% endif %}
