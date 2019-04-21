@@ -6,7 +6,7 @@ from ...models.proposal import Proposal
 @pytest.mark.django_db()
 class TestProposal:
 
-    def test_presenter_can_be_created_with_no_values(self):
+    def test_proposal_can_be_created(self):
         proposal = Proposal.objects.create(
             type=1,
             duration=30,
