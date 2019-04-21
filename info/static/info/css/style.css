@@ -121,3 +121,7 @@ blockquote {
 .account-select .caret {
   display: none;
 }
+
+a, p, span {
+  font-size: 16px;
+}
