@@ -122,6 +122,6 @@ blockquote {
   display: none;
 }
 
-a, p, span {
+a, p, span, li, div {
   font-size: 16px;
 }
