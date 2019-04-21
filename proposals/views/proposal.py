@@ -41,7 +41,12 @@ class ProposalsView(View):
         event = Event.objects.filter(year=CURRENT_EVENT).first()
 
         if event:
-            proposals = Proposal.objects.filter(event=event.pk, state=0)
+            # Filtering pending reviews to display only those proposals that are still waiting for a review to be done.
+            pending_proposal_reviews = Review.objects.filter(
+                author=request.user,
+                status=0,
+            ).values_list("proposal", flat=True)
+            proposals = Proposal.objects.filter(id__in=pending_proposal_reviews, event=event.pk, state=0)
 
         context = {"proposals": proposals if event else None}
 
