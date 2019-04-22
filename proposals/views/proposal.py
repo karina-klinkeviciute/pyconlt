@@ -41,7 +41,12 @@ class ProposalsView(View):
         event = Event.objects.filter(year=CURRENT_EVENT).first()
 
         if event:
-            proposals = Proposal.objects.filter(event=event.pk, state=0)
+            # Filtering finished reviews to display only those proposals that are still waiting for a review to be done.
+            finished_reviews = Review.objects.filter(
+                author=request.user,
+                status=1,
+            ).values_list("proposal", flat=True)
+            proposals = Proposal.objects.filter(event=event.pk, state=0).exclude(id__in=finished_reviews)
 
         context = {"proposals": proposals if event else None}
 
