@@ -81,8 +81,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {#        </div>#}
 
 <div class="row">
-    <ul id="About-dropdown" class="dropdown-content" style="min-width: 200px !important">
-        {% load menubuilder %}{% menu About-dropdown %}
+    <ul id="Why-attend-dropdown" class="dropdown-content" style="min-width: 200px !important">
+        {% load menubuilder %}{% menu why-attend-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}"  title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="left hide-on-med-and-down">
                {% load menubuilder %}{% menu main-menu-2019 %}
                   {% for item in menuitems %}
-                      <li><a href="{{ item.url }}" class="dropdown-button" data-activates="{{ item.title }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}{% if item.title == 'Register' %} class='orange darken-4'{% endif %}>{{ item.title }}</a></li>
+                      <li><a href="{{ item.url }}" class="dropdown-button" data-activates="{{ item.title|slugify }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
             </ul>
             <ul class="right hide-on-med-and-down">
