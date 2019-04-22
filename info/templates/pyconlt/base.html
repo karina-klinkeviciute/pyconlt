@@ -87,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li><a href="{{ item.url }}"  title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
     </ul>
-        <ul id="practical-info-dropdown" class="dropdown-content" style="min-width: 200px !important">
+        <ul id="practical-information-dropdown" class="dropdown-content" style="min-width: 200px !important">
         {% load menubuilder %}{% menu practical-info-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
