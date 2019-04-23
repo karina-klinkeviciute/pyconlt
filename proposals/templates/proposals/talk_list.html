@@ -11,6 +11,12 @@
             <div class="row">
               <div class="col s12">
                   <div class="center-align">
+                    <div id="presenter-modal-{{ talk.presenter.id }}" style="display: none;" class="presenter-modal">
+                        <span style="display: block; float: left">{{ talk.presenter.image }}</span>
+                        <span style="display: block; float: left">{{ talk.presenter.name }}</span>
+                        <div>{{ talk.presenter.bio }}</div>
+
+                    </div>
                     <h3 class="header" id="talk{{ talk.id }}">
 {#                        <a href="/{{ talk.event.year }}/speakers/#speaker{{ talk.presenter.id }}">#}
                             {{ talk.presenter.name }}
@@ -27,4 +33,7 @@
             </div>
         {% endfor %}
 
+    <script>
+{#    here we should add event listener, then get a target and then show the modal for the right presenter #}
+    </script>
 {% endblock content %}
