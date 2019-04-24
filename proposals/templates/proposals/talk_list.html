@@ -9,6 +9,56 @@
 
         {% for talk in talks %}
             <div class="row">
+                    <div class="col s12 m12 l8">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title"><i>{{ talk.title }}</i>
+                                    by {{ talk.presenter }}</span>
+                                    <p>{{ talk.short_description | safe }}</p>
+                                <br>
+                                <p>
+                                    {% for tag in talk.tags %}
+                                        <span class="chip">{{ tag }}</span>
+                                    {% endfor %}
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a class="btn">Like</a>
+                                <!-- Modal Trigger -->
+                                <a class="btn modal-trigger" href="#modal1">Speaker bio</a>
+                                <!-- Modal Structure -->
+                                <div id="modal1" class="modal">
+                                    <div class="modal-content">
+                                        <h4>{{ talk.presenter.name }}</h4>
+                                        <img style="max-height: 100px; margin: 20px; float:left;"
+                                            src={% if talk.presenter.image %}{{ talk.presenter.image.url }}{% else %}#{% endif %}>
+                                        <p>{{ talk.presenter.bio | safe }}</p>
+                                        {% if talk.presenter.has_twitter %}
+                                            <a href="https://www.twitter.com/{{talk.presenter.twitter_handle}}/" target="_blank">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if talk.presenter.has_linkedin %}
+                                            <a href="https://www.linkedin.com/in/{{talk.presenter.linkedin_handle}}/" target="_blank">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if talk.presenter.has_github %}
+                                            <a href="https://www.github.com/{{talk.presenter.github_handle}}/" target="_blank">
+                                            <i class="fa fa-github" aria-hidden="true"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#!" class="modal-close btn-flat">Close</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- old template here
+            <div class="row">
               <div class="col s12">
                   <div class="center-align">
                     <div id="presenter-modal-{{ talk.presenter.id }}" style="display: none;" class="presenter-modal">
@@ -31,9 +81,19 @@
                   </div>
               </div>
             </div>
+            -->
         {% endfor %}
 
-    <script>
-{#    here we should add event listener, then get a target and then show the modal for the right presenter #}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems, options);
+            });
+    </script>
+
 {% endblock content %}
