@@ -15,16 +15,15 @@
                         <span style="display: block; float: left">{{ talk.presenter.image }}</span>
                         <span style="display: block; float: left">{{ talk.presenter.name }}</span>
                         <div>{{ talk.presenter.bio }}</div>
-
                     </div>
-                    <h1 id="talk{{ talk.id }}">
+                  </div>
+                  <div class="center-align" id="talk{{ talk.id }}">
+                    <h5 class="header">{{ talk.title }}</h5>
+                    <h5>
                         <a href="/{{ talk.event.year }}/speakers/#speaker{{ talk.presenter.id }}">
                             {{ talk.presenter.name }}
                         </a>
-                    </h1>
-                  </div>
-                  <div class="center-align">
-                    <h3 class="header">{{ talk.title }}</h3>
+                    </h5>
                   </div>
                   <div>
                         {{ talk.short_description|safe }}
