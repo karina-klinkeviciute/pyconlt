@@ -23,11 +23,10 @@
                                 </p>
                             </div>
                             <div class="card-action">
-                                <a class="btn">Like</a>
                                 <!-- Modal Trigger -->
-                                <a class="btn modal-trigger" href="#modal1">Speaker bio</a>
+                                <a class="btn modal-trigger" href="#modal{{talk.id}}">Speaker bio</a>
                                 <!-- Modal Structure -->
-                                <div id="modal1" class="modal">
+                                <div id="modal{{talk.id}}" class="modal">
                                     <div class="modal-content">
                                         <h4>{{ talk.presenter.name }}</h4>
                                         <img style="max-height: 100px; margin: 20px; float:left;"
