@@ -40,10 +40,10 @@ class SocialMixin(models.Model):
     )
 
     def has_linkedin(self):
-        return self.linkedin_handle is not None
+        return self.linkedin_handle
 
     def has_twitter(self):
-        return self.twitter_handle is not None
+        return self.twitter_handle
 
     @property
     def twitter_url(self):
@@ -69,7 +69,7 @@ class SocialMixin(models.Model):
             return 'https://www.github.com/'.format(self.github_handle)
 
     def has_github(self):
-        return self.github_handle is not None
+        return self.github_handle
 
     class Meta:
         abstract = True
