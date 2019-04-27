@@ -40,6 +40,7 @@ class SocialMixin(models.Model):
     )
 
     def has_linkedin(self):
+        print(self.linkedin_handle)
         return self.linkedin_handle
 
     def has_twitter(self):
@@ -59,14 +60,14 @@ class SocialMixin(models.Model):
         if self.linkedin_handle.startswith('https://'):
             return self.linkedin_handle
         else:
-            return 'https://www.linkedin.com/in/'.format(self.linkedin_handle)
+            return 'https://www.linkedin.com/in/{}'.format(self.linkedin_handle)
 
     @property
     def github_url(self):
         if self.github_handle.startswith('https://'):
             return self.github_handle
         else:
-            return 'https://www.github.com/'.format(self.github_handle)
+            return 'https://www.github.com/{}'.format(self.github_handle)
 
     def has_github(self):
         return self.github_handle
