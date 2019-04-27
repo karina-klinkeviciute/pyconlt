@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import bleach
 from ckeditor.fields import RichTextField
 from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
@@ -101,6 +102,11 @@ class ProfileMixin(models.Model):
 
     class Meta:
         abstract = True
+
+    def clean(self):
+        super(ProfileMixin, self).clean()
+
+        self.bio = bleach.clean(self.bio)
 
 
 class Presenter(ProfileMixin, SocialMixin, models.Model):

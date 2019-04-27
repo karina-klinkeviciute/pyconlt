@@ -1,3 +1,4 @@
+import bleach
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
@@ -146,3 +147,10 @@ class Proposal(EventFKMixin):
 
     def __str__(self):
         return self.title or "No title"
+
+    def clean(self):
+        super(Proposal, self).clean()
+
+        self.short_description = bleach.clean(self.short_description)
+        self.extra_info = bleach.clean(self.extra_info)
+        self.target_audience = bleach.clean(self.target_audience)
