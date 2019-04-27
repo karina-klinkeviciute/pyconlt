@@ -96,8 +96,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pyconlt.wsgi.application'
-
+# XXX: maybe this should be in pythonanywhere.py ?
+# WSGI_APPLICATION = 'pyconlt.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
