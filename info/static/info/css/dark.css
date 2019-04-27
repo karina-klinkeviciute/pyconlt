@@ -1,3 +1,4 @@
+/* Note that this should be duplicated in info/templates/pyconlt/base.html setDarkTheme */
 :root {
     --primary-bg-color: #191919;
     --primary-text-color: #F8F8F2;
