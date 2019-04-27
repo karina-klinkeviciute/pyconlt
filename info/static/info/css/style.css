@@ -130,12 +130,12 @@ a, p, span, li, div {
 
 .dropdown-content {
    background-color: var(--secondary-bg-color);
-   color: var(--primary-text-color);
+   color: var(--header-text-color);
 }
 .dropdown-content li {
    background-color: var(--secondary-bg-color);
-   color: var(--primary-text-color);
+   color: var(--header-text-color);
 }
 .dropdown-content > li > a, .dropdown-content li > span  {
-   color: var(--primary-text-color);
+   color: var(--header-text-color);
 }
