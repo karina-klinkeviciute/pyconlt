@@ -148,7 +148,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main>
-    <img style="display: none" id="header" alt="header"/>
+    {% if request.COOKIES.theme == 'dark' %}
+        <img id="header" alt="header" src="{% static 'info/img/pycon2019_header_dark.png' %}"/>
+    {% else %}
+        <img id="header" alt="header" src="{% static 'info/img/pycon2019_header_light.png' %}"/>
+    {% endif %}
+
     <div class="container">
      {% block content %}
 
@@ -203,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function setHeader(theme) {
         var img = $('#header-data').data(theme);
         if (img) {
-            $('#header').attr('src', img).attr('style', 'width: 100%');
+            $('#header').attr('src', img);
         }
     }
 

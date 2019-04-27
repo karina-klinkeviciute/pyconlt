@@ -1,6 +1,11 @@
 #logo {
     width: 100%;
 }
+
+#header {
+    width: 100%;
+}
+
 .main_menu {
     font-size: 0.95rem;
 }
