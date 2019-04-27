@@ -32,7 +32,7 @@
 
                                         {% if talk.presenter.image %}
                                         <img style="max-height: 100px; margin: 20px; float:left;"
-                                            src={{ talk.presenter.image.url }}/>
+                                            src="{{ talk.presenter.image.url }}" />
                                         {% endif %}
                                         <p>{{ talk.presenter.bio | safe }}</p>
                                         {% if talk.presenter.has_twitter %}
