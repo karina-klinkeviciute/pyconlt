@@ -64,9 +64,9 @@
   src="https://www.facebook.com/tr?id=415401939037313&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
-    
+
 </head>
-  
+
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2GBD5M"
@@ -108,14 +108,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   {% endfor %}
                 {% if user.is_authenticated %}
                   <li>
-                    <select class="account-select" name="" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                    <select class="account-select" name="" onchange="onSelectChange(this.options[this.selectedIndex].value)">
                       <option value="{% url 'presenter_update' %}">{% trans "Account" %}</option>
                       <option value="{% url 'proposal_list' %}">{% trans "Proposals" %}</option>
                         {% ifequal user.user_permissions.all.0.name "is_committee_member" %}
                             <option value="{% url 'review_list' %}">{% trans "Reviews" %}</option>
                         {% endifequal %}
-                      <option><a class="lighttheme">{% trans "Light theme" %}</a></option>
-                      <option><a class="darktheme">{% trans "Dark theme" %}</a></option>
+                      <option value="lighttheme"><a class="lighttheme">{% trans "Light theme" %}</a></option>
+                      <option value="darktheme"><a class="darktheme">{% trans "Dark theme" %}</a></option>
                       <option value="{% url 'account_logout' %}">{% trans "Sign out" %}</option>
                     </select>
                   </li>
@@ -180,6 +180,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% else %}
     const g_theme = 'light';
     {% endif %}
+
+    function onSelectChange(value) {
+        if (value === 'lighttheme') {
+            setLightTheme();
+        } else if (value === 'darktheme') {
+            setDarkTheme()
+        } else {
+            window.location = value;
+        }
+    }
 
     function setCookie(name,value,days) {
         var expires = "";
