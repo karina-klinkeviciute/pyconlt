@@ -1,8 +1,9 @@
+/* Note that this should be duplicated in info/templates/pyconlt/base.html setLightTheme */
 :root {
     --primary-bg-color: #FFFFFF;
     --primary-text-color: #000000;
     --secondary-bg-color: #3776aa;
     --links-color: #ff9b48;
-    --header-text-color: #000000;
+    --header-text-color: #ffffff;
     --nav-text-color: #ffffff;
 }

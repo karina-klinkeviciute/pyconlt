@@ -47,6 +47,12 @@ DATABASES = {
 }
 ```
 
+* Export DJANGO_SETTINGS_MODULE:
+
+```
+export DJANGO_SETTINGS_MODULE=pyconlt.settings.local
+```
+
 * Run `python manage.py migrate`
 
 * Import data `python manage.py loaddata data.json` - ask for

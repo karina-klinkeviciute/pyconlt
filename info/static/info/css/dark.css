@@ -1,7 +1,8 @@
+/* Note that this should be duplicated in info/templates/pyconlt/base.html setDarkTheme */
 :root {
     --primary-bg-color: #191919;
     --primary-text-color: #F8F8F2;
-    --secondary-bg-color: #171812;
+    --secondary-bg-color: #262626;
     --links-color: #baba1b;
     --header-text-color: #F8F8F2;
     --nav-text-color: #F8F8F2;
