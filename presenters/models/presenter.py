@@ -45,6 +45,29 @@ class SocialMixin(models.Model):
     def has_twitter(self):
         return self.twitter_handle is not None
 
+    @property
+    def twitter_url(self):
+        if self.twitter_handle.startswith('https://'):
+            return self.twitter_handle
+        elif self.twitter_handle.startswith('@'):
+            return 'https://www.twitter.com/{}'.format(self.twitter_handle[1:])
+        else:
+            return 'https://www.twitter.com/{}'.format(self.twitter_handle)
+
+    @property
+    def linkedin_url(self):
+        if self.linkedin_handle.startswith('https://'):
+            return self.linkedin_handle
+        else:
+            return 'https://www.linkedin.com/in/'.format(self.linkedin_handle)
+
+    @property
+    def github_url(self):
+        if self.github_handle.startswith('https://'):
+            return self.github_handle
+        else:
+            return 'https://www.github.com/'.format(self.github_handle)
+
     def has_github(self):
         return self.github_handle is not None
 

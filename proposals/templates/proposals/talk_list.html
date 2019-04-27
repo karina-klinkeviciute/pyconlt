@@ -29,21 +29,24 @@
                                 <div id="modal{{talk.id}}" class="modal">
                                     <div class="modal-content">
                                         <h4>{{ talk.presenter.name }}</h4>
+
+                                        {% if talk.presenter.image %}
                                         <img style="max-height: 100px; margin: 20px; float:left;"
-                                            src={% if talk.presenter.image %}{{ talk.presenter.image.url }}{% else %}#{% endif %}>
+                                            src={{ talk.presenter.image.url }}/>
+                                        {% endif %}
                                         <p>{{ talk.presenter.bio | safe }}</p>
                                         {% if talk.presenter.has_twitter %}
-                                            <a href="https://www.twitter.com/{{talk.presenter.twitter_handle}}/" target="_blank">
+                                            <a href="{{talk.presenter.twitter_url}}/" target="_blank">
                                             <i class="fa fa-twitter" aria-hidden="true"></i>
                                             </a>
                                         {% endif %}
                                         {% if talk.presenter.has_linkedin %}
-                                            <a href="https://www.linkedin.com/in/{{talk.presenter.linkedin_handle}}/" target="_blank">
+                                            <a href="{{talk.presenter.linkedin_url}}/" target="_blank">
                                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                                             </a>
                                         {% endif %}
                                         {% if talk.presenter.has_github %}
-                                            <a href="https://www.github.com/{{talk.presenter.github_handle}}/" target="_blank">
+                                            <a href="{{talk.presenter.github_url}}/" target="_blank">
                                             <i class="fa fa-github" aria-hidden="true"></i>
                                             </a>
                                         {% endif %}
