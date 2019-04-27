@@ -1,5 +1,6 @@
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.db.models import Avg
 from django.utils.translation import ugettext_lazy as _
@@ -112,6 +113,18 @@ class Proposal(EventFKMixin):
         help_text=_('Foreign key to presenter who proposed this '
                     'talk/workshop'),
         on_delete=models.SET_NULL,
+        blank=True,
+        null=True
+    )
+
+    # Proposal or Talk tags ex.: "DevOps, WebDev.."
+    tags = ArrayField(
+        models.CharField(
+            max_length=50,
+            blank=True,
+            null=True
+        ),
+        help_text=_("Proposal/Talk tags"),
         blank=True,
         null=True
     )
