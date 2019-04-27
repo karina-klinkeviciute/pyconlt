@@ -125,3 +125,13 @@ blockquote {
 a, p, span, li, div {
   font-size: 16px;
 }
+
+.modal {
+   background-color: var(--primary-bg-color);
+   color: var(--primary-text-color);
+}
+
+.modal .modal-footer {
+   background-color: var(--secondary-bg-color);
+   color: var(--primary-text-color);
+}
