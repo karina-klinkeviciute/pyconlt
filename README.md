@@ -76,3 +76,24 @@ DJANGO_SETTINGS_MODULE=pyconlt.settings.pythonanywhere
 
 Follow deployment instructions for your platform. For
 pythonanywhere we have deploy.sh script in the system.
+
+## DB Dump
+
+In order to produce DB dump connect to pythonanywhere via SSH or
+using Console in web. Then run `./dump.sh` on server, that will
+produce dump in format pyconYYYY-MM-DD.dump format. Download dump
+via SSH using scp or use PythonAnywhere web.
+
+To import dump create empty pyconlt database using psql, e.g.
+
+```
+DROP DATABASE pyconlt;
+
+CREATE DATABASE pyconlt;
+```
+
+Then use psql to import dump:
+
+```
+psql -d pyconlt < pyconYYYY-MM-DD.dump
+```
