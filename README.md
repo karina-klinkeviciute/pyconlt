@@ -19,15 +19,19 @@ Planned features:
 ## Setting development environment
 
 If you prefer Docker follow instructions in docker-compose.rst.
-Docker workflow might save you some time.
+Docker workflow might save you some time if you are used to Docker.
 
 Alternative workflow:
 
-* Install pipenv (e.g. `pip3 install --user pipenv`).
+* Install pipenv (e.g. `pip3 install --user pipenv`) if you don't
+  have it yet.
 
 * Install all requires packages `pipenv install`.
 
-* Run pipenv shell `pipenv shell`.
+* Run pipenv shell `pipenv shell`. I recommend to start using
+  direnv (see https://github.com/direnv/direnv) if you are not
+  doing it yet. This will run `pipenv shell` command automatically
+  for you.
 
 * Install posgresql DB and create pysql database.
 
@@ -47,17 +51,28 @@ DATABASES = {
 }
 ```
 
-* Export DJANGO_SETTINGS_MODULE:
-
-```
-export DJANGO_SETTINGS_MODULE=pyconlt.settings.local
-```
-
 * Run `python manage.py migrate`
 
-* Import data `python manage.py loaddata data.json` - ask for
-  data.json from team members.
+* Import data using on of the two methods:
+
+    * `python manage.py loaddata data.json`
+
+    * `psql < pyconlt.dump`
+
+  Ask for data.json or pyconlt.dump from team members.
 
 * Run `python manage.py runserver`
 
 Now you can develop.
+
+## Deployment
+
+Configure your environment properly in file in pyconlt/settings
+folder and specify DJANGO_SETTINGS_MODULE in .env file. E.g.:
+
+```
+DJANGO_SETTINGS_MODULE=pyconlt.settings.pythonanywhere
+```
+
+Follow deployment instructions for your platform. For
+pythonanywhere we have deploy.sh script in the system.
