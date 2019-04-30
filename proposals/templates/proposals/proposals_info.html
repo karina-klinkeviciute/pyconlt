@@ -1,0 +1,58 @@
+{% extends 'pyconlt/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h4 align="center">{% trans "List of Proposals" %}</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    {% trans "Author" %}
+                </th>
+                <th>
+                    {% trans "Title" %}
+                </th>
+                <th>
+                    {% trans "Type" %}
+                </th>
+                <th>
+                    {% trans "Speaker grant" %}
+                </th>
+                <th>
+                    {% trans "Grant description" %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if proposals %}
+                {% for proposal in proposals %}
+                    <tr>
+                        <td>
+                            {% if proposal.presenter.name %}
+                                {{ proposal.presenter.name }}
+                            {% else %}
+                                Unknown
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ proposal.title }}
+                        </td>
+                        <td>
+                            {{ proposal.get_type_display }}
+                        </td>
+                        <td>
+                            {{ proposal.speaker_grant }}
+                        </td>
+                        <td>
+                            {{ proposal.grant_description }}
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    {% if not proposals %}
+        <p align="center">No proposals here yet :(</p>
+    {% endif %}
+{% endblock content %}

@@ -51,3 +51,27 @@ class ProposalsView(View):
         context = {"proposals": proposals if event else None}
 
         return render(request, self.template, context)
+
+
+class ProposalsInfoView(View):
+    """Displaying proposals that are ready to be reviewed."""
+    template = "proposals/proposals_info.html"
+
+    @method_decorator(login_required)
+    def get(self, request, *args, **kwargs):
+        if not request.user.is_superuser:
+            return HttpResponseForbidden()
+
+        event = Event.objects.filter(year=CURRENT_EVENT).first()
+
+        if event:
+            # Filtering finished reviews to display only those proposals that are still waiting for a review to be done.
+            finished_reviews = Review.objects.filter(
+                author=request.user,
+                status=1,
+            ).values_list("proposal", flat=True)
+            proposals = Proposal.objects.filter(event=event.pk, state=1)
+
+        context = {"proposals": proposals if event else None}
+
+        return render(request, self.template, context)
