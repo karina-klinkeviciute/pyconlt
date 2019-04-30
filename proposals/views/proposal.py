@@ -70,7 +70,7 @@ class ProposalsInfoView(View):
                 author=request.user,
                 status=1,
             ).values_list("proposal", flat=True)
-            proposals = Proposal.objects.filter(event=event.pk, state=1)
+            proposals = Proposal.objects.filter(event=event.pk, state=1, speaker_grant=True)
 
         context = {"proposals": proposals if event else None}
 

@@ -10,6 +10,9 @@
                     {% trans "Author" %}
                 </th>
                 <th>
+                    {% trans "Email" %}
+                </th>
+                <th>
                     {% trans "Title" %}
                 </th>
                 <th>
@@ -34,6 +37,7 @@
                                 Unknown
                             {% endif %}
                         </td>
+                            {{ proposal.presenter.user.email }}
                         <td>
                             {{ proposal.title }}
                         </td>
