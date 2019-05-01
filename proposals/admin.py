@@ -6,7 +6,7 @@ from proposals.models.review import Review
 
 
 class ProposalAdmin(admin.ModelAdmin):
-    list_display = ('title', 'presenter', 'event', 'state', 'type')
+    list_display = ('title', 'duration', 'presenter', 'event', 'state', 'type')
     list_filter = ('event', 'state', 'type')
 
 
