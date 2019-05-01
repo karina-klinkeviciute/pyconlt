@@ -33,24 +33,24 @@ a.orange {
 }
 
 nav {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
 }
 
 .nav-wrapper {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
 }
 
 .secondary-content > .material-icons.css {
-   color: var(--secondary-bg-color);
+   color: rgb(var(--secondary-bg-color));
 }
 
 .btn {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
 }
 
 .page-footer {
    color: var(--header-text-color);
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
 }
 
 .page-footer a {
@@ -61,7 +61,7 @@ nav {
 
 .page-footer .footer-copyright {
    color: var(--header-text-color);
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
 }
 
 .input-field {
@@ -91,7 +91,7 @@ nav {
 }
 
 .side-nav li > a:hover {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
 }
 
 blockquote {
@@ -129,18 +129,68 @@ a, p, span, li, div {
 }
 
 .modal .modal-footer {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
    color: var(--primary-text-color);
 }
 
 .dropdown-content {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
    color: var(--header-text-color);
 }
 .dropdown-content li {
-   background-color: var(--secondary-bg-color);
+   background-color: rgb(var(--secondary-bg-color));
    color: var(--header-text-color);
 }
 .dropdown-content > li > a, .dropdown-content li > span  {
    color: var(--header-text-color);
+}
+
+.schedule {
+    margin-bottom: 2em;
+}
+
+.schedule div.hidden {
+    display: none;
+}
+
+.schedule table thead {
+    background-color: rgba(var(--secondary-bg-color), 0.5);
+}
+
+.schedule table tr:nth-child(even) {
+    background-color: rgba(var(--secondary-bg-color), 0.2);
+}
+
+ul.schedule_header {
+    list-style-type: none;
+    padding: 8px 8px;
+    background-color: var(--primary-bg-color);
+    position: sticky;
+    top: 0;
+}
+
+ul.schedule_header li {
+    display: inline;
+    text-align: center;
+    padding: 8px 8px;
+    border-bottom: 1px solid rgb(var(--secondary-bg-color));
+}
+
+ul.schedule_header li a {
+    width: 40px;
+    color: var(--primary-text-color);
+    margin: 8px 8px;
+    text-decoration: none;
+}
+
+ul.schedule_header li.active {
+    background-color: rgba(var(--secondary-bg-color), 0.8);
+}
+
+ul.schedule_header li.active a {
+    color: var(--header-text-color);
+}
+
+ul.schedule_header li a:hover {
+    opacity: 0.5;
 }

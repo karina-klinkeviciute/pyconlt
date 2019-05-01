@@ -2,7 +2,7 @@
 :root {
     --primary-bg-color: #FFFFFF;
     --primary-text-color: #000000;
-    --secondary-bg-color: #3776aa;
+    --secondary-bg-color: 55, 118, 170;
     --links-color: #ff9b48;
     --header-text-color: #ffffff;
     --nav-text-color: #ffffff;
