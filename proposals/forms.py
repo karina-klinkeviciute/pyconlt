@@ -92,3 +92,14 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ("text", "rating", "status")
+
+
+class TalksFilterForm(forms.Form):
+
+    def __init__(self, *args, **kwargs):
+        choices = kwargs.pop('choices')
+        super().__init__(*args, **kwargs)
+        self.fields['option'].choices = choices
+
+    option = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,
+        required=False)

@@ -7,6 +7,17 @@
 
 {% block content %}
 
+        {% if tags %}
+          <div class="row" id="tags-filter">
+            <form class="filter-block" action="" method="post">
+              {% csrf_token %}
+              {{ form.as_table }}
+              <button class="btn" type="submit">Filter</button>
+              <a href="{% url 'talks_list' year=2019 %}">Reset Filter</a>
+            </form>
+          </div>
+        {% endif %}
+
         {% for talk in talks %}
             <div class="row">
                     <div class="col s12 m12 l8">
@@ -51,6 +62,11 @@
                                             </a>
                                         {% endif %}
                                     </div>
+                                    {% if talk.tags %}
+                                        <div>
+                                          {{ talk.tags }}
+                                        </div>
+                                    {% endif %}
                                     <div class="modal-footer">
                                         <a href="#!" class="modal-close btn-flat">Close</a>
                                     </div>
