@@ -82,13 +82,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {#        </div>#}
 
 <div class="row">
-    <ul id="why-attend-dropdown" class="dropdown-content" style="min-width: 200px !important">
+    <ul id="why-attend-dropdown" class="dropdown-content">
         {% load menubuilder %}{% menu why-attend-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}"  title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
     </ul>
-        <ul id="practical-information-dropdown" class="dropdown-content" style="min-width: 200px !important">
+        <ul id="practical-information-dropdown" class="dropdown-content">
         {% load menubuilder %}{% menu practical-info-dropdown %}
           {% for item in menuitems %}
               <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="left hide-on-med-and-down">
                 <li><a href="/">PyConLT'2019</a></li>
             </ul>
-            <ul class="right hide-on-med-and-down">
+            <ul class="right hide-on-med-and-down" id="right-side-menu">
                 {% load menubuilder %}{% menu main-menu-2019 %}
                   {% for item in menuitems %}
                       <li><a href="{{ item.url }}" class="dropdown-button" data-activates="{{ item.title|slugify }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
