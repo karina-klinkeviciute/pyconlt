@@ -35,12 +35,10 @@ class TalksListView(ListView):
 
     def get_tags(self, talks):
         tags = talks.filter(tags__isnull=False).values_list('tags', flat=True).distinct().order_by()
-        tag_list = []
-        [tag_list.extend(tag) for tag in tags]
 
-        tag_options = []
-        [tag_options.append((tag, tag)) for tag in set(tag_list)]
-        return tag_list
+        tag_list = [tag for sublist in tags for tag in sublist]
+        tag_options = [(tag, tag) for tag in set(tag_list)]
+        return tag_options
 
     def get_talks(self, year):
         event = Event.objects.get(year=year)
@@ -54,13 +52,11 @@ class TalksListView(ListView):
         year = kwargs.get('year', CURRENT_EVENT)
         talks = self.get_talks(year)
 
-        tag_options = []
         tag_list = self.get_tags(talks)
-        [tag_options.append((tag, tag)) for tag in set(tag_list)]
-        form = TalksFilterForm(choices=tag_options)
+        form = TalksFilterForm(choices=tag_list)
 
         self.object_list = talks
-        context = {'talks': talks, 'tags': list(set(tag_options)),
+        context = {'talks': talks, 'tags': list(set(tag_list)),
             'form':form}
         return self.render_to_response(context)
 
@@ -69,11 +65,9 @@ class TalksListView(ListView):
         year = kwargs.get('year', CURRENT_EVENT)
         talks = self.get_talks(year)
 
-        tag_options = []
         tag_list = self.get_tags(talks)
-        [tag_options.append((tag, tag)) for tag in set(tag_list)]
 
-        form = TalksFilterForm(request.POST, choices=tag_options)
+        form = TalksFilterForm(request.POST, choices=tag_list)
 
         if form.is_valid():
             data = form.cleaned_data
