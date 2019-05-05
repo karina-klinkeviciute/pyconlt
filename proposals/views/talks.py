@@ -75,9 +75,10 @@ class TalksListView(ListView):
             options = data.get('option')
             if options:
                 talks = query.none()
-                query_chain = Q()
-                for option in options:
-                    query_chain = (query_chain | Q(tags__contains=option))
+                query_list = [Q(tags__contains=option) for option in options]
+                query_chain = query_list.pop()
+                for option in query_list:
+                    query_chain |= option
                 talks = query.filter(query_chain)
             else:
                 talks = query
