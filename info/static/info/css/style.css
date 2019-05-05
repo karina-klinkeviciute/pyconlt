@@ -246,4 +246,5 @@ ul.schedule_header li a:hover {
     min-width: 100px;
     max-width: 100px;
     text-align: center;
+    height: 6em;
 }
