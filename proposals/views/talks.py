@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.db.models import Q
 from django.views.generic import DetailView, ListView
 
 from conference.models import Event
@@ -73,7 +74,11 @@ class TalksListView(ListView):
             data = form.cleaned_data
             options = data.get('option')
             if options:
-                talks = query.filter(tags__contains=[options])
+                talks = query.none()
+                query_chain = Q()
+                for option in options:
+                    query_chain = (query_chain | Q(tags__contains=option))
+                talks = query.filter(query_chain)
             else:
                 talks = query
 
