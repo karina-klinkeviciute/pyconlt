@@ -146,7 +146,7 @@ a, p, span, li, div {
 }
 
 .nav-wrapper > ul#right-side-menu > li {
-  min-width: 120px !important;
+  min-width: 100px !important;
   text-align: center;
 }
 
@@ -188,7 +188,8 @@ a, p, span, li, div {
 
 .filter-block > button {
   float:right;
-=======
+}
+
 .schedule {
     margin-bottom: 2em;
 }
