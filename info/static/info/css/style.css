@@ -208,23 +208,23 @@ a, p, span, li, div {
 
 ul.schedule_header {
     list-style-type: none;
-    padding: 8px 8px;
     background-color: var(--primary-bg-color);
     position: sticky;
     top: 0;
 }
 
 ul.schedule_header li {
-    display: inline;
+    display: inline-block;
     text-align: center;
     padding: 8px 8px;
     border-bottom: 1px solid rgb(var(--secondary-bg-color));
+    white-space: nowrap;
 }
 
 ul.schedule_header li a {
     width: 40px;
     color: var(--primary-text-color);
-    margin: 8px 8px;
+    padding: 8px;
     text-decoration: none;
 }
 
@@ -238,4 +238,12 @@ ul.schedule_header li.active a {
 
 ul.schedule_header li a:hover {
     opacity: 0.5;
+}
+
+.schedule table td:first-child,
+.schedule table th:first-child {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: center;
 }
