@@ -74,7 +74,7 @@ class TalksListView(ListView):
             data = form.cleaned_data
             options = data.get('option')
             if options:
-                query_list = [Q(tags__contains=option) for option in [options]]
+                query_list = [Q(tags__contains=option) for option in options.split(",").trim()]
                 query_chain = query_list.pop()
                 for option in query_list:
                     query_chain |= option
