@@ -1,5 +1,7 @@
+import csv
+
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 from django.views.generic import View
@@ -75,3 +77,48 @@ class ProposalsInfoView(View):
         context = {"proposals": proposals if event else None}
 
         return render(request, self.template, context)
+
+
+class ProposalsCSVView(View):
+    """CSV view for proposals and presenters"""
+    @method_decorator(login_required)
+    def get(self, request, *args, **kwargs):
+
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+
+        writer = csv.writer(response)
+        event = Event.objects.filter(year=CURRENT_EVENT).first()
+
+        writer.writerow([
+            'Email',
+            'Name',
+            'Title',
+            'Duration',
+            'Type',
+            'Short description',
+            'Extra info',
+            'Audience experience',
+            'Target audience',
+            'Grant description',
+            'Tags',
+            'Presenter expertise'
+
+        ])
+        proposals = Proposal.objects.filter(event=event.pk, state=1)
+        for proposal in proposals:
+            writer.writerow([
+                proposal.presenter.user.email,
+                proposal.presenter.name,
+                proposal.title,
+                proposal.duration,
+                proposal.type,
+                proposal.short_description,
+                proposal.extra_info,
+                proposal.audience_experience,
+                proposal.target_audience,
+                proposal.grant_description,
+                proposal.tags,
+                proposal.presenter.expertise])
+
+        return response
