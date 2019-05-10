@@ -3,7 +3,7 @@ from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
-from django.db.models import Avg
+from django.db.models import Avg, TextField
 from django.utils.translation import ugettext_lazy as _
 
 from conference.mixins.event_foreign_key import EventFKMixin
@@ -70,11 +70,11 @@ class Proposal(EventFKMixin):
         help_text=_('Estimated duration (minutes)')
     )
 
-    short_description = RichTextField(
+    short_description = TextField(
         help_text=_('Short information about proposal')
     )
 
-    extra_info = RichTextField(
+    extra_info = TextField(
         help_text=_('Extra information'),
         blank=True,
         null=True
