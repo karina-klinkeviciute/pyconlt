@@ -9,14 +9,10 @@
 
         {% if tags %}
           <div class="row" id="tags-filter">
-            <form class="filter-block" action="" method="post">
-              {% csrf_token %}
-              {{ form.as_table }}
-              <button class="btn" type="submit">Filter</button>
-              <a href="{% url 'talks_list' year=2019 %}">Reset Filter</a>
-            </form>
+            <input type="text" id="tag-input" onkeyup="searchByTags()" placeholder="Search for tags.." title="Type in a tag">
           </div>
         {% endif %}
+
 
         {% for talk in talks %}
             <div class="row">
@@ -75,36 +71,26 @@
                         </div>
                     </div>
             </div>
-            <!-- old template here
-            <div class="row">
-              <div class="col s12">
-                  <div class="center-align">
-                    <div id="presenter-modal-{{ talk.presenter.id }}" style="display: none;" class="presenter-modal">
-                        <span style="display: block; float: left">{{ talk.presenter.image }}</span>
-                        <span style="display: block; float: left">{{ talk.presenter.name }}</span>
-                        <div>{{ talk.presenter.bio }}</div>
-                    </div>
-                  </div>
-                  <div class="center-align" id="talk{{ talk.id }}">
-                    <h5 class="header">{{ talk.title }}</h5>
-                    <h5>
-                        <a href="/{{ talk.event.year }}/speakers/#speaker{{ talk.presenter.id }}">
-                            {{ talk.presenter.name }}
-                        </a>
-                    </h5>
-                  </div>
-                  <div>
-                        {{ talk.short_description|safe }}
-                  </div>
-              </div>
-            </div>
-            -->
         {% endfor %}
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('.modal').modal();
         });
+
+        function searchByTags() {
+          var inputVal = document.getElementById('tag-input').value;
+          $.ajax({
+              url: "{% url 'talks_list' year='2019' %}",
+              type: "GET",
+              dataType: 'json',
+              cache: false,
+              data: {'input': inputVal},
+              success: function(data){
+                console.log("success ", data);
+              }
+          })
+        }
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
