@@ -86,7 +86,7 @@ class Proposal(EventFKMixin):
         help_text=_('Audience level')
     )
 
-    target_audience = RichTextField(
+    target_audience = TextField(
         help_text=_('Target audience'),
         blank=True,
         null=True
@@ -147,10 +147,3 @@ class Proposal(EventFKMixin):
 
     def __str__(self):
         return self.title or "No title"
-
-    def clean(self):
-        super(Proposal, self).clean()
-
-        self.short_description = bleach.clean(self.short_description)
-        self.extra_info = bleach.clean(self.extra_info)
-        self.target_audience = bleach.clean(self.target_audience)
