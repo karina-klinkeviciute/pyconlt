@@ -103,7 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="/">PyConLT'2019</a></li>
             </ul>
             <ul class="right hide-on-med-and-down" id="right-side-menu">
-                {% load menubuilder %}{% menu main-menu-2019 %}
+                {% load menubuilder %}{% menu main-menu-2020 %}
                   {% for item in menuitems %}
                       <li><a href="{{ item.url }}" class="dropdown-button" data-activates="{{ item.title|slugify }}-dropdown" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
@@ -127,7 +127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {% endif %}
             </ul>
             <ul class="side-nav" id="mobile-demo">
-              {% load menubuilder %}{% menu mobile-menu-2019 %}
+              {% load menubuilder %}{% menu mobile-menu-2020 %}
                   {% for item in menuitems %}
                       <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='active'{% endif %}>{{ item.title }}</a></li>
                   {% endfor %}
