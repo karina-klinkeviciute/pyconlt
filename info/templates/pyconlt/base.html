@@ -149,15 +149,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main>
-    {% if request.path == '/' %}
-        {% if request.COOKIES.theme == 'dark' %}
-            <img id="header" alt="header" src="{% static 'info/img/pycon2019_header_dark.png' %}"/>
-        {% else %}
-            <img id="header" alt="header" src="{% static 'info/img/pycon2019_header_light.png' %}"/>
-        {% endif %}
-    {% else %}
-        <img id="header" alt="header" style="display: none"/>
-    {% endif %}
+{#    {% if request.path == '/' %}#}
+{#        {% if request.COOKIES.theme == 'dark' %}#}
+{#            <img id="header" alt="header" src="{% static 'info/img/pycon2019_header_dark.png' %}"/>#}
+{#        {% else %}#}
+{#            <img id="header" alt="header" src="{% static 'info/img/pycon2019_header_light.png' %}"/>#}
+{#        {% endif %}#}
+{#    {% else %}#}
+{#        <img id="header" alt="header" style="display: none"/>#}
+{#    {% endif %}#}
 
     <div class="container">
      {% block content %}
