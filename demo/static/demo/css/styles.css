@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:visited,
+.btn-danger:focus {
+  background-color: #eb7567;
+  border-color: #eb7567;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #47b275;
+  border-color: #47b275;
+}
+
+.bg-dark {
+  background-color: #3776aa !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 60%;
+    z-index: 1000;
+  }
+  .navbar-collapse.collapsing {
+    height: auto;
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    left: -100%;
+  }
+  .navbar-collapse.show {
+    left: 0;
+    -webkit-transition: left 0.3s ease-in;
+    -o-transition: left 0.3s ease-in;
+    -moz-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in;
+  }
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.text-blue {
+  color: #3776AA;
+}
+
+.social-icon {
+  height: 50px;
+}
+
+.bg-yellow {
+  background-color: #FDB913;
+}
